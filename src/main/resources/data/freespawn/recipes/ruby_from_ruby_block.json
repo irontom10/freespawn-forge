@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",     // fully qualify the type
+  "category": "misc",                         // groups it under “Misc” in the recipe book
+  "ingredients": [
+    { "item": "freespawn:ruby_block" }        // your mod’s namespace
+  ],
+  "result": {
+    "item": "freespawn:ruby",                 // same namespace here
+    "count": 9
+  }
+}

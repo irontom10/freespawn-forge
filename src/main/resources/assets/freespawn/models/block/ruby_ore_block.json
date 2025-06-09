@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+    "textures": {
+        "all": "freespawn:block/ruby_ore_block"
+    }
+}
