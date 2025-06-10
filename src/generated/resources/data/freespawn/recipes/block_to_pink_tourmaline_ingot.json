@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "freespawn:pink_tourmaline_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "freespawn:pink_tourmaline_ingot"
+  }
+}

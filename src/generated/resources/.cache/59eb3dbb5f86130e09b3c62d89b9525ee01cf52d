@@ -1,8 +1,17 @@
-// 1.20.1	2025-06-09T22:02:55.293230686	Loot Tables
+// 1.20.1	2025-06-10T18:35:14.496787455	Loot Tables
 8ca056d8d61953d02227e509fd7bd914860ce558 data/freespawn/loot_tables/blocks/amethyst_block.json
 9a778853b2fb450b9a21e893faec74e542b177a2 data/freespawn/loot_tables/blocks/amethyst_ore.json
 422887236cb7790c459396b21b7b194af2573411 data/freespawn/loot_tables/blocks/crystal_stone.json
 1d7cfa1672b1896f5680c6b984cbadd513f7a26b data/freespawn/loot_tables/blocks/crystal_torch.json
+ffc35188f9a4de0451f4260f06bc7d217f2d6a0e data/freespawn/loot_tables/blocks/ender_eye_block.json
+40b2c1c68d16d72b739128aa8259c19c66c02a73 data/freespawn/loot_tables/blocks/ender_pearl_block.json
 7030702f58193894ad609799a07b762d25ec50b5 data/freespawn/loot_tables/blocks/extreme_torch.json
+de23ac916559a5cd2a099ad23ee9991fe1304f14 data/freespawn/loot_tables/blocks/mobzilla_scale_block.json
+0109a3a5d8807c580eed9aec1846ba877b5c806f data/freespawn/loot_tables/blocks/pink_tourmaline_block.json
 d2a4015dfce8e0fb449695f8523dfc4a92780930 data/freespawn/loot_tables/blocks/ruby_block.json
 7cb8ea8492c44a7a08bd09b2b7ef346a13a27cfc data/freespawn/loot_tables/blocks/ruby_ore.json
+0f5c4366980ab32417afe7c30678d5a2f0c6cdba data/freespawn/loot_tables/blocks/tigerseye_block.json
+62e7701b47bc84dab09a38244e7ec5d78c08edbf data/freespawn/loot_tables/blocks/titanium_block.json
+1f905da3561944f61540ddf701a1b8ce786a6315 data/freespawn/loot_tables/blocks/titanium_ore.json
+1c47fc8e1a3e8b118c537e1a184600e89d89a5e3 data/freespawn/loot_tables/blocks/uranium_block.json
+ceed4bb6151a16d6c0bb7707035116481794e519 data/freespawn/loot_tables/blocks/uranium_ore.json

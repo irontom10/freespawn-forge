@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "freespawn:titanium_nugget"
+    }
+  },
+  "pattern": [
+    "NNN",
+    "NNN",
+    "NNN"
+  ],
+  "result": {
+    "item": "freespawn:titanium_ingot"
+  },
+  "show_notification": true
+}

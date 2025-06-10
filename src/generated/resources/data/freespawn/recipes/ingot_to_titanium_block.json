@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "I": {
+      "item": "freespawn:titanium_ingot"
+    }
+  },
+  "pattern": [
+    "III",
+    "III",
+    "III"
+  ],
+  "result": {
+    "item": "freespawn:titanium_block"
+  },
+  "show_notification": true
+}

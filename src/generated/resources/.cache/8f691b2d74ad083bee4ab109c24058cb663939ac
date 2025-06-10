@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-09T22:02:55.292582678	Item Models: freespawn
+// 1.20.1	2025-06-10T18:35:14.495682188	Item Models: freespawn
 b9b9df8a5fcb31f69abc2bebb692a1718535b0b9 assets/freespawn/models/item/a_crabby_patty.json
 0f6c9047d1707eedab0eeee8a539c30e28160598 assets/freespawn/models/item/amethyst.json
 7f958ed23bd90bb9ab32d50ec9cf1d4d4185e273 assets/freespawn/models/item/apple_tree_seed.json
@@ -40,6 +40,7 @@ d7cf6888bbe627f223b6ea851642c6fd5188c888 assets/freespawn/models/item/raw_corn_d
 6a13dc38b5ca6d54f81f86799d8f926c130a83aa assets/freespawn/models/item/raw_crab_meat.json
 9f91e3a9ff3c6a2e68f2ebca60668ee61ab30381 assets/freespawn/models/item/raw_peacock.json
 ec414d9f5920e76f5fd1fe44908bdbb32038daea assets/freespawn/models/item/rice.json
+157590ad2bce479e8d08437ca2753c38f97e321b assets/freespawn/models/item/rock_fish.json
 7e936da29e85286c4d5ce17e415f2859f4b9bfc4 assets/freespawn/models/item/ruby.json
 0f8a42c3b126e3c22f50dd625b1b3f262f8a5b6e assets/freespawn/models/item/spark_fish.json
 c8f67270df7902c08cc1ab15499fd921db546364 assets/freespawn/models/item/strawberry.json

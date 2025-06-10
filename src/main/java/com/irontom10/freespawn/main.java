@@ -1,12 +1,17 @@
 package com.irontom10.freespawn;
 
+
+
 import com.irontom10.freespawn.block.ModBlocks;
+import com.irontom10.freespawn.entity.ModEntities;
+import com.irontom10.freespawn.entity.girlfriend.GirlfriendEntity;
 import com.irontom10.freespawn.item.ModItems;
 import com.irontom10.freespawn.item.ModCreativeTabs;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -27,15 +32,24 @@ public class main {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
+        ModEntities.register(FMLJavaModLoadingContext.get().getModEventBus());
 
+        modEventBus.addListener(this::onEntityAttributeCreation);
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
 
     }
+    private void onEntityAttributeCreation(EntityAttributeCreationEvent event){
+        event.put(
+                ModEntities.GIRLFRIEND.get(),
+                GirlfriendEntity.createAttributes().build()
+        );
+    }
     private void commonSetup(final FMLClientSetupEvent event)
     {
+
 
     }
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
