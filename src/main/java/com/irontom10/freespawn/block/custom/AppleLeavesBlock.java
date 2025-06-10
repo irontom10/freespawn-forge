@@ -19,6 +19,7 @@ public class AppleLeavesBlock extends LeavesBlock {
     public AppleLeavesBlock() {
         super(BlockBehaviour.Properties
                 .of()
+                .noLootTable()
                 .strength(0.2F)
                 .sound(SoundType.GRASS)
                 .noOcclusion()

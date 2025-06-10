@@ -66,7 +66,7 @@ public class ModItems {
     public static final RegistryObject<Item> RAW_BACON = ITEM.register("raw_bacon",
             () -> new Item(new Item.Properties().food(ModFoods.RAW_BACON)));
 
-    public static final RegistryObject<Item> BACON = ITEM.register("bacon",
+    public static final RegistryObject<Item> COOKED_BACON = ITEM.register("cooked_bacon",
             () -> new Item(new Item.Properties().food(ModFoods.COOKED_BACON)));
 
     public static final RegistryObject<Item> RAW_CRAB_MEAT = ITEM.register("raw_crab_meat",
@@ -152,26 +152,10 @@ public class ModItems {
             () -> new com.irontom10.freespawn.item.special.AppleTreeSeed(new Item.Properties())
     );
 
-    public static final RegistryObject<Item> APPLE_LEAVES = ITEM.register("apple_leaves",
-            () -> new BlockItem(
-                    ModBlocks.APPLE_LEAVES.get(),
-                    new Item.Properties()
-            )
-    );
-    public static final RegistryObject<Item> PEACH_LEAVES = ITEM.register("peach_leaves",
-            () -> new BlockItem(
-                    ModBlocks.PEACH_LEAVES.get(),
-                    new Item.Properties()
-            )
-    );
-    public static final RegistryObject<Item> CHERRY_LEAVES = ITEM.register("cherry_leaves",
-            () -> new BlockItem(
-                    ModBlocks.CHERRY_LEAVES.get(),
-                    new Item.Properties()
-            )
-    );
-
     public static final RegistryObject<Item> AMETHYST = ITEM.register("amethyst",
+            () -> new Item(new Item.Properties())
+    );
+    public static final RegistryObject<Item> RUBY = ITEM.register("ruby",
             () -> new Item(new Item.Properties())
     );
     public static final RegistryObject<Item> MOTHSCALE = ITEM.register("mothscale",
@@ -189,22 +173,6 @@ public class ModItems {
     public static final RegistryObject<Item> MOBZILLA_SCALE = ITEM.register("mobzilla_scale",
             () -> new Item(new Item.Properties())
     );
-    public static final RegistryObject<Item> RUBY = ITEM.register("ruby",
-            () -> new Item(new Item.Properties())
-    );
-
-    public static final RegistryObject<Item> RUBY_BLOCK = ITEM.register("ruby_block",
-            () -> new BlockItem(
-                    ModBlocks.RUBY_BLOCK.get(),
-                    new Item.Properties()
-            )
-    );
-    public static final RegistryObject<Item> RUBY_ORE = ITEM.register("ruby_ore",
-            () -> new BlockItem(
-                    ModBlocks.RUBY_ORE.get(),
-                    new Item.Properties()
-            )
-    );
 
     public static final RegistryObject<Item> QUEEN_SCALE = ITEM.register("queen_scale",
             () -> new Item(new Item.Properties())
@@ -219,19 +187,6 @@ public class ModItems {
             () -> new Item(new Item.Properties())
     );
     public static final RegistryObject<Item> URANIUM_NUGGET = ITEM.register("uranium_nugget",
-            () -> new Item(new Item.Properties())
-    );
-
-    public static final RegistryObject<Item> TITANIUM_BLOCK = ITEM.register("titanium_block",
-            () -> new Item(new Item.Properties())
-    );
-    public static final RegistryObject<Item> URANIUM_BLOCK = ITEM.register("uranium_block",
-            () -> new Item(new Item.Properties())
-    );
-    public static final RegistryObject<Item> URANIUM_ORE = ITEM.register("uranium_ore",
-            () -> new Item(new Item.Properties())
-    );
-    public static final RegistryObject<Item> TITANIUM_ORE = ITEM.register("titanium_ore",
             () -> new Item(new Item.Properties())
     );
 
