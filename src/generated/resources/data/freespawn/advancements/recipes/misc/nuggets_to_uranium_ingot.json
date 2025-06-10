@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "freespawn:nuggets_to_uranium_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_uranium_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "freespawn:uranium_nugget"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_uranium_nugget",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "freespawn:nuggets_to_uranium_ingot"
+    ]
+  },
+  "sends_telemetry_event": false
+}

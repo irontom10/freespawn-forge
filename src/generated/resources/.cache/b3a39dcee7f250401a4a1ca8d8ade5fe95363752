@@ -1,0 +1,4 @@
+// 1.20.1	2025-06-10T06:52:57.419936535	Tags for minecraft:block mod id freespawn
+4683cf5f417e1ed6441924ae7f44862365c649b6 data/minecraft/tags/blocks/mineable/pickaxe.json
+b29b61a90a1bd05786936c89b34b1ba09c018b4a data/minecraft/tags/blocks/needs_diamond_tool.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/needs_iron_tool.json
