@@ -1,0 +1,9 @@
+// 1.20.1	2025-06-09T22:02:55.293410954	Recipes
+15684e0d33c5eb96a207f80a3feb2ab7e3122bc4 data/freespawn/advancements/recipes/misc/ruby.json
+625cdc25428188672f96eae02aaadd9552b2bdff data/freespawn/advancements/recipes/misc/ruby_block.json
+fd09ea77344c90ba3885ac506b7def5ce30b87da data/freespawn/advancements/recipes/misc/ruby_from_blasting_ruby_ore.json
+a39b81e1d7e8156b43052076f2463aa0027a70d6 data/freespawn/advancements/recipes/misc/ruby_from_smelting_ruby_ore.json
+17da05102ead5148df020950753ce1971bdc2c1f data/freespawn/recipes/ruby.json
+e703bb957aef4e8b13db088d99f27ab49921c424 data/freespawn/recipes/ruby_block.json
+1b115026c430c111a713ab45427b64e4a2fdbe15 data/freespawn/recipes/ruby_from_blasting_ruby_ore.json
+912c9a7c20bcfec9c3628fcfc41ba6ad1c532e84 data/freespawn/recipes/ruby_from_smelting_ruby_ore.json
