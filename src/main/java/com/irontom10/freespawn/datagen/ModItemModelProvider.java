@@ -46,6 +46,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.JEW_FISH);
         simpleItem(ModItems.WOOD_FISH);
         simpleItem(ModItems.GRAY_FISH);
+        simpleItem(ModItems.ROCK_FISH);
         simpleItem(ModItems.GARDEN_SALAD);
         simpleItem(ModItems.BLT_SANDWITCH);
         simpleItem(ModItems.A_CRABBY_PATTY);
@@ -63,6 +64,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         //MISC ITEMS
         simpleItem(ModItems.MINERS_DREAM);
         simpleItem(ModItems.APPLE_TREE_SEED);
+
         //INGREDIENTS
         simpleItem(ModItems.AMETHYST);
         simpleItem(ModItems.RUBY);
@@ -76,6 +78,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.TITANIUM_INGOT);
         simpleItem(ModItems.URANIUM_NUGGET);
         simpleItem(ModItems.TITANIUM_NUGGET);
+
 
         //Armor
         simpleItem(ModItems.ULTIMATE_HELMET);

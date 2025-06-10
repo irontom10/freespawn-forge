@@ -14,7 +14,7 @@ public class UltimateAxe extends AxeItem {
     public UltimateAxe() {
         super(
                 Tiers.NETHERITE,  // material
-                5,                // base damage (vanilla netherite axe is 5)
+                40,                // base damage (vanilla netherite axe is 5)
                 -3.0F,            // attack speed (vanilla netherite axe is -3.0)
                 new Item.Properties()
                         .fireResistant()

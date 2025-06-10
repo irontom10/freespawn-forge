@@ -180,15 +180,16 @@ public class ModItems {
     public static final RegistryObject<Item> URANIUM_INGOT = ITEM.register("uranium_ingot",
             () -> new Item(new Item.Properties())
     );
+    public static final RegistryObject<Item> URANIUM_NUGGET = ITEM.register("uranium_nugget",
+            () -> new Item(new Item.Properties())
+    );
     public static final RegistryObject<Item> TITANIUM_INGOT = ITEM.register("titanium_ingot",
             () -> new Item(new Item.Properties())
     );
     public static final RegistryObject<Item> TITANIUM_NUGGET = ITEM.register("titanium_nugget",
             () -> new Item(new Item.Properties())
     );
-    public static final RegistryObject<Item> URANIUM_NUGGET = ITEM.register("uranium_nugget",
-            () -> new Item(new Item.Properties())
-    );
+
 
 
     //Ultimate items

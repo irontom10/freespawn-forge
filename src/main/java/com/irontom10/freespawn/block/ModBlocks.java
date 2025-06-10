@@ -42,6 +42,28 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE))
     );
+    public static final RegistryObject<Block> URANIUM_ORE = registerBlock("uranium_ore",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3.0f, 4.0f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE))
+    );
+    public static final RegistryObject<Block> URANIUM_BLOCK = registerBlock("uranium_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.METAL))
+    );
+    public static final RegistryObject<Block> TITANIUM_ORE = registerBlock("titanium_ore",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3.0f, 4.0f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE))
+    );
+    public static final RegistryObject<Block> TITANIUM_BLOCK = registerBlock("titanium_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.METAL))
+    );
 
     public static final RegistryObject<Block> CRYSTAL_STONE = registerBlock("crystal_stone",
             () -> new Block(BlockBehaviour.Properties.of()
@@ -64,6 +86,32 @@ public class ModBlocks {
                     .lightLevel(state -> 15)
                     .sound(SoundType.STONE))
     );
+    public static final RegistryObject<Block> ENDER_PEARL_BLOCK = registerBlock("ender_pearl_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.METAL))
+    );
+    public static final RegistryObject<Block> ENDER_EYE_BLOCK = registerBlock("ender_eye_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.METAL))
+    );
+    public static final RegistryObject<Block> MOBZILLA_SCALE_BLOCK = registerBlock("mobzilla_scale_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.METAL))
+    );
+    public static final RegistryObject<Block> PINK_TOURMALINE_BLOCK = registerBlock("pink_tourmaline_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.METAL))
+    );
+    public static final RegistryObject<Block> TIGERSEYE_BLOCK = registerBlock("tigerseye_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.METAL))
+    );
+
 
     public static final RegistryObject<Block> APPLE_LEAVES = registerBlock("apple_leaves",
             () -> new com.irontom10.block.custom.AppleLeavesBlock()
