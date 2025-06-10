@@ -21,7 +21,7 @@ public class UltimateHoe extends HoeItem {
     public UltimateHoe() {
         super(
                 Tiers.NETHERITE,     // material
-                0,
+                30,
                 -1F,               // hoe attack speed tweak (vanilla netherite hoe is -1.0)
                 new Item.Properties()
                         .fireResistant()

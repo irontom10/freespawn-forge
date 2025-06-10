@@ -13,7 +13,7 @@ public class UltimateShovel extends ShovelItem {
     public UltimateShovel() {
         super(
                 Tiers.NETHERITE,  // material
-                1.5F,             // base damage (vanilla netherite shovel is 1.5)
+                35,             // base damage (vanilla netherite shovel is 1.5)
                 -3.0F,            // attack speed
                 new Item.Properties()
                         .fireResistant()

@@ -18,7 +18,7 @@ public class UltimatePickaxe extends PickaxeItem {
     public UltimatePickaxe() {
         super(
                 Tiers.NETHERITE,       // tier
-                1,                     // base attack damage modifier
+                32,                     // base attack damage modifier
                 -3.0F,                 // attack speed modifier
                 new Item.Properties()
                         .fireResistant()
