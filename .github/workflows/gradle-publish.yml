@@ -43,32 +43,46 @@ jobs:
     permissions:
       contents: write
       actions: write
+
     steps:
+      # 1) actually pull down the JAR that your build job uploaded
       - name: Download build artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/download-artifact@v3
         with:
           name: mod-jar
-          path: build/libs/*.jar
+          # you can omit `path:` and it will extract to `./mod-jar/`, or
+          # point it somewhere else if you like:
+          # path: .
 
+      # 2) figure out the real filename (wildcards don’t work in `with:`)
+      - name: Get JAR file path
+        id: find_jar
+        run: |
+          # assumes your artifact contained build/libs/*.jar
+          JAR=$(find . -type f -name '*.jar' | head -n1)
+          echo "JAR_PATH=$JAR" >> $GITHUB_ENV
+
+      # 3) create the GitHub Release named after the commit SHA
       - name: Create GitHub Release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          # prefix avoids the 40-hex-char rule & uses the real SHA
-          tag_name: "beta-${{ github.sha }}"
-          release_name: "Prerelease beta ${{ github.sha }}"
-          draft: false
-          prerelease: true
+          tag_name:        beta-${{ github.sha }}
+          release_name:    Prerelease beta ${{ github.sha }}
+          draft:           false
+          prerelease:      true
 
+      # 4) upload that exact JAR file
       - name: Upload Mod JAR to Release
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: build/libs/freespawn-0.1-1.20.1.jar
-          asset_name: freespawn-${{ github.sha }}.jar
+          upload_url:        ${{ steps.create_release.outputs.upload_url }}
+          asset_path:        ${{ env.JAR_PATH }}
+          # if you want to rename it in the UI, you can do so here:
+          asset_name:        freespawn-${{ github.sha }}.jar
           asset_content_type: application/java-archive
 
