@@ -11,8 +11,6 @@ runs-on: ubuntu-latest
 steps:
 \- name: Checkout repository
 uses: actions/checkout\@v3
-
-```
   - name: Set up Java
     uses: actions/setup-java@v3
     with:
@@ -30,7 +28,6 @@ uses: actions/checkout\@v3
     with:
       name: mod-jar
       path: build/libs/*.jar
-```
 
 release:
 name: Create Release
@@ -43,7 +40,6 @@ with:
 name: mod-jar
 path: ./
 
-```
   - name: Create GitHub Release
     id: create_release
     uses: actions/create-release@v1
@@ -60,4 +56,3 @@ path: ./
       asset_path: ./build/libs/freespawn-forge-*.jar
       asset_name: freespawn-${{ github.sha }}.jar
       asset_content_type: application/java-archive
-```
