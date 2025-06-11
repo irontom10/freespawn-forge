@@ -10,7 +10,7 @@ import net.minecraft.world.level.Level;
 public class QueenBoots extends ArmorItem {
     public QueenBoots() {
         super(
-                ModArmorMaterials.ULTIMATE,  // material
+                ModArmorMaterials.TIGERSEYE,  // material
                 Type.BOOTS,               // armor type
                 new Properties()
                         .fireResistant()  // properties

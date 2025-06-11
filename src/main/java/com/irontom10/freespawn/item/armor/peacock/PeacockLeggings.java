@@ -10,7 +10,7 @@ import net.minecraft.world.level.Level;
 public class PeacockLeggings extends ArmorItem {
     public PeacockLeggings() {
         super(
-                ModArmorMaterials.ULTIMATE,  // material
+                ModArmorMaterials.PEACOCK,  // material
                 Type.LEGGINGS,               // armor type
                 new Properties()
                         .fireResistant()  // properties

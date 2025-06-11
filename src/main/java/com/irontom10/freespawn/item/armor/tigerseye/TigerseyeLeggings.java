@@ -1,4 +1,4 @@
-package com.irontom10.freespawn.item.armor.amethyst;
+package com.irontom10.freespawn.item.armor.tigerseye;
 
 import com.irontom10.freespawn.item.armor.ModArmorMaterials;
 import net.minecraft.world.item.ArmorItem;
@@ -7,11 +7,11 @@ import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 
-public class UltimateBoots extends ArmorItem {
-    public UltimateBoots() {
+public class TigerseyeLeggings extends ArmorItem {
+    public TigerseyeLeggings() {
         super(
-                ModArmorMaterials.ULTIMATE,  // material
-                Type.BOOTS,               // armor type
+                ModArmorMaterials.TIGERSEYE,  // material
+                Type.LEGGINGS,               // armor type
                 new Properties()
                         .fireResistant()  // properties
         );
@@ -40,14 +40,6 @@ public class UltimateBoots extends ArmorItem {
         if( !world.isClientSide()
                 && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.PROJECTILE_PROTECTION, stack) <= 0) {
             stack.enchant(Enchantments.PROJECTILE_PROTECTION, 5);
-        }
-        if (!world.isClientSide()
-                && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FALL_PROTECTION, stack) <= 0) {
-            stack.enchant(Enchantments.FALL_PROTECTION, 3);
-        }
-        if (!world.isClientSide()
-                && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FROST_WALKER, stack) <= 0) {
-            stack.enchant(Enchantments.FROST_WALKER, 3);
         }
         super.inventoryTick(stack, world, entity, slot, selected);
     }

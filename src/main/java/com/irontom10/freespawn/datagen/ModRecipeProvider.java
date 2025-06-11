@@ -11,6 +11,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import org.objectweb.asm.commons.GeneratorAdapter;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -56,6 +57,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.RUBY_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.RUBY_BLOCK.get()), has(ModBlocks.RUBY_BLOCK.get()))
                 .save(pWriter);
+
+
+        GenArmorSet(pWriter, ModItems.AMETHYST.get(), "amethyst", ModItems.AMETHYST_HELMET.get(), ModItems.AMETHYST_CHESTPLATE.get(), ModItems.AMETHYST_LEGGINGS.get(), ModItems.AMETHYST_BOOTS.get());
+        GenArmorSet(pWriter, Items.EMERALD, "emerald", ModItems.EMERALD_HELMET.get(), ModItems.EMERALD_CHESTPLATE.get(), ModItems.EMERALD_LEGGINGS.get(), ModItems.EMERALD_BOOTS.get());
+        GenArmorSet(pWriter, ModItems.RUBY.get(), "ruby", ModItems.RUBY_HELMET.get(), ModItems.RUBY_CHESTPLATE.get(), ModItems.RUBY_LEGGINGS.get(), ModItems.RUBY_BOOTS.get());
+        GenArmorSet(pWriter, ModItems.PINK_TOURMALINE_INGOT.get(), "pink_tourmailine", ModItems.PINK_TOURMALINE_HELMET.get(), ModItems.PINK_TOURMALINE_CHESTPLATE.get(), ModItems.PINK_TOURMALINE_LEGGINGS.get(), ModItems.PINK_TOURMALINE_BOOTS.get());
+        GenArmorSet(pWriter, ModItems.TIGERSEYE_INGOT.get(), "tigerseye", ModItems.TIGERSEYE_HELMET.get(), ModItems.TIGERSEYE_CHESTPLATE.get(), ModItems.TIGERSEYE_LEGGINGS.get(), ModItems.TIGERSEYE_BOOTS.get());
+        GenArmorSet(pWriter, ModItems.MOTHSCALE.get(), "mothscale", ModItems.MOTHSCALE_HELMET.get(), ModItems.MOTHSCALE_CHESTPLATE.get(), ModItems.MOTHSCALE_LEGGINGS.get(), ModItems.MOTHSCALE_BOOTS.get());
+        GenArmorSet(pWriter, ModItems.LAVAEEL.get(), "lavaeel", ModItems.LAVAEEL_HELMET.get(), ModItems.LAVAEEL_CHESTPLATE.get(), ModItems.LAVAEEL_LEGGINGS.get(), ModItems.LAVAEEL_BOOTS.get());
+        GenArmorSet(pWriter, ModItems.PEACOCK_FEATHER.get(), "peacock", ModItems.PEACOCK_HELMET.get(), ModItems.PEACOCK_CHESTPLATE.get(), ModItems.PEACOCK_LEGGINGS.get(), ModItems.PEACOCK_BOOTS.get());
+        GenArmorSet(pWriter, ModItems.MOBZILLA_SCALE.get(), "mobzilla", ModItems.MOBZILLA_HELMET.get(), ModItems.MOBZILLA_CHESTPLATE.get(), ModItems.MOBZILLA_LEGGINGS.get(), ModItems.MOBZILLA_BOOTS.get());
+        GenArmorSet(pWriter, ModItems.QUEEN_SCALE.get(), "queen", ModItems.QUEEN_HELMET.get(), ModItems.QUEEN_CHESTPLATE.get(), ModItems.QUEEN_LEGGINGS.get(), ModItems.QUEEN_BOOTS.get());
+
     }
 
 
@@ -116,6 +130,33 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(block)
                 .unlockedBy(getHasName(block), has(block))
                 .save(pWriter, main.MOD_ID + ":" + "dried_to_" + getItemName(egg));
+    }
+
+    private void GenArmorSet(Consumer<FinishedRecipe> pWriter, ItemLike item, String material, ItemLike helmet, ItemLike chestplate, ItemLike leggings, ItemLike boots) {
+        String MATERIAL = material.toUpperCase();
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, helmet)
+                .pattern("III")
+                .pattern("I I")
+                .define('I', item)
+                .unlockedBy(getHasName(item), has(item));
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, chestplate)
+                .pattern("I I")
+                .pattern("III")
+                .pattern("III")
+                .define('I', item)
+                .unlockedBy(getHasName(item), has(item));
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, leggings)
+                .pattern("III")
+                .pattern("I I")
+                .pattern("I I")
+                .define('I', item)
+                .unlockedBy(getHasName(item), has(item));
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, boots)
+                .pattern("I I")
+                .pattern("I I")
+                .define('I', item)
+                .unlockedBy(getHasName(item), has(item));
     }
 
 

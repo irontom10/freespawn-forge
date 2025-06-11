@@ -11,7 +11,7 @@ public class PinkTourmalineChestplate extends ArmorItem {
 
     public PinkTourmalineChestplate() {
         super(
-                ModArmorMaterials.ULTIMATE,  // material
+                ModArmorMaterials.PINK_TOURMALINE,  // material
                 Type.CHESTPLATE,         // armor type
                 new Properties()
                         .fireResistant()  // properties

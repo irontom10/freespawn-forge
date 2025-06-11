@@ -85,6 +85,59 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.ULTIMATE_CHESTPLATE);
         simpleItem(ModItems.ULTIMATE_LEGGINGS);
         simpleItem(ModItems.ULTIMATE_BOOTS);
+        simpleItem(ModItems.AMETHYST_HELMET);
+        simpleItem(ModItems.AMETHYST_CHESTPLATE);
+        simpleItem(ModItems.AMETHYST_LEGGINGS);
+        simpleItem(ModItems.AMETHYST_BOOTS);
+        simpleItem(ModItems.EMERALD_HELMET);
+        simpleItem(ModItems.EMERALD_CHESTPLATE);
+        simpleItem(ModItems.EMERALD_LEGGINGS);
+        simpleItem(ModItems.EMERALD_BOOTS);
+        simpleItem(ModItems.RUBY_HELMET);
+        simpleItem(ModItems.RUBY_CHESTPLATE);
+        simpleItem(ModItems.RUBY_LEGGINGS);
+        simpleItem(ModItems.RUBY_BOOTS);
+        simpleItem(ModItems.PINK_TOURMALINE_HELMET);
+        simpleItem(ModItems.PINK_TOURMALINE_CHESTPLATE);
+        simpleItem(ModItems.PINK_TOURMALINE_LEGGINGS);
+        simpleItem(ModItems.PINK_TOURMALINE_BOOTS);
+        simpleItem(ModItems.TIGERSEYE_HELMET);
+        simpleItem(ModItems.TIGERSEYE_CHESTPLATE);
+        simpleItem(ModItems.TIGERSEYE_LEGGINGS);
+        simpleItem(ModItems.TIGERSEYE_BOOTS);
+        simpleItem(ModItems.MOTHSCALE_HELMET);
+        simpleItem(ModItems.MOTHSCALE_CHESTPLATE);
+        simpleItem(ModItems.MOTHSCALE_LEGGINGS);
+        simpleItem(ModItems.MOTHSCALE_BOOTS);
+        simpleItem(ModItems.LAVAEEL_HELMET);
+        simpleItem(ModItems.LAVAEEL_CHESTPLATE);
+        simpleItem(ModItems.LAVAEEL_LEGGINGS);
+        simpleItem(ModItems.LAVAEEL_BOOTS);
+        simpleItem(ModItems.PEACOCK_HELMET);
+        simpleItem(ModItems.PEACOCK_CHESTPLATE);
+        simpleItem(ModItems.PEACOCK_LEGGINGS);
+        simpleItem(ModItems.PEACOCK_BOOTS);
+        simpleItem(ModItems.MOBZILLA_HELMET);
+        simpleItem(ModItems.MOBZILLA_CHESTPLATE);
+        simpleItem(ModItems.MOBZILLA_LEGGINGS);
+        simpleItem(ModItems.MOBZILLA_BOOTS);
+        simpleItem(ModItems.QUEEN_HELMET);
+        simpleItem(ModItems.QUEEN_CHESTPLATE);
+        simpleItem(ModItems.QUEEN_LEGGINGS);
+        simpleItem(ModItems.QUEEN_BOOTS);
+        simpleItem(ModItems.LAPIS_HELMET);
+        simpleItem(ModItems.LAPIS_CHESTPLATE);
+        simpleItem(ModItems.LAPIS_LEGGINGS);
+        simpleItem(ModItems.LAPIS_BOOTS);
+        simpleItem(ModItems.ROYAL_HELMET);
+        simpleItem(ModItems.ROYAL_CHESTPLATE);
+        simpleItem(ModItems.ROYAL_LEGGINGS);
+        simpleItem(ModItems.ROYAL_BOOTS);
+        simpleItem(ModItems.EXPERIENCE_HELMET);
+        simpleItem(ModItems.EXPERIENCE_CHESTPLATE);
+        simpleItem(ModItems.EXPERIENCE_LEGGINGS);
+        simpleItem(ModItems.EXPERIENCE_BOOTS);
+
 
 
         //Weapons and tools
@@ -93,6 +146,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         toolItem(ModItems.ULTIMATE_AXE);
         toolItem(ModItems.ULTIMATE_SHOVEL);
         toolItem(ModItems.ULTIMATE_HOE);
+
 
 
 

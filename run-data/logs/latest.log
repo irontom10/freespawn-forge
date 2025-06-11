@@ -1,29 +1,29 @@
-[11Jun2025 08:20:29.887] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, /home/irontom10/.gradle/caches/forge_gradle/assets, --gameDir, ., --fml.forgeVersion, 47.4.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, freespawn, --all, --output, /home/irontom10/git/freespawn-forge/src/generated/resources, --existing, /home/irontom10/git/freespawn-forge/src/main/resources]
-[11Jun2025 08:20:29.889] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 21.0.7 by Arch Linux; OS Linux arch amd64 version 6.14.9-arch1-1
-[11Jun2025 08:20:29.958] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[11Jun2025 08:20:29.999] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/irontom10/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23116!/ Service=ModLauncher Env=CLIENT
-[11Jun2025 08:20:30.208] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/irontom10/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.20.1-47.4.0/f0c0b352173d0a378cbdcec9cfc4ba65899a721/javafmllanguage-1.20.1-47.4.0.jar is missing mods.toml file
-[11Jun2025 08:20:30.209] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/irontom10/.gradle/caches/modules-2/files-2.1/net.minecraftforge/lowcodelanguage/1.20.1-47.4.0/e862740d8c84d08dbfedea412bef88fe42e727c5/lowcodelanguage-1.20.1-47.4.0.jar is missing mods.toml file
-[11Jun2025 08:20:30.210] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/irontom10/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.20.1-47.4.0/5719b3a297a33f877ed5dde4cb4bd75c859096af/mclanguage-1.20.1-47.4.0.jar is missing mods.toml file
-[11Jun2025 08:20:30.211] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/irontom10/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.20.1-47.4.0/235975dafa4309945b59c56b53f31dc5b65a6051/fmlcore-1.20.1-47.4.0.jar is missing mods.toml file
-[11Jun2025 08:20:30.273] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[11Jun2025 08:20:31.134] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, /home/irontom10/.gradle/caches/forge_gradle/assets, --assetIndex, 5, --mod, freespawn, --all, --output, /home/irontom10/git/freespawn-forge/src/generated/resources, --existing, /home/irontom10/git/freespawn-forge/src/main/resources]
-[11Jun2025 08:20:31.365] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [freespawn]
-[11Jun2025 08:20:33.942] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.0, for MC 1.20.1 with MCP 20230612.114412
-[11Jun2025 08:20:33.947] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.0 Initialized
-[11Jun2025 08:20:34.270] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/irontom10/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1.jar%23181!/assets/.mcassetsroot' uses unexpected schema
-[11Jun2025 08:20:34.271] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/irontom10/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1.jar%23181!/data/.mcassetsroot' uses unexpected schema
-[11Jun2025 08:20:34.372] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[11Jun2025 08:20:34.405] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 33 ms
-[11Jun2025 08:20:34.406] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[11Jun2025 08:20:34.443] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 36 ms
-[11Jun2025 08:20:34.443] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: freespawn
-[11Jun2025 08:20:34.534] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: freespawn finished after 90 ms
-[11Jun2025 08:20:34.534] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: freespawn
-[11Jun2025 08:20:34.558] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: freespawn finished after 23 ms
-[11Jun2025 08:20:34.558] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id freespawn
-[11Jun2025 08:20:34.566] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id freespawn finished after 8 ms
-[11Jun2025 08:20:34.566] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id freespawn
-[11Jun2025 08:20:34.567] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id freespawn finished after 0 ms
-[11Jun2025 08:20:34.567] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 195 ms
-[11Jun2025 08:20:34.570] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 192, old count: 192, new count: 193, removed stale: 0, written: 0
+[11Jun2025 19:21:57.752] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, /home/irontom10/.gradle/caches/forge_gradle/assets, --gameDir, ., --fml.forgeVersion, 47.4.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, freespawn, --all, --output, /home/irontom10/git/freespawn-forge/src/generated/resources, --existing, /home/irontom10/git/freespawn-forge/src/main/resources]
+[11Jun2025 19:21:57.757] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 21.0.7 by Arch Linux; OS Linux arch amd64 version 6.14.5-arch1-1
+[11Jun2025 19:21:57.908] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[11Jun2025 19:21:58.021] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/irontom10/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23116!/ Service=ModLauncher Env=CLIENT
+[11Jun2025 19:21:58.696] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/irontom10/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.20.1-47.4.0/f0c0b352173d0a378cbdcec9cfc4ba65899a721/javafmllanguage-1.20.1-47.4.0.jar is missing mods.toml file
+[11Jun2025 19:21:58.785] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/irontom10/.gradle/caches/modules-2/files-2.1/net.minecraftforge/lowcodelanguage/1.20.1-47.4.0/e862740d8c84d08dbfedea412bef88fe42e727c5/lowcodelanguage-1.20.1-47.4.0.jar is missing mods.toml file
+[11Jun2025 19:21:58.792] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/irontom10/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.20.1-47.4.0/5719b3a297a33f877ed5dde4cb4bd75c859096af/mclanguage-1.20.1-47.4.0.jar is missing mods.toml file
+[11Jun2025 19:21:58.798] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/irontom10/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.20.1-47.4.0/235975dafa4309945b59c56b53f31dc5b65a6051/fmlcore-1.20.1-47.4.0.jar is missing mods.toml file
+[11Jun2025 19:21:58.958] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[11Jun2025 19:22:01.789] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, /home/irontom10/.gradle/caches/forge_gradle/assets, --assetIndex, 5, --mod, freespawn, --all, --output, /home/irontom10/git/freespawn-forge/src/generated/resources, --existing, /home/irontom10/git/freespawn-forge/src/main/resources]
+[11Jun2025 19:22:02.311] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [freespawn]
+[11Jun2025 19:22:09.205] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.0, for MC 1.20.1 with MCP 20230612.114412
+[11Jun2025 19:22:09.212] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.0 Initialized
+[11Jun2025 19:22:10.211] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/irontom10/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1.jar%23181!/assets/.mcassetsroot' uses unexpected schema
+[11Jun2025 19:22:10.212] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/irontom10/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1.jar%23181!/data/.mcassetsroot' uses unexpected schema
+[11Jun2025 19:22:10.438] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[11Jun2025 19:22:10.495] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 56 ms
+[11Jun2025 19:22:10.496] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[11Jun2025 19:22:10.551] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 54 ms
+[11Jun2025 19:22:10.551] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: freespawn
+[11Jun2025 19:22:10.721] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: freespawn finished after 169 ms
+[11Jun2025 19:22:10.722] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: freespawn
+[11Jun2025 19:22:10.799] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: freespawn finished after 76 ms
+[11Jun2025 19:22:10.799] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id freespawn
+[11Jun2025 19:22:10.833] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id freespawn finished after 33 ms
+[11Jun2025 19:22:10.834] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id freespawn
+[11Jun2025 19:22:10.836] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id freespawn finished after 2 ms
+[11Jun2025 19:22:10.837] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 398 ms
+[11Jun2025 19:22:10.847] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 244, old count: 244, new count: 245, removed stale: 0, written: 0

@@ -11,7 +11,7 @@ import net.minecraft.world.level.Level;
 public class PeacockHelmet extends ArmorItem {
     public PeacockHelmet() {
         super(
-                ModArmorMaterials.ULTIMATE,  // material
+                ModArmorMaterials.PEACOCK,  // material
                 Type.HELMET,               // armor type
                 new Properties()
                         .fireResistant()  // properties

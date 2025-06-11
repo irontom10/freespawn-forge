@@ -10,7 +10,7 @@ import net.minecraft.world.level.Level;
 public class PinkTourmalineBoots extends ArmorItem {
     public PinkTourmalineBoots() {
         super(
-                ModArmorMaterials.ULTIMATE,  // material
+                ModArmorMaterials.PINK_TOURMALINE,  // material
                 Type.BOOTS,               // armor type
                 new Properties()
                         .fireResistant()  // properties

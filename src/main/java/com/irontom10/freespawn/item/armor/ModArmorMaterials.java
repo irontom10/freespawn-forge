@@ -18,7 +18,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
     MOTHSCALE("mothscale",  50,new int[]{ 2,  7,  5,  2},  50, SoundEvents.ARMOR_EQUIP_GENERIC, 0f, 0f, () -> Ingredient.of(ModItems.MOTHSCALE.get())),
     LAVAEEL("lavaeel",     40, new int[]{ 2,  7,  5,  2},  35, SoundEvents.ARMOR_EQUIP_GENERIC, 0f, 0f, () -> Ingredient.of(ModItems.LAVAEEL.get())),
     ULTIMATE("ultimate",   200, new int[]{ 6, 12, 10,  6}, 100, SoundEvents.ARMOR_EQUIP_GENERIC, 0f, 0f, () -> Ingredient.EMPTY),
-    PINK_TOURMAILINE("pink_tourmailine",           50,  new int[]{ 3,  7,  5,  2},  40, SoundEvents.ARMOR_EQUIP_GENERIC, 0f, 0f, () -> Ingredient.of(ModItems.PINK_TOURMALINE_INGOT.get())),
+    PINK_TOURMALINE("pink_tourmailine",           50,  new int[]{ 3,  7,  5,  2},  40, SoundEvents.ARMOR_EQUIP_GENERIC, 0f, 0f, () -> Ingredient.of(ModItems.PINK_TOURMALINE_INGOT.get())),
     TIGERSEYE("tigerseye",  80, new int[]{ 4,  8,  7,  4},  55, SoundEvents.ARMOR_EQUIP_GENERIC, 0f, 0f, () -> Ingredient.of(ModItems.TIGERSEYE_INGOT.get())),
     PEACOCK("peacock",     40,  new int[]{ 2,  5,  4,  2},  30, SoundEvents.ARMOR_EQUIP_GENERIC, 0f, 0f, () -> Ingredient.of(ModItems.PEACOCK_FEATHER.get())),
     MOBZILLA("mobzilla",  1000, new int[]{ 7, 13, 11,  7}, 150, SoundEvents.ARMOR_EQUIP_GENERIC, 0f, 0f, () -> Ingredient.of(ModItems.MOBZILLA_SCALE.get())),

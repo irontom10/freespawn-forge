@@ -1,4 +1,4 @@
-package com.irontom10.freespawn.item.armor.lavaeel;
+package com.irontom10.freespawn.item.armor.tigerseye;
 
 import com.irontom10.freespawn.item.armor.ModArmorMaterials;
 import net.minecraft.world.item.ArmorItem;
@@ -7,11 +7,11 @@ import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 
-public class UltimateChestplate extends ArmorItem {
+public class TigerseyeChestplate extends ArmorItem {
 
-    public UltimateChestplate() {
+    public TigerseyeChestplate() {
         super(
-                ModArmorMaterials.ULTIMATE,  // material
+                ModArmorMaterials.TIGERSEYE,  // material
                 Type.CHESTPLATE,         // armor type
                 new Properties()
                         .fireResistant()  // properties

@@ -1,10 +1,21 @@
 package com.irontom10.freespawn.item;
 
 import com.irontom10.freespawn.entity.ModEntities;
-import com.irontom10.freespawn.item.armor.ultimate.UltimateBoots;
-import com.irontom10.freespawn.item.armor.ultimate.UltimateChestplate;
-import com.irontom10.freespawn.item.armor.ultimate.UltimateHelmet;
-import com.irontom10.freespawn.item.armor.ultimate.UltimateLeggings;
+import com.irontom10.freespawn.item.armor.amethyst.*;
+import com.irontom10.freespawn.item.armor.emerald.*;
+import com.irontom10.freespawn.item.armor.experience.*;
+import com.irontom10.freespawn.item.armor.lapis.*;
+import com.irontom10.freespawn.item.armor.lavaeel.*;
+import com.irontom10.freespawn.item.armor.mobzilla.*;
+import com.irontom10.freespawn.item.armor.mothscale.*;
+import com.irontom10.freespawn.item.armor.peacock.*;
+import com.irontom10.freespawn.item.armor.pink_tourmaline.*;
+import com.irontom10.freespawn.item.armor.tigerseye.*;
+import com.irontom10.freespawn.item.armor.queen.*;
+import com.irontom10.freespawn.item.armor.royal.*;
+import com.irontom10.freespawn.item.armor.ruby.*;
+import com.irontom10.freespawn.item.armor.ultimate.*;
+
 import com.irontom10.freespawn.item.special.MinersDream;
 import com.irontom10.freespawn.item.tool.ultimate.*;
 import net.minecraft.world.item.Item;
@@ -206,18 +217,123 @@ public class ModItems {
     public static final RegistryObject<Item> ULTIMATE_SHOVEL =
             ITEM.register("ultimate_shovel", UltimateShovel::new);
 
-    public static final RegistryObject<Item> ULTIMATE_HELMET =
-            ITEM.register("ultimate_helmet", UltimateHelmet::new);
 
-    public static final RegistryObject<Item> ULTIMATE_CHESTPLATE =
-            ITEM.register("ultimate_chestplate", UltimateChestplate::new);
 
-    public static final RegistryObject<Item> ULTIMATE_LEGGINGS =
-            ITEM.register("ultimate_leggings", UltimateLeggings::new);
 
+    //Armor items
+
+    public static final RegistryObject<Item> AMETHYST_BOOTS =
+            ITEM.register("amethyst_boots", AmethystBoots::new);
+    public static final RegistryObject<Item> AMETHYST_CHESTPLATE =
+            ITEM.register("amethyst_chestplate", AmethystChestplate::new);
+    public static final RegistryObject<Item> AMETHYST_HELMET =
+            ITEM.register("amethyst_helmet", AmethystHelmet::new);
+    public static final RegistryObject<Item> AMETHYST_LEGGINGS =
+            ITEM.register("amethyst_leggings", AmethystLeggings::new);
+    public static final RegistryObject<Item> EMERALD_BOOTS =
+            ITEM.register("emerald_boots", EmeraldBoots::new);
+    public static final RegistryObject<Item> EMERALD_CHESTPLATE =
+            ITEM.register("emerald_chestplate", EmeraldChestplate::new);
+    public static final RegistryObject<Item> EMERALD_HELMET =
+            ITEM.register("emerald_helmet", EmeraldHelmet::new);
+    public static final RegistryObject<Item> EMERALD_LEGGINGS =
+            ITEM.register("emerald_leggings", EmeraldLeggings::new);
+    public static final RegistryObject<Item> EXPERIENCE_BOOTS =
+            ITEM.register("experience_boots", ExperienceBoots::new);
+    public static final RegistryObject<Item> EXPERIENCE_CHESTPLATE =
+            ITEM.register("experience_chestplate", ExperienceChestplate::new);
+    public static final RegistryObject<Item> EXPERIENCE_HELMET =
+            ITEM.register("experience_helmet", ExperienceHelmet::new);
+    public static final RegistryObject<Item> EXPERIENCE_LEGGINGS =
+            ITEM.register("experience_leggings", ExperienceLeggings::new);
+    public static final RegistryObject<Item> LAPIS_BOOTS =
+            ITEM.register("lapis_boots", LapisBoots::new);
+    public static final RegistryObject<Item> LAPIS_CHESTPLATE =
+            ITEM.register("lapis_chestplate", LapisChestplate::new);
+    public static final RegistryObject<Item> LAPIS_HELMET =
+            ITEM.register("lapis_helmet", LapisHelmet::new);
+    public static final RegistryObject<Item> LAPIS_LEGGINGS =
+            ITEM.register("lapis_leggings", LapisLeggings::new);
+    public static final RegistryObject<Item> LAVAEEL_BOOTS =
+            ITEM.register("lavaeel_boots", LavaeelBoots::new);
+    public static final RegistryObject<Item> LAVAEEL_CHESTPLATE =
+            ITEM.register("lavaeel_chestplate", LavaeelChestplate::new);
+    public static final RegistryObject<Item> LAVAEEL_HELMET =
+            ITEM.register("lavaeel_helmet", LavaeelHelmet::new);
+    public static final RegistryObject<Item> LAVAEEL_LEGGINGS =
+            ITEM.register("lavaeel_leggings", LavaeelLeggings::new);
+    public static final RegistryObject<Item> MOBZILLA_BOOTS =
+            ITEM.register("mobzilla_boots", MobzillaBoots::new);
+    public static final RegistryObject<Item> MOBZILLA_CHESTPLATE =
+            ITEM.register("mobzilla_chestplate", MobzillaChestplate::new);
+    public static final RegistryObject<Item> MOBZILLA_HELMET =
+            ITEM.register("mobzilla_helmet", MobzillaHelmet::new);
+    public static final RegistryObject<Item> MOBZILLA_LEGGINGS =
+            ITEM.register("mobzilla_leggings", MobzillaLeggings::new);
+    public static final RegistryObject<Item> MOTHSCALE_BOOTS =
+            ITEM.register("mothscale_boots", MothscaleBoots::new);
+    public static final RegistryObject<Item> MOTHSCALE_CHESTPLATE =
+            ITEM.register("mothscale_chestplate", MothscaleChestplate::new);
+    public static final RegistryObject<Item> MOTHSCALE_HELMET =
+            ITEM.register("mothscale_helmet", MothscaleHelmet::new);
+    public static final RegistryObject<Item> MOTHSCALE_LEGGINGS =
+            ITEM.register("mothscale_leggings", MothscaleLeggings::new);
+    public static final RegistryObject<Item> PEACOCK_BOOTS =
+            ITEM.register("peacock_boots", PeacockBoots::new);
+    public static final RegistryObject<Item> PEACOCK_CHESTPLATE =
+            ITEM.register("peacock_chestplate", PeacockChestplate::new);
+    public static final RegistryObject<Item> PEACOCK_HELMET =
+            ITEM.register("peacock_helmet", PeacockHelmet::new);
+    public static final RegistryObject<Item> PEACOCK_LEGGINGS =
+            ITEM.register("peacock_leggings", PeacockLeggings::new);
+    public static final RegistryObject<Item> PINK_TOURMALINE_BOOTS =
+            ITEM.register("pink_tourmaline_boots", PinkTourmalineBoots::new);
+    public static final RegistryObject<Item> PINK_TOURMALINE_CHESTPLATE =
+            ITEM.register("pink_tourmaline_chestplate", PinkTourmalineChestplate::new);
+    public static final RegistryObject<Item> PINK_TOURMALINE_HELMET =
+            ITEM.register("pink_tourmaline_helmet", PinkTourmalineHelmet::new);
+    public static final RegistryObject<Item> PINK_TOURMALINE_LEGGINGS =
+            ITEM.register("pink_tourmaline_leggings", PinkTourmalineLeggings::new);
+    public static final RegistryObject<Item> TIGERSEYE_HELMET =
+            ITEM.register("tigerseye_helmet", TigerseyeHelmet::new);
+    public static final RegistryObject<Item> TIGERSEYE_CHESTPLATE =
+            ITEM.register("tigerseye_chestplate", TigerseyeChestplate::new);
+    public static final RegistryObject<Item> TIGERSEYE_LEGGINGS =
+            ITEM.register("tigerseye_leggings", TigerseyeLeggings::new);
+    public static final RegistryObject<Item> TIGERSEYE_BOOTS =
+            ITEM.register("tigerseye_boots", TigerseyeBoots::new);
+    public static final RegistryObject<Item> QUEEN_BOOTS =
+            ITEM.register("queen_boots", QueenBoots::new);
+    public static final RegistryObject<Item> QUEEN_CHESTPLATE =
+            ITEM.register("queen_chestplate", QueenChestplate::new);
+    public static final RegistryObject<Item> QUEEN_HELMET =
+            ITEM.register("queen_helmet", QueenHelmet::new);
+    public static final RegistryObject<Item> QUEEN_LEGGINGS =
+            ITEM.register("queen_leggings", QueenLeggings::new);
+    public static final RegistryObject<Item> ROYAL_BOOTS =
+            ITEM.register("royal_boots", RoyalBoots::new);
+    public static final RegistryObject<Item> ROYAL_CHESTPLATE =
+            ITEM.register("royal_chestplate", RoyalChestplate::new);
+    public static final RegistryObject<Item> ROYAL_HELMET =
+            ITEM.register("royal_helmet", RoyalHelmet::new);
+    public static final RegistryObject<Item> ROYAL_LEGGINGS =
+            ITEM.register("royal_leggings", RoyalLeggings::new);
+    public static final RegistryObject<Item> RUBY_BOOTS =
+            ITEM.register("ruby_boots", RubyBoots::new);
+    public static final RegistryObject<Item> RUBY_CHESTPLATE =
+            ITEM.register("ruby_chestplate", RubyChestplate::new);
+    public static final RegistryObject<Item> RUBY_HELMET =
+            ITEM.register("ruby_helmet", RubyHelmet::new);
+    public static final RegistryObject<Item> RUBY_LEGGINGS =
+            ITEM.register("ruby_leggings", RubyLeggings::new);
     public static final RegistryObject<Item> ULTIMATE_BOOTS =
             ITEM.register("ultimate_boots", UltimateBoots::new);
-
+    public static final RegistryObject<Item> ULTIMATE_CHESTPLATE =
+            ITEM.register("ultimate_chestplate", UltimateChestplate::new);
+    public static final RegistryObject<Item> ULTIMATE_HELMET =
+            ITEM.register("ultimate_helmet", UltimateHelmet::new);
+    public static final RegistryObject<Item> ULTIMATE_LEGGINGS =
+            ITEM.register("ultimate_leggings", UltimateLeggings::new);
 
     //Spawn eggs
     public static final RegistryObject<Item> GIRLFRIEND_SPAWN_EGG =

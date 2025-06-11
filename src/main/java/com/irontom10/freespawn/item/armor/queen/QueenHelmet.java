@@ -1,4 +1,5 @@
-package com.irontom10.freespawn.item.armor.mobzilla;
+package com.irontom10.freespawn.item.armor.queen;
+
 
 import com.irontom10.freespawn.item.armor.ModArmorMaterials;
 import net.minecraft.world.item.ArmorItem;
@@ -7,20 +8,20 @@ import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 
-public class UltimateChestplate extends ArmorItem {
-
-    public UltimateChestplate() {
+public class QueenHelmet extends ArmorItem {
+    public QueenHelmet() {
         super(
-                ModArmorMaterials.ULTIMATE,  // material
-                Type.CHESTPLATE,         // armor type
+                ModArmorMaterials.QUEEN,  // material
+                Type.HELMET,               // armor type
                 new Properties()
                         .fireResistant()  // properties
         );
     }
+
     @Override
     public void inventoryTick(
             ItemStack stack,
-            Level    world,
+            Level world,
             net.minecraft.world.entity.Entity entity,
             int      slot,
             boolean  selected
@@ -41,6 +42,15 @@ public class UltimateChestplate extends ArmorItem {
                 && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.PROJECTILE_PROTECTION, stack) <= 0) {
             stack.enchant(Enchantments.PROJECTILE_PROTECTION, 5);
         }
+        if (!world.isClientSide()
+                && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.RESPIRATION, stack) <= 0) {
+            stack.enchant(Enchantments.RESPIRATION, 2);
+        }
+        if (!world.isClientSide()
+                && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.AQUA_AFFINITY, stack) <= 0) {
+            stack.enchant(Enchantments.AQUA_AFFINITY, 3);
+        }
+
         super.inventoryTick(stack, world, entity, slot, selected);
     }
 }

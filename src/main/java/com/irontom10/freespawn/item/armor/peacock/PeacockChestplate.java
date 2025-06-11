@@ -11,7 +11,7 @@ public class PeacockChestplate extends ArmorItem {
 
     public PeacockChestplate() {
         super(
-                ModArmorMaterials.ULTIMATE,  // material
+                ModArmorMaterials.PEACOCK,  // material
                 Type.CHESTPLATE,         // armor type
                 new Properties()
                         .fireResistant()  // properties

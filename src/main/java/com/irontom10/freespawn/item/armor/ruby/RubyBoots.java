@@ -10,7 +10,7 @@ import net.minecraft.world.level.Level;
 public class RubyBoots extends ArmorItem {
     public RubyBoots() {
         super(
-                ModArmorMaterials.ULTIMATE,  // material
+                ModArmorMaterials.RUBY,  // material
                 Type.BOOTS,               // armor type
                 new Properties()
                         .fireResistant()  // properties

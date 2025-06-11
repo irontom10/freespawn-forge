@@ -10,7 +10,7 @@ import net.minecraft.world.level.Level;
 public class PeacockBoots extends ArmorItem {
     public PeacockBoots() {
         super(
-                ModArmorMaterials.ULTIMATE,  // material
+                ModArmorMaterials.PEACOCK,  // material
                 Type.BOOTS,               // armor type
                 new Properties()
                         .fireResistant()  // properties

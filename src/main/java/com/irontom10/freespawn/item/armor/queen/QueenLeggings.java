@@ -10,7 +10,7 @@ import net.minecraft.world.level.Level;
 public class QueenLeggings extends ArmorItem {
     public QueenLeggings() {
         super(
-                ModArmorMaterials.ULTIMATE,  // material
+                ModArmorMaterials.QUEEN,  // material
                 Type.LEGGINGS,               // armor type
                 new Properties()
                         .fireResistant()  // properties

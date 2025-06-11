@@ -11,7 +11,7 @@ import net.minecraft.world.level.Level;
 public class PinkTourmalineHelmet extends ArmorItem {
     public PinkTourmalineHelmet() {
         super(
-                ModArmorMaterials.ULTIMATE,  // material
+                ModArmorMaterials.PINK_TOURMALINE,  // material
                 Type.HELMET,               // armor type
                 new Properties()
                         .fireResistant()  // properties
