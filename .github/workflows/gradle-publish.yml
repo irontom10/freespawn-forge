@@ -3,7 +3,7 @@ name: Build and Release
 on:
   push:
     branches:
-      - main
+      - freespawn-forge
   workflow_dispatch:
 
 jobs:
