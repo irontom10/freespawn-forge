@@ -106,30 +106,30 @@ public class GirlfriendEntity extends TamableAnimal implements RangedAttackMob {
     protected SoundEvent getAmbientSound() {
         // e.g. water vs rain vs dark vs default
         if (this.isInWater()) {
-            return ModSounds.WATER1.get();
+            return ModSounds.GIRLFIREND_WATER.get();
         }
         if (this.level().isRaining()) {
-            return ModSounds.RAIN.get();
+            return ModSounds.GIRLFIREND_RAIN.get();
         }
         if (!this.level().isDay()) {
-            return ModSounds.DARK.get();
+            return ModSounds.GIRLFIREND_DARK.get();
         }
         // fallback to a random “happy” if tamed, or null
         return this.isTame()
-                ? ModSounds.HAPPY1.get()  // or pick randomly HAPPY1–HAPPY7
+                ? ModSounds.GIRLFIREND_HAPPY.get()  // or pick randomly HAPPY1–HAPPY7
                 : null;
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource ds) {
-        return ModSounds.HURT1.get();  // or random HURT1–HURT9
+        return ModSounds.GIRLFIREND_HURT.get();  // or random HURT1–HURT9
     }
 
     @Override
     protected SoundEvent getDeathSound() {
         return this.isTame()
-                ? ModSounds.DEATH_GIRL.get()
-                : ModSounds.DEATH_SINGLE.get();
+                ? ModSounds.GIRLFIREND_DEATH.get()
+                : ModSounds.GIRLFIREND_DEATH_SINGLE.get();
     }
 
 
