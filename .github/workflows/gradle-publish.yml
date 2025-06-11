@@ -68,7 +68,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ${{ env.JAR_PATH }}
+          asset_path: build/libs/freespawn-forge-0.1-1.20.1.jar
           asset_name: freespawn-${{ github.sha }}.jar
           asset_content_type: application/java-archive
 
