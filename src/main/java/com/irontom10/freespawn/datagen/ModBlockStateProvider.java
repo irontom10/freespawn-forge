@@ -34,6 +34,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.MOBZILLA_SCALE_BLOCK);
         blockWithItem(ModBlocks.ENDER_PEARL_BLOCK);
         blockWithItem(ModBlocks.ENDER_EYE_BLOCK);
+        blockWithItem(ModBlocks.ANCIENT_DRIED_GIRLFRIEND);
         
     }
     private void blockWithItem(RegistryObject<Block> blockRegistryObject){

@@ -1,23 +1,21 @@
 package com.irontom10.freespawn.item;
 
-import com.irontom10.freespawn.block.ModBlocks;
-import com.irontom10.freespawn.item.special.MinersDream;
-import com.irontom10.freespawn.item.tool.ultimate.UltimatePickaxe;
-import com.irontom10.freespawn.item.tool.ultimate.UltimateHoe;
-import com.irontom10.freespawn.item.tool.ultimate.UltimateShovel;
-import com.irontom10.freespawn.item.tool.ultimate.UltimateAxe;
-import com.irontom10.freespawn.item.tool.ultimate.UltimateSword;
-import com.irontom10.freespawn.item.armor.ultimate.UltimateHelmet;
-import com.irontom10.freespawn.item.armor.ultimate.UltimateChestplate;
-import com.irontom10.freespawn.item.armor.ultimate.UltimateLeggings;
+import com.irontom10.freespawn.entity.ModEntities;
 import com.irontom10.freespawn.item.armor.ultimate.UltimateBoots;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTabs;
+import com.irontom10.freespawn.item.armor.ultimate.UltimateChestplate;
+import com.irontom10.freespawn.item.armor.ultimate.UltimateHelmet;
+import com.irontom10.freespawn.item.armor.ultimate.UltimateLeggings;
+import com.irontom10.freespawn.item.special.MinersDream;
+import com.irontom10.freespawn.item.tool.ultimate.*;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SpawnEggItem;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import static com.irontom10.freespawn.entity.ModEntities.GIRLFRIEND;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEM =
@@ -219,6 +217,18 @@ public class ModItems {
 
     public static final RegistryObject<Item> ULTIMATE_BOOTS =
             ITEM.register("ultimate_boots", UltimateBoots::new);
+
+
+    //Spawn eggs
+    public static final RegistryObject<Item> GIRLFRIEND_SPAWN_EGG =
+            ITEM.register("girlfriend_spawn_egg",
+                    () -> new ForgeSpawnEggItem(
+                            ModEntities.GIRLFRIEND,     // entity type
+                            0xFF99CC,                         // primary color (pink-ish)
+                            0x663366,                         // secondary color (purple-ish)
+                            new Item.Properties()
+                    )
+            );
 
 
 

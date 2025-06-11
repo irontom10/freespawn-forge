@@ -1,6 +1,7 @@
-// 1.20.1	2025-06-10T18:35:14.497572901	Block States: freespawn
+// 1.20.1	2025-06-11T08:14:20.387234027	Block States: freespawn
 c291657beb4f375858b6acb123a3a7fe0ed9b245 assets/freespawn/blockstates/amethyst_block.json
 114504e610ac7a21e206f90f9f3c22baaa2237dd assets/freespawn/blockstates/amethyst_ore.json
+52a1341558845e7604b8e392e27e26a774e24cfb assets/freespawn/blockstates/ancient_dried_girlfriend.json
 2a26dc4378aa8844602b76ad5cb9149ebf944f5c assets/freespawn/blockstates/apple_leaves.json
 95568e507a5f48fc6f84fe40b8ba492d4a655dc8 assets/freespawn/blockstates/cherry_leaves.json
 442a6d495b8b553c5237be93c0dd1d991c89c70a assets/freespawn/blockstates/crystal_stone.json
@@ -20,6 +21,7 @@ f3b69839655de1becfebbe9c053008fae4c67302 assets/freespawn/blockstates/titanium_b
 95ea823291cae055e933cbbf53daa728e08940d2 assets/freespawn/blockstates/uranium_ore.json
 331c16a168737ec1464d56f189a528e6e737ee58 assets/freespawn/models/block/amethyst_block.json
 85409cc32871641a74df6d292410d1ca2cc6efd8 assets/freespawn/models/block/amethyst_ore.json
+26e3c196d9d44605d256ea7860ac1e55be017237 assets/freespawn/models/block/ancient_dried_girlfriend.json
 7931452c05b9e01bb8a0fdacd08b6d79962b1551 assets/freespawn/models/block/apple_leaves.json
 af98038d18dcbd11d522a64037f83f50211b8e7b assets/freespawn/models/block/cherry_leaves.json
 14a3b23bdf9b82a27fc763420294ae2bcf5d6f21 assets/freespawn/models/block/crystal_stone.json
@@ -39,6 +41,7 @@ dfa51df71eba4063ea051a28f7155a4b86a6171d assets/freespawn/models/block/ruby_ore.
 3ef15b53a7a126a3753d1dccac2145d1bdfa9e60 assets/freespawn/models/block/uranium_ore.json
 d6cba2960b92fef7d0bb521f77a1a78e4203d492 assets/freespawn/models/item/amethyst_block.json
 b2cc58538c3ef93d93e83b0ef2205a51c8d78b43 assets/freespawn/models/item/amethyst_ore.json
+3be8f050143909deec184bec1284586fc729099b assets/freespawn/models/item/ancient_dried_girlfriend.json
 fdb33f130a90eb7015c3860b7d2af2074b7bf59f assets/freespawn/models/item/apple_leaves.json
 0fa29955e0580eec45a06c99930a24f5d4143e3f assets/freespawn/models/item/cherry_leaves.json
 42944fe274267534ea867459b3653370609a038c assets/freespawn/models/item/crystal_stone.json

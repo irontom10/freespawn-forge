@@ -147,6 +147,12 @@ public class ModBlocks {
                     .friction(0.8F))
     );
 
+    //Spawn egg ores
+    public static final RegistryObject<Block> ANCIENT_DRIED_GIRLFRIEND = registerBlock("ancient_dried_girlfriend",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.GRASS))
+    );
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

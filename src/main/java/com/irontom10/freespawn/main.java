@@ -30,16 +30,17 @@ public class main {
     public main(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
+        ModEntities.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
-        ModEntities.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModSounds.register(modEventBus);
+
         modEventBus.addListener(this::onEntityAttributeCreation);
         modEventBus.addListener(this::commonSetup);
-
-        MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
+        MinecraftForge.EVENT_BUS.register(this);
+
 
     }
     private void onEntityAttributeCreation(EntityAttributeCreationEvent event){

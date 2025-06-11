@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "freespawn:block/ancient_dried_girlfriend"
+  }
+}

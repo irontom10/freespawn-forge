@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-10T18:35:14.497024581	Recipes
+// 1.20.1	2025-06-11T08:14:20.38673005	Recipes
 d173cb25fe869388daf70135e7294f8848c9bf05 data/freespawn/advancements/recipes/building_blocks/ingot_to_amethyst_block.json
 5902dc0779441e1e74e0e105b0556a84f4ecb910 data/freespawn/advancements/recipes/building_blocks/ingot_to_ender_eye_block.json
 1a2fdada2a1643dc2467182da31f6160ce596f1e data/freespawn/advancements/recipes/building_blocks/ingot_to_ender_pearl_block.json
@@ -15,6 +15,7 @@ e6686b5eaee91919240e444f0760034bedb830fd data/freespawn/advancements/recipes/mis
 483f4d9438749fb59094bd0dc2123da3b7aef118 data/freespawn/advancements/recipes/misc/block_to_tigerseye_ingot.json
 f3a40737f460de639d72cbc7d1aead1743bc8b86 data/freespawn/advancements/recipes/misc/block_to_titanium_ingot.json
 3e658176e9d421321c74e7bb4b0f339d449e188f data/freespawn/advancements/recipes/misc/block_to_uranium_ingot.json
+05c9b7bab13ca2265995b829691d64dccbc871d4 data/freespawn/advancements/recipes/misc/dried_to_girlfriend_spawn_egg.json
 069c14c38d7069536f09dd82c8f668e0dc3a0905 data/freespawn/advancements/recipes/misc/ingot_to_titanium_nugget.json
 aab5b44df8b013ff73b7a24944473bba27fc54ab data/freespawn/advancements/recipes/misc/ingot_to_uranium_nugget.json
 579e55adb160981a78e57a610d79fe8d4068b7cc data/freespawn/advancements/recipes/misc/nuggets_to_titanium_ingot.json
@@ -31,6 +32,7 @@ a39b81e1d7e8156b43052076f2463aa0027a70d6 data/freespawn/advancements/recipes/mis
 e573d9da0fc6480c4a7051b3db2e564d80f66ff7 data/freespawn/recipes/block_to_tigerseye_ingot.json
 96841b2b05662d3e30c34d0853e13fd30aff1452 data/freespawn/recipes/block_to_titanium_ingot.json
 4042562797719fe749d4b8b1ca704fede62f669b data/freespawn/recipes/block_to_uranium_ingot.json
+88fda5ac6d89fa04af04c544014b0b175214c38b data/freespawn/recipes/dried_to_girlfriend_spawn_egg.json
 a5fb892c45669809c9547bf854c3a44454d90ac0 data/freespawn/recipes/ingot_to_amethyst_block.json
 b17a2239e142a16f97cdbde33c74185ec762550a data/freespawn/recipes/ingot_to_ender_eye_block.json
 b4807a7ea0108c2adcdf6d21ae5e23013eb18484 data/freespawn/recipes/ingot_to_ender_pearl_block.json

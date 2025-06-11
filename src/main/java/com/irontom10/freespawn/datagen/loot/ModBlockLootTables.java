@@ -34,10 +34,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.PINK_TOURMALINE_BLOCK.get());
         this.dropSelf(ModBlocks.TIGERSEYE_BLOCK.get());
         this.dropSelf(ModBlocks.MOBZILLA_SCALE_BLOCK.get());
+        this.dropSelf(ModBlocks.ANCIENT_DRIED_GIRLFRIEND.get());
 
     }
     @Override
     protected Iterable<Block> getKnownBlocks(){
         return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
     }
+
 }
