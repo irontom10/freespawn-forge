@@ -51,10 +51,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.sha }}
-          release_name: Release ${{ github.commit }}
+          tag_name: ${{ github.commit }}
+          release_name: prerelease beta ${{ github.commit }}
           draft: false
-          prerelease: false
+          prerelease: true
 
 
       - name: Upload Mod JAR to Release
