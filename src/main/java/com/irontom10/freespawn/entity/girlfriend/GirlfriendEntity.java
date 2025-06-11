@@ -8,23 +8,24 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.AgeableMob;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.monster.RangedAttackMob;
-
+import net.minecraft.sounds.SoundEvent;
+import com.irontom10.freespawn.sound.ModSounds;
 
 public class GirlfriendEntity extends TamableAnimal implements RangedAttackMob {
     // 1) Data parameters
@@ -69,15 +70,31 @@ public class GirlfriendEntity extends TamableAnimal implements RangedAttackMob {
         this.goalSelector.addGoal(1, new SitWhenOrderedToGoal(this));
         this.goalSelector.addGoal(2, new TemptGoal(this, 1.25, Ingredient.of(Items.POPPY), false));
         this.goalSelector.addGoal(3, new FollowOwnerGoal(this, 1.4, 12f, 1.5f, false));
-        this.goalSelector.addGoal(4, new RangedAttackGoal(this, 1.25, 20, 10f));
-        this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 0.75));
-        this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 6f));
-        this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
-        //… add your custom AI goals here …
+
+        // NEW: melee attack if holding a sword (or unarmed)
+        this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.2, /*longMemory=*/ true));
+
+        // NEW: ranged attack if holding a bow (will only fire if performRangedAttack is implemented)
+        this.goalSelector.addGoal(5, new RangedAttackGoal(this, 1.25D, 20, 10.0F));
+
+
+        // movement + look
+        this.goalSelector.addGoal(6, new WaterAvoidingRandomStrollGoal(this, 0.75));
+        this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, 6f));
+        this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
+
+        // TARGETING: help the owner if they get hurt…
         this.targetSelector.addGoal(1, new OwnerHurtByTargetGoal(this));
         this.targetSelector.addGoal(2, new OwnerHurtTargetGoal(this));
-        this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
-        //… custom target goals …
+        // …and target any hostile monster when tamed:
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<Monster>(
+                this,           // our entity
+                Monster.class,  // target class
+                10,             // targetChance: checks every 10 ticks
+                true,           // mustSee
+                false,          // onlyNearby
+                null            // no extra filter
+        ));
     }
 
     @Override
@@ -86,33 +103,35 @@ public class GirlfriendEntity extends TamableAnimal implements RangedAttackMob {
     }
 
     @Override
-    public void tick() {
-        super.tick();
-        // replace onLivingUpdate + onUpdate logic
-        if (this.isInWater())
-            this.entityData.set(WET_TYPE, 500);
-        else if (this.entityData.get(WET_TYPE) > 0)
-            this.entityData.set(WET_TYPE, this.entityData.get(WET_TYPE) - 1);
-
-        // auto‐heal
-        if (this.tickCount % 100 == 0 && this.getHealth() < this.getMaxHealth()) {
-            this.heal(1.0f);
+    protected SoundEvent getAmbientSound() {
+        // e.g. water vs rain vs dark vs default
+        if (this.isInWater()) {
+            return ModSounds.WATER1.get();
         }
-        // sync forced flags, size changes, etc.
+        if (this.level().isRaining()) {
+            return ModSounds.RAIN.get();
+        }
+        if (!this.level().isDay()) {
+            return ModSounds.DARK.get();
+        }
+        // fallback to a random “happy” if tamed, or null
+        return this.isTame()
+                ? ModSounds.HAPPY1.get()  // or pick randomly HAPPY1–HAPPY7
+                : null;
     }
-
 
     @Override
-    public boolean causeFallDamage(float fallDistance, float damageMultiplier, DamageSource source) {
-        return super.causeFallDamage(fallDistance, damageMultiplier, source);
+    protected SoundEvent getHurtSound(DamageSource ds) {
+        return ModSounds.HURT1.get();  // or random HURT1–HURT9
     }
-
 
     @Override
-    public boolean hurt(DamageSource source, float amount) {
-        // your custom damage logic
-        return super.hurt(source, amount);
+    protected SoundEvent getDeathSound() {
+        return this.isTame()
+                ? ModSounds.DEATH_GIRL.get()
+                : ModSounds.DEATH_SINGLE.get();
     }
+
 
     @Override
     public void addAdditionalSaveData(CompoundTag tag) {
@@ -166,7 +185,69 @@ public class GirlfriendEntity extends TamableAnimal implements RangedAttackMob {
     public int getWhichGirl() {
         return this.entityData.get(TYPE);
     }
+    public InteractionResult mobInteract(Player player, InteractionHand hand) {
+        ItemStack stack = player.getItemInHand(hand);
 
+        // 1. TAME if not tamed yet
+        if (!this.isTame() && stack.getItem() == Items.POPPY) {
+            if (!player.level().isClientSide) {
+                if (this.random.nextInt(3) == 0) {
+                    this.tame(player);
+                    this.navigation.stop();
+                    this.setTarget(null);
+                    this.level().broadcastEntityEvent(this, (byte)7); // heart particles
+                } else {
+                    this.level().broadcastEntityEvent(this, (byte)6); // smoke particles
+                }
+                stack.shrink(1);
+            }
+            return InteractionResult.sidedSuccess(player.level().isClientSide);
+        }
+
+        // Only owner can equip / unequip
+        if (this.isTame() && this.isOwnedBy(player)) {
+            // 2. EQUIP ARMOR if holding an armor item
+            if (stack.getItem() instanceof ArmorItem) {
+                EquipmentSlot slot = ((ArmorItem)stack.getItem()).getEquipmentSlot();
+                ItemStack previous = this.getItemBySlot(slot);
+                this.setItemSlot(slot, stack.copy());
+                // give back the old piece (if any)
+                if (!player.getInventory().add(previous)) {
+                    player.drop(previous, false);
+                }
+                stack.shrink(1);
+                return InteractionResult.sidedSuccess(player.level().isClientSide);
+            }
+            // 3. EQUIP WEAPON if holding a sword or bow
+            if (stack.getItem() instanceof SwordItem
+                    || stack.getItem() instanceof BowItem
+                    || stack.getItem() instanceof TridentItem)
+            {
+                ItemStack prevMain = this.getMainHandItem();
+                this.setItemSlot(EquipmentSlot.MAINHAND, stack.copy());
+                if (!player.getInventory().add(prevMain)) {
+                    player.drop(prevMain, false);
+                }
+                stack.shrink(1);
+                return InteractionResult.sidedSuccess(player.level().isClientSide);
+            }
+            // 4. UNEQUIP: empty hand + crouch
+            if (stack.isEmpty() && player.isShiftKeyDown()) {
+                // drop all gear
+                for (EquipmentSlot slot : EquipmentSlot.values()) {
+                    ItemStack gear = this.getItemBySlot(slot);
+                    if (!gear.isEmpty()) {
+                        this.setItemSlot(slot, ItemStack.EMPTY);
+                        player.getInventory().add(gear);
+                    }
+                }
+                return InteractionResult.sidedSuccess(player.level().isClientSide);
+            }
+        }
+
+        // fallback to sitting behaviour
+        return super.mobInteract(player, hand);
+    }
     /**
      * Set the dry-land texture index (clamped to 0–40).
      */

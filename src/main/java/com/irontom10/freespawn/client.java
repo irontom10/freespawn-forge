@@ -1,6 +1,5 @@
-package com.irontom10.freespawn.client;
+package com.irontom10.freespawn;
 
-import com.irontom10.freespawn.main;
 import com.irontom10.freespawn.entity.ModEntities;
 import com.irontom10.freespawn.entity.girlfriend.GirlfriendModel;
 import net.minecraftforge.api.distmarker.Dist;

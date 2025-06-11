@@ -1,0 +1,55 @@
+{
+  "o_fight1":              { "sounds": [ "freespawn:o_fight1" ] },
+  "o_fight2":              { "sounds": [ "freespawn:o_fight2" ] },
+  "o_fight3":              { "sounds": [ "freespawn:o_fight3" ] },
+  "o_fight4":              { "sounds": [ "freespawn:o_fight4" ] },
+  "o_fight5":              { "sounds": [ "freespawn:o_fight5" ] },
+  "o_fight6":              { "sounds": [ "freespawn:o_fight6" ] },
+  "o_fight7":              { "sounds": [ "freespawn:o_fight7" ] },
+
+  "o_taunt1":              { "sounds": [ "freespawn:o_taunt1" ] },
+  "o_taunt2":              { "sounds": [ "freespawn:o_taunt2" ] },
+  "o_taunt3":              { "sounds": [ "freespawn:o_taunt3" ] },
+  "o_taunt4":              { "sounds": [ "freespawn:o_taunt4" ] },
+
+  "o_woohoo1":             { "sounds": [ "freespawn:o_woohoo1" ] },
+  "o_woohoo2":             { "sounds": [ "freespawn:o_woohoo2" ] },
+  "o_woohoo3":             { "sounds": [ "freespawn:o_woohoo3" ] },
+  "o_woohoo4":             { "sounds": [ "freespawn:o_woohoo4" ] },
+
+  "o_happy1":              { "sounds": [ "freespawn:o_happy1" ] },
+  "o_happy2":              { "sounds": [ "freespawn:o_happy2" ] },
+  "o_happy3":              { "sounds": [ "freespawn:o_happy3" ] },
+  "o_happy4":              { "sounds": [ "freespawn:o_happy4" ] },
+  "o_happy5":              { "sounds": [ "freespawn:o_happy5" ] },
+  "o_happy6":              { "sounds": [ "freespawn:o_happy6" ] },
+  "o_happy7":              { "sounds": [ "freespawn:o_happy7" ] },
+
+  "o_hurt1":               { "sounds": [ "freespawn:o_hurt1" ] },
+  "o_hurt2":               { "sounds": [ "freespawn:o_hurt2" ] },
+  "o_hurt3":               { "sounds": [ "freespawn:o_hurt3" ] },
+  "o_hurt4":               { "sounds": [ "freespawn:o_hurt4" ] },
+  "o_hurt5":               { "sounds": [ "freespawn:o_hurt5" ] },
+  "o_hurt6":               { "sounds": [ "freespawn:o_hurt6" ] },
+  "o_hurt7":               { "sounds": [ "freespawn:o_hurt7" ] },
+  "o_hurt8":               { "sounds": [ "freespawn:o_hurt8" ] },
+  "o_hurt9":               { "sounds": [ "freespawn:o_hurt9" ] },
+
+  "o_ow1":                 { "sounds": [ "freespawn:o_ow1" ] },
+  "o_ow2":                 { "sounds": [ "freespawn:o_ow2" ] },
+  "o_ow3":                 { "sounds": [ "freespawn:o_ow3" ] },
+  "o_ow4":                 { "sounds": [ "freespawn:o_ow4" ] },
+  "o_ow5":                 { "sounds": [ "freespawn:o_ow5" ] },
+  "o_ow6":                 { "sounds": [ "freespawn:o_ow6" ] },
+  "o_ow7":                 { "sounds": [ "freespawn:o_ow7" ] },
+  "o_ow8":                 { "sounds": [ "freespawn:o_ow8" ] },
+
+  "o_dark":                { "sounds": [ "freespawn:o_dark" ] },
+  "o_rain":                { "sounds": [ "freespawn:o_rain" ] },
+  "o_thunder":             { "sounds": [ "freespawn:o_thunder" ] },
+  "o_water1":              { "sounds": [ "freespawn:o_water1" ] },
+  "o_water2":              { "sounds": [ "freespawn:o_water2" ] },
+
+  "o_death_girlfriend":    { "sounds": [ "freespawn:o_death_girlfriend" ] },
+  "o_death_single":        { "sounds": [ "freespawn:o_death_single" ] }
+}

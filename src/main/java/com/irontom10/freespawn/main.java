@@ -7,6 +7,7 @@ import com.irontom10.freespawn.entity.ModEntities;
 import com.irontom10.freespawn.entity.girlfriend.GirlfriendEntity;
 import com.irontom10.freespawn.item.ModItems;
 import com.irontom10.freespawn.item.ModCreativeTabs;
+import com.irontom10.freespawn.sound.ModSounds;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -33,7 +34,7 @@ public class main {
         ModBlocks.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
         ModEntities.register(FMLJavaModLoadingContext.get().getModEventBus());
-
+        ModSounds.register(modEventBus);
         modEventBus.addListener(this::onEntityAttributeCreation);
         modEventBus.addListener(this::commonSetup);
 
@@ -72,6 +73,7 @@ public class main {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+
 
         }
     }
