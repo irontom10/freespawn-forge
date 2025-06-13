@@ -42,11 +42,17 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE))
     );
-    public static final RegistryObject<Block> URANIUM_ORE = registerBlock("uranium_ore",
+    public static final RegistryObject<Block> STONE_URANIUM_ORE = registerBlock("stone_uranium_ore",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3.0f, 4.0f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE))
+    );
+    public static final RegistryObject<Block> DEEPSLATE_URANIUM_ORE = registerBlock("deepslate_uranium_ore",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3.0f, 4.0f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.DEEPSLATE))
     );
     public static final RegistryObject<Block> URANIUM_BLOCK = registerBlock("uranium_block",
             () -> new Block(BlockBehaviour.Properties.of()
@@ -153,11 +159,17 @@ public class ModBlocks {
     );
 
     //Spawn egg ores
-    public static final RegistryObject<Block> ANCIENT_DRIED_GIRLFRIEND = registerBlock("ancient_dried_girlfriend",
+    public static final RegistryObject<Block> STONE_ANCIENT_DRIED_GIRLFRIEND = registerBlock("stone_ancient_dried_girlfriend",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(5.0f, 6.0f)
                     .sound(SoundType.GRASS))
     );
+    public static final RegistryObject<Block> DEEPSLATE_ANCIENT_DRIED_GIRLFRIEND = registerBlock("deepslate_ancient_dried_girlfriend",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.GRASS))
+    );
+
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

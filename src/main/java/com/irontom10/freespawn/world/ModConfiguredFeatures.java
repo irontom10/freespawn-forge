@@ -21,9 +21,12 @@ public class ModConfiguredFeatures {
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?,?>>  context) {
         RuleTest stoneReplacable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
-        List<OreConfiguration.TargetBlockState> overworldUraniumOres = List.of(
-                OreConfiguration.target(stoneReplacable, ModBlocks.URANIUM_ORE.get().defaultBlockState())
+        RuleTest deepslateReplacable = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
+
+        List<OreConfiguration.TargetBlockState> overworldUraniumOres = List.of(
+                OreConfiguration.target(stoneReplacable, ModBlocks.STONE_URANIUM_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplacable, ModBlocks.DEEPSLATE_URANIUM_ORE.get().defaultBlockState())
         );
         register(context, URANIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldUraniumOres, 9));
     }

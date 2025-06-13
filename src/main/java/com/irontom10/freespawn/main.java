@@ -8,7 +8,7 @@ import com.irontom10.freespawn.entity.girlfriend.GirlfriendEntity;
 import com.irontom10.freespawn.item.ModItems;
 import com.irontom10.freespawn.item.ModCreativeTabs;
 import com.irontom10.freespawn.sound.ModSounds;
-import com.irontom10.freespawn.util.FindBlockCommand;
+
 import com.irontom10.freespawn.util.ModAutoEnchants;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -48,7 +48,7 @@ public class main {
 
     @SubscribeEvent
     public void onRegisterCommands(RegisterCommandsEvent event) {
-        FindBlockCommand.register(event.getDispatcher());
+
     }
 
     private void onEntityAttributeCreation(EntityAttributeCreationEvent event){

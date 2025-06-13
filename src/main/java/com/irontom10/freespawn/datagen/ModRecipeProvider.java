@@ -41,8 +41,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         blockWithIngot(pWriter, ModBlocks.PINK_TOURMALINE_BLOCK.get(), ModItems.PINK_TOURMALINE_INGOT.get());
         blockWithIngot(pWriter, ModBlocks.TIGERSEYE_BLOCK.get(), ModItems.TIGERSEYE_INGOT.get());
 
-        DriedToEgg(pWriter, ModBlocks.ANCIENT_DRIED_GIRLFRIEND.get(), ModItems.GIRLFRIEND_SPAWN_EGG.get());
-
+        DriedToEgg(pWriter, ModBlocks.STONE_ANCIENT_DRIED_GIRLFRIEND.get(), ModItems.GIRLFRIEND_SPAWN_EGG.get());
+        DriedToEgg(pWriter, ModBlocks.DEEPSLATE_ANCIENT_DRIED_GIRLFRIEND.get(), ModItems.GIRLFRIEND_SPAWN_EGG.get());
 
         oreSmelting(pWriter, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RUBY.get(), 0.25f, 200, "ruby");
         oreBlasting(pWriter, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RUBY.get(), 0.25f, 100, "ruby");
@@ -137,7 +137,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.WATER_BUCKET)
                 .requires(block)
                 .unlockedBy(getHasName(block), has(block))
-                .save(pWriter, main.MOD_ID + ":" + "dried_to_" + getItemName(egg));
+                .save(pWriter, main.MOD_ID + ":" + getItemName(block)+ "_" + getItemName(egg));
     }
     private void GenToolSet(Consumer<FinishedRecipe> pWriter, ItemLike materialItem, String material, ItemLike sword, ItemLike pickaxe, ItemLike axe, ItemLike shovel, ItemLike hoe) {
         String MATERIAL = material.toUpperCase();

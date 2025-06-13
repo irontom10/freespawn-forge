@@ -19,7 +19,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.AMETHYST_BLOCK);
         blockWithItem(ModBlocks.RUBY_ORE);
         blockWithItem(ModBlocks.RUBY_BLOCK);
-        blockWithItem(ModBlocks.URANIUM_ORE);
+        blockWithItem(ModBlocks.STONE_URANIUM_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_URANIUM_ORE);
         blockWithItem(ModBlocks.URANIUM_BLOCK);
         blockWithItem(ModBlocks.TITANIUM_ORE);
         blockWithItem(ModBlocks.TITANIUM_BLOCK);
@@ -35,7 +36,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.MOBZILLA_SCALE_BLOCK);
         blockWithItem(ModBlocks.ENDER_PEARL_BLOCK);
         blockWithItem(ModBlocks.ENDER_EYE_BLOCK);
-        blockWithItem(ModBlocks.ANCIENT_DRIED_GIRLFRIEND);
+        blockWithItem(ModBlocks.STONE_ANCIENT_DRIED_GIRLFRIEND);
+        blockWithItem(ModBlocks.DEEPSLATE_ANCIENT_DRIED_GIRLFRIEND);
         
     }
     private void blockWithItem(RegistryObject<Block> blockRegistryObject){

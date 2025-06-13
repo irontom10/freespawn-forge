@@ -3,7 +3,6 @@ package com.irontom10.freespawn.datagen;
 import com.irontom10.freespawn.main;
 import com.irontom10.freespawn.world.ModBiomeModifiers;
 import com.irontom10.freespawn.world.ModConfiguredFeatures;
-import com.irontom10.freespawn.world.ModOrePlacement;
 import com.irontom10.freespawn.world.ModPlacedFeatures;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
@@ -22,6 +21,6 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
             .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);
 
     public ModWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries, Set.of(main.MOD_ID));
+        super(output, registries, BUILDER, Set.of(main.MOD_ID));
     }
 }

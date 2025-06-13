@@ -25,7 +25,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.CRYSTAL_STONE.get());
         this.dropSelf(ModBlocks.EXTREME_TORCH.get());
         this.dropSelf(ModBlocks.CRYSTAL_TORCH.get());
-        this.dropSelf(ModBlocks.URANIUM_ORE.get());
+        this.dropSelf(ModBlocks.STONE_URANIUM_ORE.get());
+        this.dropSelf(ModBlocks.DEEPSLATE_URANIUM_ORE.get());
         this.dropSelf(ModBlocks.URANIUM_BLOCK.get());
         this.dropSelf(ModBlocks.TITANIUM_ORE.get());
         this.dropSelf(ModBlocks.TITANIUM_BLOCK.get());
@@ -34,7 +35,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.PINK_TOURMALINE_BLOCK.get());
         this.dropSelf(ModBlocks.TIGERSEYE_BLOCK.get());
         this.dropSelf(ModBlocks.MOBZILLA_SCALE_BLOCK.get());
-        this.dropSelf(ModBlocks.ANCIENT_DRIED_GIRLFRIEND.get());
+        this.dropSelf(ModBlocks.STONE_ANCIENT_DRIED_GIRLFRIEND.get());
+        this.dropSelf(ModBlocks.DEEPSLATE_ANCIENT_DRIED_GIRLFRIEND.get());
         this.dropSelf(ModBlocks.CRYSTAL_WOOD_PLANKS.get());
 
     }
