@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-11T08:14:20.387234027	Block States: freespawn
+// 1.20.1	2025-06-12T20:58:27.796507812	Block States: freespawn
 c291657beb4f375858b6acb123a3a7fe0ed9b245 assets/freespawn/blockstates/amethyst_block.json
 114504e610ac7a21e206f90f9f3c22baaa2237dd assets/freespawn/blockstates/amethyst_ore.json
 52a1341558845e7604b8e392e27e26a774e24cfb assets/freespawn/blockstates/ancient_dried_girlfriend.json
@@ -6,6 +6,7 @@ c291657beb4f375858b6acb123a3a7fe0ed9b245 assets/freespawn/blockstates/amethyst_b
 95568e507a5f48fc6f84fe40b8ba492d4a655dc8 assets/freespawn/blockstates/cherry_leaves.json
 442a6d495b8b553c5237be93c0dd1d991c89c70a assets/freespawn/blockstates/crystal_stone.json
 a9738cbd9754f2ae57cfedc3a72901c62f96c716 assets/freespawn/blockstates/crystal_torch.json
+da0b1faa99055ded9cf8fb01221a4991b8f4e9a5 assets/freespawn/blockstates/crystal_wood_planks.json
 a4acc0a6e9a5412bebc25eb72bf164ae765a70c2 assets/freespawn/blockstates/ender_eye_block.json
 22314dc5ecc8a5f702080d7535cb37f501ee508a assets/freespawn/blockstates/ender_pearl_block.json
 71f0113a443850844526f48d1f034086b1307435 assets/freespawn/blockstates/extreme_torch.json
@@ -26,6 +27,7 @@ f3b69839655de1becfebbe9c053008fae4c67302 assets/freespawn/blockstates/titanium_b
 af98038d18dcbd11d522a64037f83f50211b8e7b assets/freespawn/models/block/cherry_leaves.json
 14a3b23bdf9b82a27fc763420294ae2bcf5d6f21 assets/freespawn/models/block/crystal_stone.json
 bbd870c5109b51b79aedaf02aa5b30cc7853d4fa assets/freespawn/models/block/crystal_torch.json
+cea3724e632ca003dc7322b9360b4f3ee0ffff33 assets/freespawn/models/block/crystal_wood_planks.json
 660c1549ac85950935dda632aaf6e19272f59c09 assets/freespawn/models/block/ender_eye_block.json
 2724d72b1624ef71f739eda5a55f6af3a565895e assets/freespawn/models/block/ender_pearl_block.json
 7cfc9e0e2665061536f98f1e04bc408aa4cbd6e6 assets/freespawn/models/block/extreme_torch.json
@@ -46,6 +48,7 @@ fdb33f130a90eb7015c3860b7d2af2074b7bf59f assets/freespawn/models/item/apple_leav
 0fa29955e0580eec45a06c99930a24f5d4143e3f assets/freespawn/models/item/cherry_leaves.json
 42944fe274267534ea867459b3653370609a038c assets/freespawn/models/item/crystal_stone.json
 2798c9ff4312480e27d5cda546c707d462ccc51d assets/freespawn/models/item/crystal_torch.json
+40a69dbc25e250a1231802cf1c3b66a50361c021 assets/freespawn/models/item/crystal_wood_planks.json
 e6d842d7a1e0544a2818a45b433a0ff71752eb08 assets/freespawn/models/item/ender_eye_block.json
 d8ca68c2b6648a78d5ed801b192fa2510350f104 assets/freespawn/models/item/ender_pearl_block.json
 3d019a312dc6c89f10132bc1a45657767260366f assets/freespawn/models/item/extreme_torch.json

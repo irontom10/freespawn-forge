@@ -1,5 +1,6 @@
 package com.irontom10.freespawn.item;
 
+
 import com.irontom10.freespawn.entity.ModEntities;
 import com.irontom10.freespawn.item.armor.amethyst.*;
 import com.irontom10.freespawn.item.armor.emerald.*;
@@ -15,18 +16,15 @@ import com.irontom10.freespawn.item.armor.queen.*;
 import com.irontom10.freespawn.item.armor.royal.*;
 import com.irontom10.freespawn.item.armor.ruby.*;
 import com.irontom10.freespawn.item.armor.ultimate.*;
-
 import com.irontom10.freespawn.item.special.MinersDream;
-import com.irontom10.freespawn.item.tool.ultimate.*;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SpawnEggItem;
+import com.irontom10.freespawn.util.ModAutoEnchants;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
-import static com.irontom10.freespawn.entity.ModEntities.GIRLFRIEND;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEM =
@@ -201,24 +199,6 @@ public class ModItems {
 
 
 
-    //Ultimate items
-    public static final RegistryObject<Item> ULTIMATE_SWORD =
-            ITEM.register("ultimate_sword", UltimateSword::new);
-
-    public static final RegistryObject<Item> ULTIMATE_PICKAXE =
-            ITEM.register("ultimate_pickaxe", UltimatePickaxe::new);
-
-    public static final RegistryObject<Item> ULTIMATE_AXE =
-            ITEM.register("ultimate_axe", UltimateAxe::new);
-
-    public static final RegistryObject<Item> ULTIMATE_HOE =
-            ITEM.register("ultimate_hoe", UltimateHoe::new);
-
-    public static final RegistryObject<Item> ULTIMATE_SHOVEL =
-            ITEM.register("ultimate_shovel", UltimateShovel::new);
-
-
-
 
     //Armor items
 
@@ -335,6 +315,299 @@ public class ModItems {
     public static final RegistryObject<Item> ULTIMATE_LEGGINGS =
             ITEM.register("ultimate_leggings", UltimateLeggings::new);
 
+    //Tool Items
+
+    public static final RegistryObject<Item> AMETHYST_SWORD =
+            ITEM.register("amethyst_sword", () -> new SwordItem(
+                    ModToolMaterials.AMETHYST,  // tool material
+                    3,                          // attack damage
+                    -2.4F,                      // attack speed
+                    new Item.Properties()
+            ));
+
+    public static final RegistryObject<Item> AMETHYST_PICKAXE =
+            ITEM.register("amethyst_pickaxe", () -> new PickaxeItem(
+                    ModToolMaterials.AMETHYST,  // tool material
+                    1,                          // mining level
+                    -2.8F,                      // attack speed
+                    new Item.Properties()
+            ));
+
+    public static final RegistryObject<Item> AMETHYST_AXE =
+            ITEM.register("amethyst_axe", () -> new AxeItem(
+                    ModToolMaterials.AMETHYST,  // tool material
+                    6,                          // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> AMETHYST_SHOVEL =
+            ITEM.register("amethyst_shovel", () -> new ShovelItem(
+                    ModToolMaterials.AMETHYST,  // tool material
+                    1.5F,                       // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> AMETHYST_HOE =
+            ITEM.register("amethyst_hoe", () -> new HoeItem(
+                    ModToolMaterials.AMETHYST,  // tool material
+                    -1,                         // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> RUBY_SWORD =
+            ITEM.register("ruby_sword", () -> new SwordItem(
+                    ModToolMaterials.RUBY,      // tool material
+                    3,                          // attack damage
+                    -2.4F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> RUBY_PICKAXE =
+            ITEM.register("ruby_pickaxe", () -> new PickaxeItem(
+                    ModToolMaterials.RUBY,      // tool material
+                    1,                          // mining level
+                    -2.8F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> RUBY_AXE =
+            ITEM.register("ruby_axe", () -> new AxeItem(
+                    ModToolMaterials.RUBY,      // tool material
+                    6,                          // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> RUBY_SHOVEL =
+            ITEM.register("ruby_shovel", () -> new ShovelItem(
+                    ModToolMaterials.RUBY,      // tool material
+                    1.5F,                       // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> RUBY_HOE =
+            ITEM.register("ruby_hoe", () -> new HoeItem(
+                    ModToolMaterials.RUBY,      // tool material
+                    -1,                         // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> TIGERSEYE_SWORD =
+            ITEM.register("tigerseye_sword", () -> new SwordItem(
+                    ModToolMaterials.TIGERS_EYE, // tool material
+                    3,                          // attack damage
+                    -2.4F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> TIGERSEYE_PICKAXE =
+            ITEM.register("tigerseye_pickaxe", () -> new PickaxeItem(
+                    ModToolMaterials.TIGERS_EYE, // tool material
+                    1,                          // mining level
+                    -2.8F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> TIGERSEYE_AXE =
+            ITEM.register("tigerseye_axe", () -> new AxeItem(
+                    ModToolMaterials.TIGERS_EYE, // tool material
+                    6,                          // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> TIGERSEYE_SHOVEL =
+            ITEM.register("tigerseye_shovel", () -> new ShovelItem(
+                    ModToolMaterials.TIGERS_EYE, // tool material
+                    1.5F,                       // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> TIGERSEYE_HOE =
+            ITEM.register("tigerseye_hoe", () -> new HoeItem(
+                    ModToolMaterials.TIGERS_EYE, // tool material
+                    -1,                         // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public  static final RegistryObject<Item> ULTIMATE_SWORD =
+            ITEM.register("ultimate_sword", () -> new SwordItem(
+                    ModToolMaterials.ULTIMATE,  // tool material
+                    3,                          // attack damage
+                    -2.4F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> ULTIMATE_PICKAXE =
+            ITEM.register("ultimate_pickaxe", () -> new PickaxeItem(
+                    ModToolMaterials.ULTIMATE,  // tool material
+                    1,                          // mining level
+                    -2.8F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> ULTIMATE_AXE =
+            ITEM.register("ultimate_axe", () -> new AxeItem(
+                    ModToolMaterials.ULTIMATE,  // tool material
+                    6,                          // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> ULTIMATE_SHOVEL =
+            ITEM.register("ultimate_shovel", () -> new ShovelItem(
+                    ModToolMaterials.ULTIMATE,  // tool material
+                    1.5F,                       // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> ULTIMATE_HOE =
+            ITEM.register("ultimate_hoe", () -> new HoeItem(
+                    ModToolMaterials.ULTIMATE,  // tool material
+                    -1,                         // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> EMERALD_SWORD =
+            ITEM.register("emerald_sword", () -> new SwordItem(
+                    ModToolMaterials.EMERALD,  // tool material
+                    3,                          // attack damage
+                    -2.4F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> EMERALD_PICKAXE =
+            ITEM.register("emerald_pickaxe", () -> new PickaxeItem(
+                    ModToolMaterials.EMERALD,  // tool material
+                    1,                          // mining level
+                    -2.8F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> EMERALD_AXE =
+            ITEM.register("emerald_axe", () -> new AxeItem(
+                    ModToolMaterials.EMERALD,  // tool material
+                    6,                          // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> EMERALD_SHOVEL =
+            ITEM.register("emerald_shovel", () -> new ShovelItem(
+                    ModToolMaterials.EMERALD,  // tool material
+                    1.5F,                       // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> EMERALD_HOE =
+            ITEM.register("emerald_hoe", () -> new HoeItem(
+                    ModToolMaterials.EMERALD,  // tool material
+                    -1,                         // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> CRYSTAL_WOOD_SWORD =
+            ITEM.register("crystal_wood_sword", () -> new SwordItem(
+                    ModToolMaterials.CRYSTAL_WOOD, // tool material
+                    3,                          // attack damage
+                    -2.4F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> CRYSTAL_WOOD_PICKAXE =
+            ITEM.register("crystal_wood_pickaxe", () -> new PickaxeItem(
+                    ModToolMaterials.CRYSTAL_WOOD, // tool material
+                    1,                          // mining level
+                    -2.8F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> CRYSTAL_WOOD_AXE =
+            ITEM.register("crystal_wood_axe", () -> new AxeItem(
+                    ModToolMaterials.CRYSTAL_WOOD, // tool material
+                    6,                          // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> CRYSTAL_WOOD_SHOVEL =
+            ITEM.register("crystal_wood_shovel", () -> new ShovelItem(
+                    ModToolMaterials.CRYSTAL_WOOD, // tool material
+                    1.5F,                       // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> CRYSTAL_WOOD_HOE =
+            ITEM.register("crystal_wood_hoe", () -> new HoeItem(
+                    ModToolMaterials.CRYSTAL_WOOD, // tool material
+                    -1,                         // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public  static final RegistryObject<Item> PINK_TOURMALINE_SWORD =
+            ITEM.register("pink_tourmaline_sword", () -> new SwordItem(
+                    ModToolMaterials.PINK_TOURMALINE, // tool material
+                    3,                          // attack damage
+                    -2.4F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> PINK_TOURMALINE_PICKAXE =
+            ITEM.register("pink_tourmaline_pickaxe", () -> new PickaxeItem(
+                    ModToolMaterials.PINK_TOURMALINE, // tool material
+                    1,                          // mining level
+                    -2.8F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> PINK_TOURMALINE_AXE =
+            ITEM.register("pink_tourmaline_axe", () -> new AxeItem(
+                    ModToolMaterials.PINK_TOURMALINE, // tool material
+                    6,                          // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> PINK_TOURMALINE_SHOVEL =
+            ITEM.register("pink_tourmaline_shovel", () -> new ShovelItem(
+                    ModToolMaterials.PINK_TOURMALINE, // tool material
+                    1.5F,                       // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> PINK_TOURMALINE_HOE =
+            ITEM.register("pink_tourmaline_hoe", () -> new HoeItem(
+                    ModToolMaterials.PINK_TOURMALINE, // tool material
+                    -1,                         // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> CRYSTAL_STONE_SWORD =
+            ITEM.register("crystal_stone_sword", () -> new SwordItem(
+                    ModToolMaterials.CRYSTAL_STONE, // tool material
+                    3,                          // attack damage
+                    -2.4F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> CRYSTAL_STONE_PICKAXE =
+            ITEM.register("crystal_stone_pickaxe", () -> new PickaxeItem(
+                    ModToolMaterials.CRYSTAL_STONE, // tool material
+                    1,                          // mining level
+                    -2.8F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> CRYSTAL_STONE_AXE =
+            ITEM.register("crystal_stone_axe", () -> new AxeItem(
+                    ModToolMaterials.CRYSTAL_STONE, // tool material
+                    6,                          // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> CRYSTAL_STONE_SHOVEL =
+            ITEM.register("crystal_stone_shovel", () -> new ShovelItem(
+                    ModToolMaterials.CRYSTAL_STONE, // tool material
+                    1.5F,                       // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> CRYSTAL_STONE_HOE =
+            ITEM.register("crystal_stone_hoe", () -> new HoeItem(
+                    ModToolMaterials.CRYSTAL_STONE, // tool material
+                    -1,                         // attack damage
+                    -3.0F,                      // attack speed
+                    new Item.Properties()
+            ));
+    public static final RegistryObject<Item> NIGHTMARE_SWORD =
+            ITEM.register("nightmare_sword", () -> new SwordItem(
+                    ModToolMaterials.NIGHTMARE, // tool material
+                    3,                          // attack damage
+                    -2.4F,                      // attack speed
+                    new Item.Properties()
+            ));
+
+
     //Spawn eggs
     public static final RegistryObject<Item> GIRLFRIEND_SPAWN_EGG =
             ITEM.register("girlfriend_spawn_egg",
@@ -351,5 +624,7 @@ public class ModItems {
 
     public static void register(IEventBus eventBus) {
         ITEM.register(eventBus);
+
+
     }
 }

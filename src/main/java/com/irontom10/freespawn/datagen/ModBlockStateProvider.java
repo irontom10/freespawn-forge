@@ -24,6 +24,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.TITANIUM_ORE);
         blockWithItem(ModBlocks.TITANIUM_BLOCK);
         blockWithItem(ModBlocks.CRYSTAL_STONE);
+        blockWithItem(ModBlocks.CRYSTAL_WOOD_PLANKS);
         blockWithItem(ModBlocks.EXTREME_TORCH);
         blockWithItem(ModBlocks.CRYSTAL_TORCH);
         blockWithItem(ModBlocks.APPLE_LEAVES);

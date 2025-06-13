@@ -35,6 +35,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.TIGERSEYE_BLOCK.get());
         this.dropSelf(ModBlocks.MOBZILLA_SCALE_BLOCK.get());
         this.dropSelf(ModBlocks.ANCIENT_DRIED_GIRLFRIEND.get());
+        this.dropSelf(ModBlocks.CRYSTAL_WOOD_PLANKS.get());
 
     }
     @Override

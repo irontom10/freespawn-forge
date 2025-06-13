@@ -1,6 +1,0 @@
-girlfriend skin randomization
-lower gf sound frequency
-fix for armor recipes
-make ores spawn in the world
-make gfs spawn in world naturally
-

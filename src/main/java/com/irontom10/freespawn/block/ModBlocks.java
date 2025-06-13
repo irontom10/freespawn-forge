@@ -70,6 +70,11 @@ public class ModBlocks {
                     .strength(1.5f, 2.0f)
                     .sound(SoundType.STONE))
     );
+    public static final RegistryObject<Block> CRYSTAL_WOOD_PLANKS = registerBlock("crystal_wood_planks",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(2.0f, 3.0f)
+                    .sound(SoundType.WOOD))
+    );
 
     public static final RegistryObject<Block> EXTREME_TORCH = registerBlock("extreme_torch",
             () -> new Block(BlockBehaviour.Properties.of()

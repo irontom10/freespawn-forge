@@ -1,9 +1,10 @@
-// 1.20.1	2025-06-11T08:14:20.386097911	Loot Tables
+// 1.20.1	2025-06-12T20:58:27.796204423	Loot Tables
 8ca056d8d61953d02227e509fd7bd914860ce558 data/freespawn/loot_tables/blocks/amethyst_block.json
 9a778853b2fb450b9a21e893faec74e542b177a2 data/freespawn/loot_tables/blocks/amethyst_ore.json
 9b32359641376ea8a45c0777a0a2e0b8b90f9081 data/freespawn/loot_tables/blocks/ancient_dried_girlfriend.json
 422887236cb7790c459396b21b7b194af2573411 data/freespawn/loot_tables/blocks/crystal_stone.json
 1d7cfa1672b1896f5680c6b984cbadd513f7a26b data/freespawn/loot_tables/blocks/crystal_torch.json
+02644bc2dbb965fe42484d835561b671045d5a7d data/freespawn/loot_tables/blocks/crystal_wood_planks.json
 ffc35188f9a4de0451f4260f06bc7d217f2d6a0e data/freespawn/loot_tables/blocks/ender_eye_block.json
 40b2c1c68d16d72b739128aa8259c19c66c02a73 data/freespawn/loot_tables/blocks/ender_pearl_block.json
 7030702f58193894ad609799a07b762d25ec50b5 data/freespawn/loot_tables/blocks/extreme_torch.json

@@ -141,11 +141,47 @@ public class ModItemModelProvider extends ItemModelProvider {
 
 
         //Weapons and tools
+        toolItem(ModItems.AMETHYST_SWORD);
+        toolItem(ModItems.AMETHYST_PICKAXE);
+        toolItem(ModItems.AMETHYST_AXE);
+        toolItem(ModItems.AMETHYST_SHOVEL);
+        toolItem(ModItems.AMETHYST_HOE);
+        toolItem(ModItems.RUBY_SWORD);
+        toolItem(ModItems.RUBY_PICKAXE);
+        toolItem(ModItems.RUBY_AXE);
+        toolItem(ModItems.RUBY_SHOVEL);
+        toolItem(ModItems.RUBY_HOE);
+        toolItem(ModItems.PINK_TOURMALINE_SWORD);
+        toolItem(ModItems.PINK_TOURMALINE_PICKAXE);
+        toolItem(ModItems.PINK_TOURMALINE_AXE);
+        toolItem(ModItems.PINK_TOURMALINE_SHOVEL);
+        toolItem(ModItems.PINK_TOURMALINE_HOE);
+        toolItem(ModItems.TIGERSEYE_SWORD);
+        toolItem(ModItems.TIGERSEYE_PICKAXE);
+        toolItem(ModItems.TIGERSEYE_AXE);
+        toolItem(ModItems.TIGERSEYE_SHOVEL);
+        toolItem(ModItems.TIGERSEYE_HOE);
         toolItem(ModItems.ULTIMATE_SWORD);
         toolItem(ModItems.ULTIMATE_PICKAXE);
         toolItem(ModItems.ULTIMATE_AXE);
         toolItem(ModItems.ULTIMATE_SHOVEL);
         toolItem(ModItems.ULTIMATE_HOE);
+        toolItem(ModItems.EMERALD_SWORD);
+        toolItem(ModItems.EMERALD_PICKAXE);
+        toolItem(ModItems.EMERALD_AXE);
+        toolItem(ModItems.EMERALD_SHOVEL);
+        toolItem(ModItems.EMERALD_HOE);
+        toolItem(ModItems.CRYSTAL_STONE_SWORD);
+        toolItem(ModItems.CRYSTAL_STONE_PICKAXE);
+        toolItem(ModItems.CRYSTAL_STONE_AXE);
+        toolItem(ModItems.CRYSTAL_STONE_SHOVEL);
+        toolItem(ModItems.CRYSTAL_STONE_HOE);
+        toolItem(ModItems.CRYSTAL_WOOD_SWORD);
+        toolItem(ModItems.CRYSTAL_WOOD_PICKAXE);
+        toolItem(ModItems.CRYSTAL_WOOD_AXE);
+        toolItem(ModItems.CRYSTAL_WOOD_SHOVEL);
+        toolItem(ModItems.CRYSTAL_WOOD_HOE);
+        toolItem(ModItems.NIGHTMARE_SWORD);
 
 
 

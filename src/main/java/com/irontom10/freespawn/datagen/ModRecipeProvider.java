@@ -70,6 +70,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         GenArmorSet(pWriter, ModItems.MOBZILLA_SCALE.get(), "mobzilla", ModItems.MOBZILLA_HELMET.get(), ModItems.MOBZILLA_CHESTPLATE.get(), ModItems.MOBZILLA_LEGGINGS.get(), ModItems.MOBZILLA_BOOTS.get());
         GenArmorSet(pWriter, ModItems.QUEEN_SCALE.get(), "queen", ModItems.QUEEN_HELMET.get(), ModItems.QUEEN_CHESTPLATE.get(), ModItems.QUEEN_LEGGINGS.get(), ModItems.QUEEN_BOOTS.get());
 
+        GenToolSet(pWriter, ModItems.AMETHYST.get(), "amethyst", ModItems.AMETHYST_SWORD.get(), ModItems.AMETHYST_PICKAXE.get(), ModItems.AMETHYST_AXE.get(), ModItems.AMETHYST_SHOVEL.get(), ModItems.AMETHYST_HOE.get());
+        GenToolSet(pWriter, Items.EMERALD, "emerald", ModItems.EMERALD_SWORD.get(), ModItems.EMERALD_PICKAXE.get(), ModItems.EMERALD_AXE.get(), ModItems.EMERALD_SHOVEL.get(), ModItems.EMERALD_HOE.get());
+        GenToolSet(pWriter, ModItems.RUBY.get(), "ruby", ModItems.RUBY_SWORD.get(), ModItems.RUBY_PICKAXE.get(), ModItems.RUBY_AXE.get(), ModItems.RUBY_SHOVEL.get(), ModItems.RUBY_HOE.get());
+        GenToolSet(pWriter, ModItems.PINK_TOURMALINE_INGOT.get(), "pink_tourmailine", ModItems.PINK_TOURMALINE_SWORD.get(), ModItems.PINK_TOURMALINE_PICKAXE.get(), ModItems.PINK_TOURMALINE_AXE.get(), ModItems.PINK_TOURMALINE_SHOVEL.get(), ModItems.PINK_TOURMALINE_HOE.get());
+        GenToolSet(pWriter, ModItems.TIGERSEYE_INGOT.get(), "tigerseye", ModItems.TIGERSEYE_SWORD.get(), ModItems.TIGERSEYE_PICKAXE.get(), ModItems.TIGERSEYE_AXE.get(), ModItems.TIGERSEYE_SHOVEL.get(), ModItems.TIGERSEYE_HOE.get());
+        GenToolSet(pWriter, ModBlocks.CRYSTAL_STONE.get(), "crystal_stone", ModItems.CRYSTAL_STONE_SWORD.get(), ModItems.CRYSTAL_STONE_PICKAXE.get(), ModItems.CRYSTAL_STONE_AXE.get(), ModItems.CRYSTAL_STONE_SHOVEL.get(), ModItems.CRYSTAL_STONE_HOE.get());
+        GenToolSet(pWriter, ModBlocks.CRYSTAL_WOOD_PLANKS.get(), "crystal_wood", ModItems.CRYSTAL_WOOD_SWORD.get(), ModItems.CRYSTAL_WOOD_PICKAXE.get(), ModItems.CRYSTAL_WOOD_AXE.get(), ModItems.CRYSTAL_WOOD_SHOVEL.get(), ModItems.CRYSTAL_WOOD_HOE.get());
+
     }
 
 
@@ -130,6 +138,59 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(block)
                 .unlockedBy(getHasName(block), has(block))
                 .save(pWriter, main.MOD_ID + ":" + "dried_to_" + getItemName(egg));
+    }
+    private void GenToolSet(Consumer<FinishedRecipe> pWriter, ItemLike materialItem, String material, ItemLike sword, ItemLike pickaxe, ItemLike axe, ItemLike shovel, ItemLike hoe) {
+        String MATERIAL = material.toUpperCase();
+
+        // Sword
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, sword)
+                .pattern("I")
+                .pattern("I")
+                .pattern("S")
+                .define('I', materialItem)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(materialItem), has(materialItem));
+
+
+        // Pickaxe
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pickaxe)
+                .pattern("III")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('I', materialItem)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(materialItem), has(materialItem));
+
+
+        // Axe
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, axe)
+                .pattern("II")
+                .pattern("IS")
+                .pattern(" S")
+                .define('I', materialItem)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(materialItem), has(materialItem));
+
+
+        // Shovel
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, shovel)
+                .pattern("I")
+                .pattern("S")
+                .pattern("S")
+                .define('I', materialItem)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(materialItem), has(materialItem));
+
+
+        // Hoe
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, hoe)
+                .pattern("II")
+                .pattern(" S")
+                .pattern(" S")
+                .define('I', materialItem)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(materialItem), has(materialItem));
+
     }
 
     private void GenArmorSet(Consumer<FinishedRecipe> pWriter, ItemLike item, String material, ItemLike helmet, ItemLike chestplate, ItemLike leggings, ItemLike boots) {
