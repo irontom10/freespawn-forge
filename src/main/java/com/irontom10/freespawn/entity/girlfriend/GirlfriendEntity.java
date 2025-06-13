@@ -39,7 +39,12 @@ public class GirlfriendEntity extends TamableAnimal implements RangedAttackMob {
         super(type, world);
         this.setCanPickUpLoot(true);
         this.xpReward = 0;
+        if(!world.isClientSide) {
+            this.setWhichGirl(this.random.nextInt(41));    // 0-40 inclusive
+            this.setWhichWetGirl(this.random.nextInt(18)); // 0-17 inclusive
+        }
     }
+
     @Override
     public AgeableMob getBreedOffspring(ServerLevel world, AgeableMob mate) {
         // you can return a new GirlfriendEntity if you want them to breed,
@@ -179,9 +184,7 @@ public class GirlfriendEntity extends TamableAnimal implements RangedAttackMob {
 
     // in GirlfriendEntity.java, after defineSynchedData()…
 
-    /**
-     * @return the dry-land texture index (0–40)
-     */
+
     public int getWhichGirl() {
         return this.entityData.get(TYPE);
     }
