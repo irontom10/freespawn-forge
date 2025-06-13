@@ -1,0 +1,4 @@
+// 1.20.1	2025-06-13T12:32:49.767879573	Registries
+0a30b27faddc97f617e4b368009e3caa5a9e87c1 data/freespawn/forge/biome_modifier/add_uranium_ore.json
+acf51d033f5f42aee9a6f1e5e59c54f14a7e123a data/freespawn/worldgen/configured_feature/urainium_ore.json
+b7b240f730b84d29586c9f3abbf69f67f131e761 data/freespawn/worldgen/placed_feature/uranium_ore_placed.json

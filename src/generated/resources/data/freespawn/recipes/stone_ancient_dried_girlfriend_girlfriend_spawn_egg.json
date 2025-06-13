@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "freespawn:stone_ancient_dried_girlfriend"
+    }
+  ],
+  "result": {
+    "item": "freespawn:girlfriend_spawn_egg"
+  }
+}
