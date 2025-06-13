@@ -8,6 +8,7 @@ import com.irontom10.freespawn.entity.girlfriend.GirlfriendEntity;
 import com.irontom10.freespawn.item.ModItems;
 import com.irontom10.freespawn.item.ModCreativeTabs;
 import com.irontom10.freespawn.sound.ModSounds;
+import com.irontom10.freespawn.util.FindBlockCommand;
 import com.irontom10.freespawn.util.ModAutoEnchants;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -15,7 +16,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
-import net.minecraftforge.event.server.ServerStartingEvent;
+import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -43,9 +44,13 @@ public class main {
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::addCreative);
         MinecraftForge.EVENT_BUS.register(this);
-
-
     }
+
+    @SubscribeEvent
+    public void onRegisterCommands(RegisterCommandsEvent event) {
+        FindBlockCommand.register(event.getDispatcher());
+    }
+
     private void onEntityAttributeCreation(EntityAttributeCreationEvent event){
         event.put(
                 ModEntities.GIRLFRIEND.get(),
@@ -78,10 +83,6 @@ public class main {
 
 
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
-    }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
