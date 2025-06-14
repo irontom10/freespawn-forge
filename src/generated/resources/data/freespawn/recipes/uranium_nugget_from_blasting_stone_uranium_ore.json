@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "uranium",
+  "ingredient": {
+    "item": "freespawn:stone_uranium_ore"
+  },
+  "result": "freespawn:uranium_nugget"
+}

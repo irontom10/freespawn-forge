@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "titanium",
+  "ingredient": {
+    "item": "freespawn:stone_titanium_ore"
+  },
+  "result": "freespawn:titanium_nugget"
+}
