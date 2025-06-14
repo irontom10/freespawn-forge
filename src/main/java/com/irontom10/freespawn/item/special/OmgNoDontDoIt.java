@@ -31,8 +31,7 @@ public class OmgNoDontDoIt extends  Item {
             Random random = new Random(randomSource.nextLong()); // FIX HERE
             int directionIndex = random.nextInt(4); // 0: North, 1: East, 2: South, 3: West
             int tree = random.nextInt(8);
-            BigSquareTree.generate(level, pos, random);
-
+            BigSquareTree.generate(level, pos, randomSource);
 //            switch (tree) {
 //                case 0 -> WindTree.generate(level, pos, directionIndex, random);
 //                case 1 -> SkyTree.generate(level, pos, directionIndex, random);
