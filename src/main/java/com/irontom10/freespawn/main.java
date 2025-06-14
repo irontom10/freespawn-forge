@@ -5,12 +5,15 @@ package com.irontom10.freespawn;
 import com.irontom10.freespawn.block.ModBlocks;
 import com.irontom10.freespawn.entity.ModEntities;
 import com.irontom10.freespawn.entity.girlfriend.GirlfriendEntity;
+import com.irontom10.freespawn.entity.shoe.ShoeEntityRenderer;
 import com.irontom10.freespawn.item.ModItems;
 import com.irontom10.freespawn.item.ModCreativeTabs;
 import com.irontom10.freespawn.sound.ModSounds;
 
 import com.irontom10.freespawn.util.ModAutoEnchants;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -91,8 +94,7 @@ public class main {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
-
+            EntityRenderers.register(ModEntities.SHOE.get(), ShoeEntityRenderer::new);
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.irontom10.freespawn.entity;
 
 import com.irontom10.freespawn.entity.girlfriend.GirlfriendEntity;
+import com.irontom10.freespawn.entity.shoe.ShoeEntity;
 import com.irontom10.freespawn.main;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -23,6 +24,15 @@ public class ModEntities {
                             .clientTrackingRange(8)
                             .build(new ResourceLocation(main.MOD_ID, "girlfriend").toString())
             );
+    public static final RegistryObject<EntityType<ShoeEntity>> SHOE =
+            ENTITIES.register("shoe",
+                    () -> EntityType.Builder
+                            .<ShoeEntity>of(ShoeEntity::new, MobCategory.MISC)
+                            .sized(0.5f, 0.5f)
+                            .clientTrackingRange(8)
+                            .build(new ResourceLocation(main.MOD_ID, "shoe").toString())
+            );
+
 
 
     public static void register(IEventBus bus) {

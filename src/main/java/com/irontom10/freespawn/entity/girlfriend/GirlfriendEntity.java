@@ -47,16 +47,19 @@ public class GirlfriendEntity extends TamableAnimal implements RangedAttackMob {
 
     @Override
     public AgeableMob getBreedOffspring(ServerLevel world, AgeableMob mate) {
-        // you can return a new GirlfriendEntity if you want them to breed,
-        // or just return null to disable breeding entirely:
         return null;
+    }
+    @Override
+    public boolean isBaby() {
+        return false;
     }
     /** Attribute registration */
     public static AttributeSupplier.Builder createAttributes() {
         return TamableAnimal.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 80.0)
                 .add(Attributes.MOVEMENT_SPEED, 0.3)
-                .add(Attributes.ATTACK_DAMAGE, 8.0);
+                .add(Attributes.ATTACK_DAMAGE, 8.0)
+                .add(Attributes.ARMOR, 8.0);
     }
 
     @Override
@@ -66,7 +69,6 @@ public class GirlfriendEntity extends TamableAnimal implements RangedAttackMob {
         this.entityData.define(WET_TYPE, 0);
         this.entityData.define(VOICE, 0);
         this.entityData.define(PRINCESS, false);
-        // … etc …
     }
 
     @Override
@@ -104,9 +106,12 @@ public class GirlfriendEntity extends TamableAnimal implements RangedAttackMob {
 
     @Override
     public void performRangedAttack(LivingEntity target, float distanceFactor) {
-        // your UltimateArrow logic here
-    }
 
+    }
+    @Override
+    public int getAmbientSoundInterval() {
+        return this.random.nextInt(1200);
+    }
     @Override
     protected SoundEvent getAmbientSound() {
         // e.g. water vs rain vs dark vs default
@@ -160,6 +165,10 @@ public class GirlfriendEntity extends TamableAnimal implements RangedAttackMob {
 
     public boolean CanSpawnSprint() {
         return false; // no despawn
+    }
+    @Override
+    public boolean causeFallDamage(float fallDistance, float damageMultiplier, DamageSource source) {
+        return false; // No fall damage
     }
     public ResourceLocation getTexture() {
         boolean inWater = this.isInWater();

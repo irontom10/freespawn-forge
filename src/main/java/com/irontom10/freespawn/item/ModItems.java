@@ -17,6 +17,7 @@ import com.irontom10.freespawn.item.armor.royal.*;
 import com.irontom10.freespawn.item.armor.ruby.*;
 import com.irontom10.freespawn.item.armor.ultimate.*;
 import com.irontom10.freespawn.item.special.MinersDream;
+import com.irontom10.freespawn.item.throwables.Shoe;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -618,6 +619,24 @@ public class ModItems {
                             0x663366,                         // secondary color (purple-ish)
                             new Item.Properties()
                     )
+            );
+
+
+    public static final RegistryObject<Item> RED_HEELS =
+            ITEM.register("red_heels",
+                    () -> new Shoe(new Item.Properties())
+            );
+    public static final RegistryObject<Item> BLACK_HEELS =
+            ITEM.register("black_heels",
+                    () -> new Shoe(new Item.Properties())
+            );
+    public static final RegistryObject<Item> SLIPPERS =
+            ITEM.register("slippers",
+                    () -> new Shoe(new Item.Properties())
+            );
+    public static final RegistryObject<Item> BOOTS =
+            ITEM.register("boots",
+                    () -> new Shoe(new Item.Properties())
             );
 
 

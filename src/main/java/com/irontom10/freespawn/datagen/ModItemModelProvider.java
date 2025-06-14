@@ -137,6 +137,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.EXPERIENCE_CHESTPLATE);
         simpleItem(ModItems.EXPERIENCE_LEGGINGS);
         simpleItem(ModItems.EXPERIENCE_BOOTS);
+        simpleItem(ModItems.RED_HEELS);
+        simpleItem(ModItems.BLACK_HEELS);
+        simpleItem(ModItems.SLIPPERS);
+        simpleItem(ModItems.BOOTS);
 
 
 
