@@ -1,9 +1,10 @@
-// 1.20.1	2025-06-13T21:05:07.495372059	Registries
+// 1.20.1	2025-06-13T21:35:46.180073218	Registries
 f8a2e7c3aa02f3220e55ee26f25f60f3fc3deefa data/freespawn/forge/biome_modifier/add_amethyst_ore.json
 d997a1794d8e1b955af91e1cf4856598ba918dc0 data/freespawn/forge/biome_modifier/add_block_diamond_ore.json
 5c5f99c358fbf20af5187f96225cb771435fa6a3 data/freespawn/forge/biome_modifier/add_block_emerald_ore.json
 447e23eaf82eaa886497fd1627c795863760c784 data/freespawn/forge/biome_modifier/add_block_gold_ore.json
 af478d7ac7e2aa260f586a11c0dca708b7dec177 data/freespawn/forge/biome_modifier/add_block_ruby_ore.json
+f944c1d0dfbe3ff139958866abce54403b973d57 data/freespawn/forge/biome_modifier/add_girlfriend_spawns.json
 b38b4d7864833c30aec595dc2600a5db8c27c6dc data/freespawn/forge/biome_modifier/add_ruby_ore.json
 814f77699c458f3da6274ee85fd3adb8da094cd2 data/freespawn/forge/biome_modifier/add_salt_ore.json
 44e672d9d7a070c304ff091acd034c88a4829f7d data/freespawn/forge/biome_modifier/add_titanium_ore.json

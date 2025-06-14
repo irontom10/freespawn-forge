@@ -24,6 +24,7 @@ public class ModEntities {
                             .build(new ResourceLocation(main.MOD_ID, "girlfriend").toString())
             );
 
+
     public static void register(IEventBus bus) {
         ENTITIES.register(bus);
     }
