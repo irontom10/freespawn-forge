@@ -1,7 +1,7 @@
 package com.irontom10.freespawn.item.special;
 
 import com.irontom10.freespawn.block.ModBlocks;
-import com.irontom10.freespawn.world.SeedTreeBuilder;
+import com.irontom10.freespawn.world.trees.SeedTreeBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;

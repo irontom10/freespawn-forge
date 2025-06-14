@@ -17,6 +17,7 @@ import com.irontom10.freespawn.item.armor.royal.*;
 import com.irontom10.freespawn.item.armor.ruby.*;
 import com.irontom10.freespawn.item.armor.ultimate.*;
 import com.irontom10.freespawn.item.special.MinersDream;
+import com.irontom10.freespawn.item.special.OmgNoDontDoIt;
 import com.irontom10.freespawn.item.throwables.Shoe;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
@@ -638,6 +639,8 @@ public class ModItems {
             ITEM.register("boots",
                     () -> new Shoe(new Item.Properties())
             );
+    public static final RegistryObject<Item> OMG_NO_DONT_DO_IT = ITEM.register("omg_no_dont_do_it",
+            () -> new OmgNoDontDoIt(new Item.Properties().stacksTo(1).durability(0).fireResistant()));
 
 
 

@@ -1,4 +1,4 @@
-package com.irontom10.freespawn.world;
+package com.irontom10.freespawn.world.trees;
 
 import com.irontom10.freespawn.block.ModBlocks;
 import net.minecraft.core.BlockPos;
