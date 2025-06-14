@@ -1,8 +1,21 @@
 {
   "values": [
+    "freespawn:stone_amethyst_ore",
+    "freespawn:deepslate_amethyst_ore",
+    "freespawn:stone_ruby_ore",
+    "freespawn:deepslate_ruby_ore",
+    "freespawn:stone_uranium_ore",
+    "freespawn:deepslate_uranium_ore",
+    "freespawn:stone_titanium_ore",
+    "freespawn:deepslate_titanium_ore",
+    "freespawn:stone_salt_ore",
+    "freespawn:deepslate_salt_ore",
     "freespawn:ruby_block",
     "freespawn:amethyst_block",
-    "freespawn:ruby_ore",
-    "freespawn:crystal_stone"
+    "freespawn:uranium_block",
+    "freespawn:titanium_block",
+    "freespawn:crystal_stone",
+    "freespawn:pink_tourmaline_block",
+    "freespawn:tigerseye_block"
   ]
 }

@@ -11,13 +11,11 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
-import org.objectweb.asm.commons.GeneratorAdapter;
 
 import java.util.List;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
-    private static final List<ItemLike> RUBY_SMELTABLES = List.of(ModBlocks.RUBY_ORE.get());
     private Consumer<FinishedRecipe> pWriter;
     private ItemLike block;
     private ItemLike ingot;
@@ -27,7 +25,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         super(pOutput);
     }
 
-
+    private static final List<ItemLike> RUBY_SMELTABLES = List.of(ModBlocks.STONE_RUBY_ORE.get(), ModBlocks.DEEPSLATE_RUBY_ORE.get());
+    private static final List<ItemLike> AMETHYST_SMELTABLES = List.of(ModBlocks.STONE_AMETHYST_ORE.get(), ModBlocks.DEEPSLATE_AMETHYST_ORE.get());
+    private static final List<ItemLike> URANIUM_SMELTABLES = List.of(ModBlocks.STONE_URANIUM_ORE.get(), ModBlocks.DEEPSLATE_URANIUM_ORE.get());
+    private static final List<ItemLike> TITANIUM_SMELTABLES = List.of(ModBlocks.STONE_TITANIUM_ORE.get(), ModBlocks.DEEPSLATE_TITANIUM_ORE.get());
+    private static final List<ItemLike> SALT_SMELTABLES = List.of(ModBlocks.STONE_SALT_ORE.get(), ModBlocks.DEEPSLATE_SALT_ORE.get());
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter){
@@ -44,19 +46,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         DriedToEgg(pWriter, ModBlocks.STONE_ANCIENT_DRIED_GIRLFRIEND.get(), ModItems.GIRLFRIEND_SPAWN_EGG.get());
         DriedToEgg(pWriter, ModBlocks.DEEPSLATE_ANCIENT_DRIED_GIRLFRIEND.get(), ModItems.GIRLFRIEND_SPAWN_EGG.get());
 
-        oreSmelting(pWriter, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RUBY.get(), 0.25f, 200, "ruby");
-        oreBlasting(pWriter, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RUBY.get(), 0.25f, 100, "ruby");
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RUBY_BLOCK.get())
-                .pattern("RRR")
-                .pattern("RRR")
-                .pattern("RRR")
-                .define('R', ModItems.RUBY.get())
-                .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get()))
-                .save(pWriter);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RUBY.get(), 9)
-                .requires(ModBlocks.RUBY_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.RUBY_BLOCK.get()), has(ModBlocks.RUBY_BLOCK.get()))
-                .save(pWriter);
+        oreSmeltingAndBlasting(pWriter, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RUBY.get(), 0.25f, 200, 100, "ruby");
+        oreSmeltingAndBlasting(pWriter, AMETHYST_SMELTABLES, RecipeCategory.MISC, ModItems.AMETHYST.get(), 0.25f, 200, 100, "amethyst");
+        oreSmeltingAndBlasting(pWriter, URANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.URANIUM_NUGGET.get(), 0.25f, 200, 100, "uranium");
+        oreSmeltingAndBlasting(pWriter, TITANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.TITANIUM_NUGGET.get(), 0.25f, 200, 100, "titanium");
+        oreSmeltingAndBlasting(pWriter, SALT_SMELTABLES, RecipeCategory.MISC, ModItems.SALT.get(), 0.25f, 200, 100, "salt");
 
 
         GenArmorSet(pWriter, ModItems.AMETHYST.get(), "amethyst", ModItems.AMETHYST_HELMET.get(), ModItems.AMETHYST_CHESTPLATE.get(), ModItems.AMETHYST_LEGGINGS.get(), ModItems.AMETHYST_BOOTS.get());
@@ -81,13 +75,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
 
-    protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
-        oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smelting");
+    protected static void oreSmeltingAndBlasting(Consumer<FinishedRecipe> consumer, List<ItemLike> ingredients,
+                                                 RecipeCategory category, ItemLike result,
+                                                 float experience, int smeltTime, int blastTime, String group) {
+        oreCooking(consumer, RecipeSerializer.SMELTING_RECIPE, ingredients, category, result, experience, smeltTime, group, "_from_smelting");
+        oreCooking(consumer, RecipeSerializer.BLASTING_RECIPE, ingredients, category, result, experience, blastTime, group, "_from_blasting");
     }
 
-    protected static void oreBlasting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
-        oreCooking(pFinishedRecipeConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_blasting");
-    }
 
     protected static void oreCooking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
         for(ItemLike itemlike : pIngredients) {

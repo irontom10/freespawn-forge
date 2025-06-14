@@ -2,6 +2,7 @@ package com.irontom10.freespawn.block;
 
 import com.irontom10.freespawn.item.ModItems;
 import com.irontom10.freespawn.main;
+import com.irontom10.freespawn.block.custom.AppleLeavesBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -18,25 +19,14 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, main.MOD_ID);
-
-    public static final RegistryObject<Block> RUBY_BLOCK = registerBlock("ruby_block",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(5.0f, 6.0f)
-                    .sound(SoundType.METAL))
-    );
-
-    public static final RegistryObject<Block> RUBY_ORE = registerBlock("ruby_ore",
+    //Register Ore Blocks
+    public static final RegistryObject<Block> STONE_TITANIUM_ORE = registerBlock("stone_titanium_ore",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3.0f, 4.0f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE))
     );
-    public static final RegistryObject<Block> AMETHYST_BLOCK = registerBlock("amethyst_block",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(5.0f, 6.0f)
-                    .sound(SoundType.METAL))
-    );
-    public static final RegistryObject<Block> AMETHYST_ORE = registerBlock("amethyst_ore",
+    public static final RegistryObject<Block> DEEPSLATE_TITANIUM_ORE = registerBlock("deepslate_titanium_ore",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3.0f, 4.0f)
                     .requiresCorrectToolForDrops()
@@ -54,17 +44,88 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.DEEPSLATE))
     );
-    public static final RegistryObject<Block> URANIUM_BLOCK = registerBlock("uranium_block",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(5.0f, 6.0f)
-                    .sound(SoundType.METAL))
-    );
-    public static final RegistryObject<Block> TITANIUM_ORE = registerBlock("titanium_ore",
+    public static final RegistryObject<Block> STONE_AMETHYST_ORE = registerBlock("stone_amethyst_ore",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3.0f, 4.0f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE))
     );
+    public static final RegistryObject<Block> DEEPSLATE_AMETHYST_ORE = registerBlock("deepslate_amethyst_ore",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3.0f, 4.0f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE))
+    );
+
+    public static final RegistryObject<Block> STONE_SALT_ORE = registerBlock("stone_salt_ore",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3.0f, 4.0f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE))
+    );
+    public static final RegistryObject<Block> DEEPSLATE_SALT_ORE = registerBlock("deepslate_salt_ore",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3.0f, 4.0f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE))
+    );
+    public static final RegistryObject<Block> STONE_RUBY_ORE = registerBlock("stone_ruby_ore",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3.0f, 4.0f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE))
+    );
+    public static final RegistryObject<Block> DEEPSLATE_RUBY_ORE = registerBlock("deepslate_ruby_ore",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3.0f, 4.0f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE))
+    );
+
+
+
+
+
+    //Spawn egg ores
+    public static final RegistryObject<Block> STONE_ANCIENT_DRIED_GIRLFRIEND = registerBlock("stone_ancient_dried_girlfriend",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.GRASS))
+    );
+    public static final RegistryObject<Block> DEEPSLATE_ANCIENT_DRIED_GIRLFRIEND = registerBlock("deepslate_ancient_dried_girlfriend",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.GRASS))
+    );
+
+
+
+
+
+
+
+
+    //Resource Blocks
+    public static final RegistryObject<Block> RUBY_BLOCK = registerBlock("ruby_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.METAL))
+    );
+
+
+    public static final RegistryObject<Block> AMETHYST_BLOCK = registerBlock("amethyst_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.METAL))
+    );
+
+
+    public static final RegistryObject<Block> URANIUM_BLOCK = registerBlock("uranium_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.METAL))
+    );
+
     public static final RegistryObject<Block> TITANIUM_BLOCK = registerBlock("titanium_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(5.0f, 6.0f)
@@ -124,8 +185,15 @@ public class ModBlocks {
     );
 
 
+
+
+
+
+
+
+
     public static final RegistryObject<Block> APPLE_LEAVES = registerBlock("apple_leaves",
-            () -> new com.irontom10.block.custom.AppleLeavesBlock()
+            () -> new AppleLeavesBlock()
     );
 
     public static final RegistryObject<Block> CHERRY_LEAVES = registerBlock("cherry_leaves",
@@ -158,17 +226,7 @@ public class ModBlocks {
                     .friction(0.8F))
     );
 
-    //Spawn egg ores
-    public static final RegistryObject<Block> STONE_ANCIENT_DRIED_GIRLFRIEND = registerBlock("stone_ancient_dried_girlfriend",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(5.0f, 6.0f)
-                    .sound(SoundType.GRASS))
-    );
-    public static final RegistryObject<Block> DEEPSLATE_ANCIENT_DRIED_GIRLFRIEND = registerBlock("deepslate_ancient_dried_girlfriend",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(5.0f, 6.0f)
-                    .sound(SoundType.GRASS))
-    );
+
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block){
@@ -176,8 +234,8 @@ public class ModBlocks {
         registerBlockItem(name, toReturn);
         return toReturn;
     }
-    private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block){
-        return ModItems.ITEM.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block){
+        ModItems.ITEM.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus) {

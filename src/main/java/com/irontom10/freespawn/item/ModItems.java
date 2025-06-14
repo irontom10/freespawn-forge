@@ -17,9 +17,7 @@ import com.irontom10.freespawn.item.armor.royal.*;
 import com.irontom10.freespawn.item.armor.ruby.*;
 import com.irontom10.freespawn.item.armor.ultimate.*;
 import com.irontom10.freespawn.item.special.MinersDream;
-import com.irontom10.freespawn.util.ModAutoEnchants;
 import net.minecraft.world.item.*;
-import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -147,6 +145,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> LETTUCE = ITEM.register("lettuce",
             () -> new Item(new Item.Properties().food(ModFoods.LETTUCE)));
+
+    public static final RegistryObject<Item> SALT = ITEM.register("salt",
+            () -> new Item(new Item.Properties()));
 
     //misc items
     public static final RegistryObject<Item> MINERS_DREAM = ITEM.register("miners_dream",

@@ -1,4 +1,4 @@
-package com.irontom10.block.custom;
+package com.irontom10.freespawn.block.custom;
 
 import com.irontom10.freespawn.item.ModItems;
 import net.minecraft.core.BlockPos;

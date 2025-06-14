@@ -20,17 +20,31 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(
+                        ModBlocks.STONE_AMETHYST_ORE.get(),
+                        ModBlocks.DEEPSLATE_AMETHYST_ORE.get(),
+                        ModBlocks.STONE_RUBY_ORE.get(),
+                        ModBlocks.DEEPSLATE_RUBY_ORE.get(),
+                        ModBlocks.STONE_URANIUM_ORE.get(),
+                        ModBlocks.DEEPSLATE_URANIUM_ORE.get(),
+                        ModBlocks.STONE_TITANIUM_ORE.get(),
+                        ModBlocks.DEEPSLATE_TITANIUM_ORE.get(),
+                        ModBlocks.STONE_SALT_ORE.get(),
+                        ModBlocks.DEEPSLATE_SALT_ORE.get(),
+
                         ModBlocks.RUBY_BLOCK.get(),
                         ModBlocks.AMETHYST_BLOCK.get(),
-                        ModBlocks.RUBY_ORE.get(),
-                        ModBlocks.CRYSTAL_STONE.get()
+                        ModBlocks.URANIUM_BLOCK.get(),
+                        ModBlocks.TITANIUM_BLOCK.get(),
+                        ModBlocks.CRYSTAL_STONE.get(),
+                        ModBlocks.PINK_TOURMALINE_BLOCK.get(),
+                        ModBlocks.TIGERSEYE_BLOCK.get()
+
+
                 );
         this.tag(BlockTags.NEEDS_IRON_TOOL);
 
 
-        this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(
-                        ModBlocks.RUBY_ORE.get()
-                );
+        this.tag(BlockTags.NEEDS_DIAMOND_TOOL);
+
     }
 }

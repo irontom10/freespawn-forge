@@ -15,14 +15,35 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        blockWithItem(ModBlocks.AMETHYST_ORE);
-        blockWithItem(ModBlocks.AMETHYST_BLOCK);
-        blockWithItem(ModBlocks.RUBY_ORE);
-        blockWithItem(ModBlocks.RUBY_BLOCK);
+        //ORE ITEMS
+        blockWithItem(ModBlocks.STONE_AMETHYST_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_AMETHYST_ORE);
+
+        blockWithItem(ModBlocks.STONE_RUBY_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_RUBY_ORE);
+
         blockWithItem(ModBlocks.STONE_URANIUM_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_URANIUM_ORE);
+
+        blockWithItem(ModBlocks.STONE_TITANIUM_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_TITANIUM_ORE);
+
+        blockWithItem(ModBlocks.STONE_SALT_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_SALT_ORE);
+
+
+        //ORE SPAWN EGGS
+        blockWithItem(ModBlocks.STONE_ANCIENT_DRIED_GIRLFRIEND);
+        blockWithItem(ModBlocks.DEEPSLATE_ANCIENT_DRIED_GIRLFRIEND);
+
+
+
+
+
+        //BLOCKS
+        blockWithItem(ModBlocks.AMETHYST_BLOCK);
+        blockWithItem(ModBlocks.RUBY_BLOCK);
         blockWithItem(ModBlocks.URANIUM_BLOCK);
-        blockWithItem(ModBlocks.TITANIUM_ORE);
         blockWithItem(ModBlocks.TITANIUM_BLOCK);
         blockWithItem(ModBlocks.CRYSTAL_STONE);
         blockWithItem(ModBlocks.CRYSTAL_WOOD_PLANKS);
@@ -36,8 +57,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.MOBZILLA_SCALE_BLOCK);
         blockWithItem(ModBlocks.ENDER_PEARL_BLOCK);
         blockWithItem(ModBlocks.ENDER_EYE_BLOCK);
-        blockWithItem(ModBlocks.STONE_ANCIENT_DRIED_GIRLFRIEND);
-        blockWithItem(ModBlocks.DEEPSLATE_ANCIENT_DRIED_GIRLFRIEND);
+
         
     }
     private void blockWithItem(RegistryObject<Block> blockRegistryObject){
