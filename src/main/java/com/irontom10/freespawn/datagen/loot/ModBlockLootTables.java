@@ -25,11 +25,13 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STONE_SALT_ORE.get());
         this.dropSelf(ModBlocks.DEEPSLATE_SALT_ORE.get());
 
-        this.dropSelf(ModBlocks.STONE_AMETHYST_ORE.get());
-        this.dropSelf(ModBlocks.DEEPSLATE_AMETHYST_ORE.get());
+        // Amethyst Ores drop Amethyst
+        this.add(ModBlocks.STONE_AMETHYST_ORE.get(), (block) -> createOreDrop(block, com.irontom10.freespawn.item.ModItems.AMETHYST.get()));
+        this.add(ModBlocks.DEEPSLATE_AMETHYST_ORE.get(), (block) -> createOreDrop(block, com.irontom10.freespawn.item.ModItems.AMETHYST.get()));
 
-        this.dropSelf(ModBlocks.STONE_RUBY_ORE.get());
-        this.dropSelf(ModBlocks.DEEPSLATE_RUBY_ORE.get());
+        // Ruby Ores drop Ruby
+        this.add(ModBlocks.STONE_RUBY_ORE.get(), (block) -> createOreDrop(block, com.irontom10.freespawn.item.ModItems.RUBY.get()));
+        this.add(ModBlocks.DEEPSLATE_RUBY_ORE.get(), (block) -> createOreDrop(block, com.irontom10.freespawn.item.ModItems.RUBY.get()));
 
 
         //ORE SPAWN EGGS

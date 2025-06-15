@@ -143,8 +143,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("S")
                 .define('I', materialItem)
                 .define('S', Items.STICK)
-                .unlockedBy(getHasName(materialItem), has(materialItem));
-
+                .unlockedBy(getHasName(materialItem), has(materialItem))
+                .save(pWriter);
 
         // Pickaxe
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pickaxe)
@@ -153,8 +153,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" S ")
                 .define('I', materialItem)
                 .define('S', Items.STICK)
-                .unlockedBy(getHasName(materialItem), has(materialItem));
-
+                .unlockedBy(getHasName(materialItem), has(materialItem))
+                .save(pWriter);
 
         // Axe
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, axe)
@@ -163,7 +163,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" S")
                 .define('I', materialItem)
                 .define('S', Items.STICK)
-                .unlockedBy(getHasName(materialItem), has(materialItem));
+                .unlockedBy(getHasName(materialItem), has(materialItem))
+                .save(pWriter);
 
 
         // Shovel
@@ -173,7 +174,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("S")
                 .define('I', materialItem)
                 .define('S', Items.STICK)
-                .unlockedBy(getHasName(materialItem), has(materialItem));
+                .unlockedBy(getHasName(materialItem), has(materialItem))
+                .save(pWriter);
 
 
         // Hoe
@@ -183,7 +185,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" S")
                 .define('I', materialItem)
                 .define('S', Items.STICK)
-                .unlockedBy(getHasName(materialItem), has(materialItem));
+                .unlockedBy(getHasName(materialItem), has(materialItem))
+                .save(pWriter);
 
     }
 
@@ -194,24 +197,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("III")
                 .pattern("I I")
                 .define('I', item)
-                .unlockedBy(getHasName(item), has(item));
+                .unlockedBy(getHasName(item), has(item))
+                .save(pWriter);
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, chestplate)
                 .pattern("I I")
                 .pattern("III")
                 .pattern("III")
                 .define('I', item)
-                .unlockedBy(getHasName(item), has(item));
+                .unlockedBy(getHasName(item), has(item))
+                .save(pWriter);
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, leggings)
                 .pattern("III")
                 .pattern("I I")
                 .pattern("I I")
                 .define('I', item)
-                .unlockedBy(getHasName(item), has(item));
+                .unlockedBy(getHasName(item), has(item))
+                .save(pWriter);
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, boots)
                 .pattern("I I")
                 .pattern("I I")
                 .define('I', item)
-                .unlockedBy(getHasName(item), has(item));
+                .unlockedBy(getHasName(item), has(item))
+                .save(pWriter);
     }
 
 

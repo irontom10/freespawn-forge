@@ -1,0 +1,3 @@
+need to altar the gf ai to make it more like the original
+
+clicking on one with a food item should apply some instant health, if it is like a gapple or potion, it should apply the effect

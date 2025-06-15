@@ -1,5 +1,7 @@
 package com.irontom10.freespawn.entity.girlfriend;
 
+import com.irontom10.freespawn.entity.ModEntities;
+import com.irontom10.freespawn.entity.shoe.ShoeEntity;
 import com.irontom10.freespawn.main;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -106,14 +108,43 @@ public class GirlfriendEntity extends TamableAnimal implements RangedAttackMob {
 
     @Override
     public void performRangedAttack(LivingEntity target, float distanceFactor) {
-
+        // She can throw shoes even if not wearing any
+        if (!this.level().isClientSide && target != null && this.isAlive()) {
+            Item[] shoes = new Item[] {
+                com.irontom10.freespawn.item.ModItems.RED_HEELS.get(),
+                com.irontom10.freespawn.item.ModItems.BLACK_HEELS.get(),
+                com.irontom10.freespawn.item.ModItems.SLIPPERS.get(),
+                com.irontom10.freespawn.item.ModItems.BOOTS.get()
+            };
+            Item shoeToThrow = shoes[this.random.nextInt(shoes.length)];
+            ItemStack stack = new ItemStack(shoeToThrow);
+            // Use your custom ShoeEntity
+            ShoeEntity proj = new ShoeEntity(this.level(), this);
+            proj.setItem(stack);
+            // Calculate direction
+            double dX = target.getX() - this.getX();
+            double dY = target.getY(0.333) - proj.getY();
+            double dZ = target.getZ() - this.getZ();
+            double dist = Math.sqrt(dX * dX + dZ * dZ);
+            // Set velocity (replace with your method if needed)
+            proj.shoot(dX, dY + dist * 0.2, dZ, 1.2F, 6.0F);
+            this.level().addFreshEntity(proj);
+        }
     }
     @Override
     public int getAmbientSoundInterval() {
+        // If sitting/quiet, don't make noise
+        if (this.isOrderedToSit()) {
+            return Integer.MAX_VALUE; // Effectively disables ambient sound
+        }
         return this.random.nextInt(1200);
     }
     @Override
     protected SoundEvent getAmbientSound() {
+        // If sitting/quiet, don't make noise
+        if (this.isOrderedToSit()) {
+            return null;
+        }
         // e.g. water vs rain vs dark vs default
         if (this.isInWater()) {
             return ModSounds.GIRLFIREND_WATER.get();
@@ -255,6 +286,49 @@ public class GirlfriendEntity extends TamableAnimal implements RangedAttackMob {
                 }
                 return InteractionResult.sidedSuccess(player.level().isClientSide);
             }
+            // 5. Change skin with dandelion
+            if (stack.getItem() == Items.DANDELION) {
+                if (!player.level().isClientSide) {
+                    // Pick a new random skin
+                    this.setWhichGirl(this.random.nextInt(41));
+                }
+                stack.shrink(1);
+                return InteractionResult.sidedSuccess(player.level().isClientSide);
+            }
+            // 6. Heal with food
+            if (stack.getItem().isEdible()) {
+                if (this.getHealth() < this.getMaxHealth()) {
+                    if (!player.level().isClientSide) {
+                        int healAmount = stack.getItem().getFoodProperties().getNutrition();
+                        this.heal((float)healAmount);
+                    }
+                    stack.shrink(1);
+                    return InteractionResult.sidedSuccess(player.level().isClientSide);
+                }
+            }
+            // 7. Sit/quiet toggle with diamond
+            if (stack.getItem() == Items.DIAMOND) {
+                if (!player.level().isClientSide) {
+                    this.setOrderedToSit(!this.isOrderedToSit());
+                }
+                return InteractionResult.sidedSuccess(player.level().isClientSide);
+            }
+            // 8. Allow holding any item (not just weapons/armor)
+            if (!(stack.getItem() instanceof ArmorItem) &&
+                !(stack.getItem() instanceof SwordItem) &&
+                !(stack.getItem() instanceof BowItem) &&
+                !(stack.getItem() instanceof TridentItem) &&
+                stack.getItem() != Items.DANDELION &&
+                !stack.getItem().isEdible() &&
+                stack.getItem() != Items.DIAMOND) {
+                ItemStack prevMain = this.getMainHandItem();
+                this.setItemSlot(EquipmentSlot.MAINHAND, stack.copy());
+                if (!player.getInventory().add(prevMain)) {
+                    player.drop(prevMain, false);
+                }
+                stack.shrink(1);
+                return InteractionResult.sidedSuccess(player.level().isClientSide);
+            }
         }
 
         // fallback to sitting behaviour
@@ -282,6 +356,42 @@ public class GirlfriendEntity extends TamableAnimal implements RangedAttackMob {
         int v = Mth.clamp(value, 0, 17);
         this.entityData.set(WET_TYPE, v);
     }
+
+    // Auto-regen fields
+    private long lastCombatTick = 0;
+    private long lastRegenTick = 0;
+
+    @Override
+    public boolean hurt(DamageSource source, float amount) {
+        boolean result = super.hurt(source, amount);
+        if (!this.level().isClientSide) {
+            this.lastCombatTick = this.level().getGameTime();
+        }
+        return result;
+    }
+
+    @Override
+    public void aiStep() {
+        super.aiStep();
+        if (!this.level().isClientSide && this.isAlive()) {
+            long now = this.level().getGameTime();
+            // Only regen if 30s (600 ticks) since last combat
+            if (now - lastCombatTick >= 600 && now - lastRegenTick >= 200 && this.getHealth() < this.getMaxHealth()) {
+                this.heal(1.0F);
+                this.lastRegenTick = now;
+            }
+            // Reset regen timer if in combat
+            if (now - lastCombatTick < 600) {
+                this.lastRegenTick = now;
+            }
+        }
+    }
+
+    @Override
+    public boolean fireImmune() {
+        return true;
+    }
+
 
 
     // … your interact(), getTexture() (in your renderer), spawn conditions, etc. …

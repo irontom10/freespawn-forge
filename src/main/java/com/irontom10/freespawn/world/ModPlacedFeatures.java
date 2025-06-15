@@ -26,6 +26,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> BLOCK_DIAMOND_ORE_PLACED_KEY = registryKey("block_diamond_ore_placed");
     public static final ResourceKey<PlacedFeature> BLOCK_EMERALD_ORE_PLACED_KEY = registryKey("block_emerald_ore_placed");
     public static final ResourceKey<PlacedFeature> BLOCK_GOLD_ORE_PLACED_KEY = registryKey("block_gold_ore_placed");
+    public static final ResourceKey<PlacedFeature> BIG_ROUND_TREE_PLACED_KEY = registryKey("big_round_tree_placed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);

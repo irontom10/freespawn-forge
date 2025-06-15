@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lavaeel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "freespawn:lavaeel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "freespawn:lavaeel_boots"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_lavaeel",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "freespawn:lavaeel_boots"
+    ]
+  },
+  "sends_telemetry_event": false
+}
