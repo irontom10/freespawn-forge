@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "freespawn:item/ultimate_helmet"
+    "layer0": "freespawn:item/omg_no_dont_do_it"
   }
 }

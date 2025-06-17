@@ -146,7 +146,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(materialItem), has(materialItem))
                 .save(pWriter);
 
-        // Pickaxe
+        // AmethystPickaxe
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pickaxe)
                 .pattern("III")
                 .pattern(" S ")

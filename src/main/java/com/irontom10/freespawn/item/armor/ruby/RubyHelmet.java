@@ -2,6 +2,7 @@ package com.irontom10.freespawn.item.armor.ruby;
 
 
 import com.irontom10.freespawn.item.armor.ModArmorMaterials;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -22,8 +23,8 @@ public class RubyHelmet extends ArmorItem {
             ItemStack stack,
             Level world,
             net.minecraft.world.entity.Entity entity,
-            int      slot,
-            boolean  selected
+            int slot,
+            boolean selected
     ) {
         if (!world.isClientSide()
                 && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.ALL_DAMAGE_PROTECTION, stack) <= 0) {
@@ -37,7 +38,7 @@ public class RubyHelmet extends ArmorItem {
                 && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.BLAST_PROTECTION, stack) <= 0) {
             stack.enchant(Enchantments.BLAST_PROTECTION, 5);
         }
-        if( !world.isClientSide()
+        if (!world.isClientSide()
                 && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.PROJECTILE_PROTECTION, stack) <= 0) {
             stack.enchant(Enchantments.PROJECTILE_PROTECTION, 5);
         }
@@ -52,3 +53,4 @@ public class RubyHelmet extends ArmorItem {
 
         super.inventoryTick(stack, world, entity, slot, selected);
     }
+}

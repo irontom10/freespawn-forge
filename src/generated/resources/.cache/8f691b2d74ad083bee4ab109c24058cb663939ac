@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-14T08:10:19.698055902	Item Models: freespawn
+// 1.20.1	2025-06-16T19:09:43.062444938	Item Models: freespawn
 b9b9df8a5fcb31f69abc2bebb692a1718535b0b9 assets/freespawn/models/item/a_crabby_patty.json
 0f6c9047d1707eedab0eeee8a539c30e28160598 assets/freespawn/models/item/amethyst.json
 e1ed9702a95bc150ea43c32bfc3123ca0d30b87e assets/freespawn/models/item/amethyst_axe.json
@@ -50,6 +50,7 @@ cf2038bcbffb4d67aa8ed2a5f06fb2e9455c0766 assets/freespawn/models/item/emerald_sh
 c86c8b006da363cd928de873e4b3ec99ea7606ce assets/freespawn/models/item/experience_leggings.json
 33cf032b92bddb0107da982ec43b7917cc383035 assets/freespawn/models/item/fire_fish.json
 1b6d98fd10e3c372a6b2e06343d6574c976fa4dd assets/freespawn/models/item/garden_salad.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/freespawn/models/item/girlfriend_spawn_egg.json
 b9a20bd1f99e4e8860c70ac9db8b196ecaea0f39 assets/freespawn/models/item/gray_fish.json
 9d4e26da7ff234d51564e35eb4b7e5641ed5c030 assets/freespawn/models/item/green_fish.json
 ca18120c2d6deeaee00dd6ba6a65cc12f2a3539e assets/freespawn/models/item/jew_fish.json
@@ -76,6 +77,7 @@ b459abda8ff9b156341853c6d67d6402b24f5a47 assets/freespawn/models/item/mothscale_
 d426c3a87d0ca6313ee1ffe2e6b3f3912eaf8716 assets/freespawn/models/item/mothscale_helmet.json
 54ecef55dcfec28fe07c9965f9099fcef0de977a assets/freespawn/models/item/mothscale_leggings.json
 06968134c864940e6dde0dd5293e2485094c9dd8 assets/freespawn/models/item/nightmare_sword.json
+fa90c02b7affd07101fc61bc78641e5c2fb2bd80 assets/freespawn/models/item/omg_no_dont_do_it.json
 34944f8d7f9e79d53d3d3368ea83ba985dc284ef assets/freespawn/models/item/peach.json
 c3329cd479f79200064228766ed719ee611d5a73 assets/freespawn/models/item/peacock_boots.json
 738e5ee75eb25e83e4000b8b83e44ec4d94cc7c9 assets/freespawn/models/item/peacock_chestplate.json
@@ -124,6 +126,7 @@ c6857a476703787a8c5dffd358ecb6b0b1f34226 assets/freespawn/models/item/ruby_leggi
 1c3b4cdc933f28368f1090d665bf94772b07f739 assets/freespawn/models/item/ruby_pickaxe.json
 e57581062bfc55b053c836e92fae4cd85143cac3 assets/freespawn/models/item/ruby_shovel.json
 828bee1719c93c2c8b5fd41bf044238c97c61ae9 assets/freespawn/models/item/ruby_sword.json
+46763e9ebc2aa2ea9d7fb4bbdaae2752bf9ef5a2 assets/freespawn/models/item/salt.json
 74721c853615c280b2904cb9d816fda073f317c9 assets/freespawn/models/item/slippers.json
 0f8a42c3b126e3c22f50dd625b1b3f262f8a5b6e assets/freespawn/models/item/spark_fish.json
 c8f67270df7902c08cc1ab15499fd921db546364 assets/freespawn/models/item/strawberry.json
@@ -142,11 +145,7 @@ f8cdfc33ffeae29b33881196285e852ebeb98faf assets/freespawn/models/item/titanium_i
 d9420b51846c0a42b8a1deeccebe67d7dfc82a55 assets/freespawn/models/item/titanium_nugget.json
 3dcd80fd8614c9707f4f57889cc03216c2075f0b assets/freespawn/models/item/tomato.json
 2ae6570c634d05b6ab2e2c00616e38326bfb6c49 assets/freespawn/models/item/ultimate_axe.json
-2a45f618843f5bf47bd6c5c904b09680a284cbfe assets/freespawn/models/item/ultimate_boots.json
-ff7b43a864c2eef8cd56a41e5413042be8fd0777 assets/freespawn/models/item/ultimate_chestplate.json
-c77dc4d4782cb08ecc6a9351daaddd62e5490607 assets/freespawn/models/item/ultimate_helmet.json
 1a5f063cb3915ee9f464c21afb70503c3d2f9467 assets/freespawn/models/item/ultimate_hoe.json
-550f380c88ec3c288c225e86cc7b983c9f1a93ac assets/freespawn/models/item/ultimate_leggings.json
 6859c44dd49ea85a7233e7fc6a490086e75388aa assets/freespawn/models/item/ultimate_pickaxe.json
 1be038b62f42cd1e4d66087dd89c96af917cc584 assets/freespawn/models/item/ultimate_shovel.json
 523ced99f2908cb82f940a820c15f098cca571c0 assets/freespawn/models/item/ultimate_sword.json
