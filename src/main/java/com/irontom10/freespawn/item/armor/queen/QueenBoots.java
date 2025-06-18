@@ -26,5 +26,19 @@ public class QueenBoots extends ArmorItem {
 			boolean selected) {
 
 		super.inventoryTick(stack, world, entity, slot, selected);
+		if (!world.isClientSide() && entity instanceof net.minecraft.world.entity.LivingEntity livingEntity) {
+			ItemStack equipped = livingEntity.getItemBySlot(net.minecraft.world.entity.EquipmentSlot.FEET);
+
+			if (equipped == stack) {
+				// Add Slow Falling for 5 ticks (0.25 seconds), re-applied every tick to maintain effect
+				livingEntity.addEffect(new net.minecraft.world.effect.MobEffectInstance(
+						net.minecraft.world.effect.MobEffects.SLOW_FALLING,
+						5, // duration in ticks
+						0, // amplifier (level 1)
+						true, // ambient
+						false // showParticles
+				));
+			}
+		}
 	}
 }

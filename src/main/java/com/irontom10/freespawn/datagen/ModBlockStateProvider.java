@@ -8,10 +8,16 @@ import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.Set;
+import java.util.HashSet;
+import net.minecraft.resources.ResourceLocation;
+
 public class ModBlockStateProvider extends BlockStateProvider {
   public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
     super(output, main.MOD_ID, exFileHelper);
   }
+
+  private final Set<ResourceLocation> modelledBlocks = new HashSet<>();
 
   @Override
   protected void registerStatesAndModels() {
@@ -57,9 +63,20 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
   private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
     simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    modelledBlocks.add(blockRegistryObject.getId());
   }
 
   private void torchWithItem() {
 
   }
+
+  private void validateAllBlocksHaveModels() {
+    for (RegistryObject<Block> block : ModBlocks.BLOCKS.getEntries()) {
+      ResourceLocation id = block.getId();
+      if (!modelledBlocks.contains(id)) {
+        throw new IllegalStateException("❌ Missing block model for: " + id);
+      }
+    }
+  }
+
 }

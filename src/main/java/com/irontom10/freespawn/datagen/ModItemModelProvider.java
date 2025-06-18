@@ -12,10 +12,18 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.stream.Collectors;
+
 public class ModItemModelProvider extends ItemModelProvider {
   public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
     super(output, main.MOD_ID, existingFileHelper);
   }
+
+  private final Set<ResourceLocation> modelledItems = new HashSet<>();
 
   @Override
   protected void registerModels() {
@@ -184,22 +192,47 @@ public class ModItemModelProvider extends ItemModelProvider {
     // Spawn eggs
     spawnEggItem(ModItems.GIRLFRIEND_SPAWN_EGG);
 
+    validateAllItemsHaveModels();
   }
 
   private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
+    modelledItems.add(item.getId());
     return withExistingParent(item.getId().getPath(),
         new ResourceLocation("item/generated")).texture("layer0",
             new ResourceLocation(main.MOD_ID, "item/" + item.getId().getPath()));
   }
 
   private ItemModelBuilder toolItem(RegistryObject<Item> item) {
+    modelledItems.add(item.getId());
     return withExistingParent(item.getId().getPath(),
         new ResourceLocation("item/handheld")).texture("layer0",
             new ResourceLocation(main.MOD_ID, "item/" + item.getId().getPath()));
   }
 
   private ItemModelBuilder spawnEggItem(RegistryObject<Item> item) {
+    modelledItems.add(item.getId());
     return withExistingParent(item.getId().getPath(),
         new ResourceLocation("item/template_spawn_egg"));
   }
+
+  private void validateAllItemsHaveModels() {
+    List<ResourceLocation> missing = new ArrayList<>();
+
+    for (RegistryObject<Item> item : ModItems.ITEM.getEntries()) {
+      // Skip block items
+      if (item.get() instanceof net.minecraft.world.item.BlockItem)
+        continue;
+
+      ResourceLocation id = item.getId();
+      if (!modelledItems.contains(id)) {
+        missing.add(id);
+      }
+    }
+
+    if (!missing.isEmpty()) {
+      throw new IllegalStateException("Missing models for items:\n" +
+          missing.stream().map(ResourceLocation::toString).collect(Collectors.joining("\n")));
+    }
+  }
+
 }

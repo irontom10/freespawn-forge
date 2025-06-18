@@ -27,27 +27,27 @@ public class MobzillaBoots extends ArmorItem {
     ) {
         if (!world.isClientSide()
                 && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.ALL_DAMAGE_PROTECTION, stack) <= 0) {
-            stack.enchant(Enchantments.ALL_DAMAGE_PROTECTION, 5);
+            stack.enchant(Enchantments.ALL_DAMAGE_PROTECTION, 10);
         }
         if (!world.isClientSide()
                 && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FIRE_PROTECTION, stack) <= 0) {
-            stack.enchant(Enchantments.FIRE_PROTECTION, 5);
+            stack.enchant(Enchantments.FIRE_PROTECTION, 10);
         }
         if (!world.isClientSide()
                 && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.BLAST_PROTECTION, stack) <= 0) {
-            stack.enchant(Enchantments.BLAST_PROTECTION, 5);
+            stack.enchant(Enchantments.BLAST_PROTECTION, 10);
         }
         if( !world.isClientSide()
                 && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.PROJECTILE_PROTECTION, stack) <= 0) {
-            stack.enchant(Enchantments.PROJECTILE_PROTECTION, 5);
+            stack.enchant(Enchantments.PROJECTILE_PROTECTION, 10);
+        }
+        if( !world.isClientSide()
+                && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.UNBREAKING, stack) <= 0) {
+            stack.enchant(Enchantments.UNBREAKING, 5);
         }
         if (!world.isClientSide()
                 && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FALL_PROTECTION, stack) <= 0) {
-            stack.enchant(Enchantments.FALL_PROTECTION, 3);
-        }
-        if (!world.isClientSide()
-                && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FROST_WALKER, stack) <= 0) {
-            stack.enchant(Enchantments.FROST_WALKER, 3);
+            stack.enchant(Enchantments.FALL_PROTECTION, 10);
         }
         super.inventoryTick(stack, world, entity, slot, selected);
     }

@@ -40,6 +40,7 @@
   "item.freespawn.lettuce": "Lettuce",
   "item.freespawn.miners_dream": "Miner’s Dream",
   "item.freespawn.apple_tree_seed": "Apple Tree Seed",
+  "item.freespawn.omg_no_dont_do_it": "OMG! NO! DON'T! DO! IT!",
   "item.freespawn.amethyst": "Amethyst",
   "item.freespawn.ruby": "Ruby",
   "item.freespawn.mothscale": "Mothscale",
@@ -52,16 +53,12 @@
   "item.freespawn.uranium_nugget": "Uranium Nugget",
   "item.freespawn.titanium_ingot": "Titanium Ingot",
   "item.freespawn.titanium_nugget": "Titanium Nugget",
-
+  "item.freespawn.ememrald_pickaxe": "Emerald Pickaxe",
   "item.freespawn.ultimate_sword": "Ultimate Sword",
   "item.freespawn.ultimate_pickaxe": "Ultimate Pickaxe",
   "item.freespawn.ultimate_axe": "Ultimate Axe",
   "item.freespawn.ultimate_hoe": "Ultimate Hoe",
   "item.freespawn.ultimate_shovel": "Ultimate Shovel",
-
-
-
-
   "block.freespawn.ruby_block": "Ruby Block",
   "block.freespawn.ruby_ore": "Ruby Ore",
   "block.freespawn.amethyst_block": "Amethyst Block",
@@ -81,10 +78,6 @@
   "block.freespawn.apple_leaves": "Apple Leaves",
   "block.freespawn.cherry_leaves": "Cherry Leaves",
   "block.freespawn.peach_leaves": "Peach Leaves",
-
-
-
-
   "item.freespawn.amethyst_helmet": "Amethyst Helmet",
   "item.freespawn.amethyst_chestplate": "Amethyst Chestplate",
   "item.freespawn.amethyst_leggings": "Amethyst Leggings",

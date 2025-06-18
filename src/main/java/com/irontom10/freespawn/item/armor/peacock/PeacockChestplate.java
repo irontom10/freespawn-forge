@@ -25,22 +25,6 @@ public class PeacockChestplate extends ArmorItem {
             int      slot,
             boolean  selected
     ) {
-        if (!world.isClientSide()
-                && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.ALL_DAMAGE_PROTECTION, stack) <= 0) {
-            stack.enchant(Enchantments.ALL_DAMAGE_PROTECTION, 5);
-        }
-        if (!world.isClientSide()
-                && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FIRE_PROTECTION, stack) <= 0) {
-            stack.enchant(Enchantments.FIRE_PROTECTION, 5);
-        }
-        if (!world.isClientSide()
-                && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.BLAST_PROTECTION, stack) <= 0) {
-            stack.enchant(Enchantments.BLAST_PROTECTION, 5);
-        }
-        if( !world.isClientSide()
-                && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.PROJECTILE_PROTECTION, stack) <= 0) {
-            stack.enchant(Enchantments.PROJECTILE_PROTECTION, 5);
-        }
         super.inventoryTick(stack, world, entity, slot, selected);
     }
 }
