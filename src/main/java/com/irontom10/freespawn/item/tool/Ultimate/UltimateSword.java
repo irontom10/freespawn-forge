@@ -6,7 +6,6 @@ import net.minecraft.world.entity.player.Player;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
@@ -15,7 +14,7 @@ public class UltimateSword extends SwordItem {
   public UltimateSword() {
     super(
         ModToolMaterials.ULTIMATE,
-        36, // attack damage
+        3, // attack damage
         -2.4F, // attack speed
         new Properties());
   }

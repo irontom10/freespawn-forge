@@ -17,8 +17,8 @@ public class UltimatePickaxe extends PickaxeItem {
   public UltimatePickaxe() {
     super(
         ModToolMaterials.ULTIMATE, // tier
-        32, // base attack damage modifier
-        -3.0F, // attack speed modifier
+        1, // base attack damage modifier
+        -2.8F, // attack speed modifier
         new Properties());
   }
 

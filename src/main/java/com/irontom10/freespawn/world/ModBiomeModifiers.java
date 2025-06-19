@@ -95,7 +95,7 @@ public class ModBiomeModifiers {
                         biomes.getOrThrow(Biomes.SAVANNA_PLATEAU)
                 ),
                 List.of(new MobSpawnSettings.SpawnerData(
-                        ModEntities.GIRLFRIEND.get(), 10, 3, 6
+                        ModEntities.GIRLFRIEND.get(), 1, 3, 6
                 ))));
     }
 

@@ -12,7 +12,7 @@ public class UltimateAxe extends AxeItem {
   public UltimateAxe() {
     super(
         ModToolMaterials.ULTIMATE, // material
-        40, // base damage (vanilla netherite axe is 5)
+        5, // base damage (vanilla netherite axe is 5)
         -3.0F, // attack speed (vanilla netherite axe is -3.0)
         new Properties());
   }

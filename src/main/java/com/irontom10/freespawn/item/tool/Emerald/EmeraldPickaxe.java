@@ -13,7 +13,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class EmeraldPickaxe extends PickaxeItem {
   public EmeraldPickaxe() {
     super(
-        ModToolMaterials.ULTIMATE, // tier
+        ModToolMaterials.EMERALD, // tier
         1, // base attack damage modifier
         -2.8F, // attack speed modifier
         new Properties());

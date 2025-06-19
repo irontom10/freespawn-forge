@@ -23,7 +23,7 @@ public class UltimateHoe extends HoeItem {
   public UltimateHoe() {
     super(
         ModToolMaterials.ULTIMATE, // material
-        30,
+        -40,
         -1F, // hoe attack speed tweak (vanilla netherite hoe is -1.0)
         new Properties());
   }

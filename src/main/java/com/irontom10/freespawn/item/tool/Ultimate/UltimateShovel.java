@@ -1,9 +1,7 @@
 package com.irontom10.freespawn.item.tool.Ultimate;
 
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.Tiers;
@@ -13,7 +11,7 @@ public class UltimateShovel extends ShovelItem {
   public UltimateShovel() {
     super(
         Tiers.NETHERITE, // material
-        35, // base damage (vanilla netherite shovel is 1.5)
+        1.5F, // base damage (vanilla netherite shovel is 1.5)
         -3.0F, // attack speed
         new Properties());
   }
