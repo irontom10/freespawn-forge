@@ -15,6 +15,6 @@
     "type": "freespawn:girlfriend",
     "maxCount": 6,
     "minCount": 3,
-    "weight": 10
+    "weight": 1
   }
 }

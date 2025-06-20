@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-16T19:09:43.062444938	Item Models: freespawn
+// 1.20.1	2025-06-20T16:49:30.334023024	Item Models: freespawn
 b9b9df8a5fcb31f69abc2bebb692a1718535b0b9 assets/freespawn/models/item/a_crabby_patty.json
 0f6c9047d1707eedab0eeee8a539c30e28160598 assets/freespawn/models/item/amethyst.json
 e1ed9702a95bc150ea43c32bfc3123ca0d30b87e assets/freespawn/models/item/amethyst_axe.json
@@ -10,6 +10,7 @@ afb96ff38ee0bf6d10e59c0843f54a168339bdd3 assets/freespawn/models/item/amethyst_h
 b7f95820dca25b6988a2c53b3662aba81da5857f assets/freespawn/models/item/amethyst_pickaxe.json
 58c3afd19d442e690cc57dcc2a3ff85da74ece78 assets/freespawn/models/item/amethyst_shovel.json
 8f3ca4d816123e6a7622e9fe565c666e4fb58035 assets/freespawn/models/item/amethyst_sword.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/freespawn/models/item/apple_cow_spawn_egg.json
 7f958ed23bd90bb9ab32d50ec9cf1d4d4185e273 assets/freespawn/models/item/apple_tree_seed.json
 729c7ea3cc7b6914e96822d86b7aa662b4320795 assets/freespawn/models/item/bag_of_popcorn.json
 9b89936e6e41b0ad9d26de2a635f745c513a9b3b assets/freespawn/models/item/black_heels.json

@@ -483,12 +483,19 @@ public class ModItems {
       new Item.Properties()));
 
   // Spawn eggs
-  public static final RegistryObject<Item> GIRLFRIEND_SPAWN_EGG = ITEM.register("girlfriend_spawn_egg",
+  public static final RegistryObject<SpawnEggItem> GIRLFRIEND_SPAWN_EGG = ITEM.register("girlfriend_spawn_egg",
       () -> new ForgeSpawnEggItem(
           ModEntities.GIRLFRIEND, // entity type
           0xFF99CC, // primary color (pink-ish)
           0x663366, // secondary color (purple-ish)
           new Item.Properties()));
+  public static final RegistryObject<SpawnEggItem> APPLE_COW_SPAWN_EGG = ITEM.register("apple_cow_spawn_egg",
+          () -> new ForgeSpawnEggItem(
+              ModEntities.APPLE_COW,
+              0x7CFC00,
+              0xFF0000,
+              new Item.Properties()));
+
 
   public static void register(IEventBus eventBus) {
     ITEM.register(eventBus);

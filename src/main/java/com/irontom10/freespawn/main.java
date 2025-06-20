@@ -14,6 +14,7 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.animal.Cow;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -61,9 +62,10 @@ public class main {
 	}
 
 	private void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
-		event.put(
-				ModEntities.GIRLFRIEND.get(),
-				GirlfriendEntity.createAttributes().build());
+		event.put(ModEntities.GIRLFRIEND.get(),GirlfriendEntity.createAttributes().build());
+		event.put(ModEntities.APPLE_COW.get(), Cow.createAttributes().build());
+
+
 	}
 
 	private void commonSetup(final FMLCommonSetupEvent event) {
@@ -117,7 +119,7 @@ public class main {
 	public static class ClientModEvents {
 		@SubscribeEvent
 		public static void onClientSetup(FMLClientSetupEvent event) {
-			EntityRenderers.register(ModEntities.SHOE.get(), ShoeEntityRenderer::new);
+
 		}
 	}
 }

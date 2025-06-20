@@ -5,9 +5,9 @@ import com.irontom10.freespawn.main;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SpawnEggItem;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
-import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 import net.minecraftforge.registries.RegistryObject;
@@ -191,6 +191,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     // Spawn eggs
     spawnEggItem(ModItems.GIRLFRIEND_SPAWN_EGG);
+    spawnEggItem(ModItems.APPLE_COW_SPAWN_EGG);
 
     validateAllItemsHaveModels();
   }
@@ -209,7 +210,7 @@ public class ModItemModelProvider extends ItemModelProvider {
             new ResourceLocation(main.MOD_ID, "item/" + item.getId().getPath()));
   }
 
-  private ItemModelBuilder spawnEggItem(RegistryObject<Item> item) {
+  private ItemModelBuilder spawnEggItem(RegistryObject<SpawnEggItem> item) {
     modelledItems.add(item.getId());
     return withExistingParent(item.getId().getPath(),
         new ResourceLocation("item/template_spawn_egg"));

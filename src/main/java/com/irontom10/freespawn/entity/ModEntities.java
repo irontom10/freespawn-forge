@@ -1,5 +1,6 @@
 package com.irontom10.freespawn.entity;
 
+import com.irontom10.freespawn.entity.AppleCow.AppleCow;
 import com.irontom10.freespawn.entity.girlfriend.GirlfriendEntity;
 import com.irontom10.freespawn.entity.shoe.ShoeEntity;
 import com.irontom10.freespawn.main;
@@ -13,6 +14,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 // In your QueenEntities (or OreSpawnEntities) class:
 public class ModEntities {
+
     public static final DeferredRegister<EntityType<?>> ENTITIES =
             DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, main.MOD_ID);
 
@@ -31,6 +33,14 @@ public class ModEntities {
                             .sized(0.5f, 0.5f)
                             .clientTrackingRange(8)
                             .build(new ResourceLocation(main.MOD_ID, "shoe").toString())
+            );
+    public static final RegistryObject<EntityType<AppleCow>> APPLE_COW =
+            ENTITIES.register("apple_cow",
+                    () -> EntityType.Builder
+                            .of(AppleCow::new, MobCategory.CREATURE)
+                            .sized(0.9f, 1.4f)
+                            .clientTrackingRange(8)
+                            .build(new ResourceLocation(main.MOD_ID, "apple_cow").toString())
             );
 
 

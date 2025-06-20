@@ -30,6 +30,7 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_BLOCK_EMERALD_ORE = registryKey("add_block_emerald_ore");
     public static final ResourceKey<BiomeModifier> ADD_BLOCK_GOLD_ORE = registryKey("add_block_gold_ore");
     public static final ResourceKey<BiomeModifier> ADD_GIRLFRIEND_SPAWNS = registryKey("add_girlfriend_spawns");
+    public static final ResourceKey<BiomeModifier> ADD_APPLE_COW_SPAWNS = registryKey("add_apple_cow_spawns");
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -96,6 +97,21 @@ public class ModBiomeModifiers {
                 ),
                 List.of(new MobSpawnSettings.SpawnerData(
                         ModEntities.GIRLFRIEND.get(), 1, 3, 6
+                ))));
+        context.register(ADD_APPLE_COW_SPAWNS, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
+                HolderSet.direct(
+                        biomes.getOrThrow(Biomes.BEACH),
+                        biomes.getOrThrow(Biomes.FOREST),
+                        biomes.getOrThrow(Biomes.PLAINS),
+                        biomes.getOrThrow(Biomes.RIVER),
+                        biomes.getOrThrow(Biomes.BIRCH_FOREST),
+                        biomes.getOrThrow(Biomes.OLD_GROWTH_SPRUCE_TAIGA), // megaTaiga
+                        biomes.getOrThrow(Biomes.TAIGA),
+                        biomes.getOrThrow(Biomes.SAVANNA),
+                        biomes.getOrThrow(Biomes.SAVANNA_PLATEAU)
+                ),
+                List.of(new MobSpawnSettings.SpawnerData(
+                        ModEntities.APPLE_COW.get(), 4, 3, 6
                 ))));
     }
 

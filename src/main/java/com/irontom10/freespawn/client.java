@@ -3,6 +3,7 @@ package com.irontom10.freespawn;
 import com.irontom10.freespawn.entity.ModEntities;
 import com.irontom10.freespawn.entity.girlfriend.GirlfriendModel;
 import com.irontom10.freespawn.entity.shoe.ShoeEntityRenderer;
+import com.irontom10.freespawn.entity.AppleCow.AppleCowRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -22,6 +23,8 @@ public class client {
         // bind the renderer to your entity type:
         evt.registerEntityRenderer(ModEntities.GIRLFRIEND.get(), GirlfriendModel::new);
         evt.registerEntityRenderer(ModEntities.SHOE.get(), ShoeEntityRenderer::new);
+        evt.registerEntityRenderer(ModEntities.APPLE_COW.get(), AppleCowRenderer::new);
+
     }
 
     /**
