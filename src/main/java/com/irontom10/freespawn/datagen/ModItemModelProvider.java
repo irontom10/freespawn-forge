@@ -188,6 +188,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     toolItem(ModItems.CRYSTAL_WOOD_SHOVEL);
     toolItem(ModItems.CRYSTAL_WOOD_HOE);
     toolItem(ModItems.NIGHTMARE_SWORD);
+    ItemIsModeled(ModItems.BERTHA);
+
 
     // Spawn eggs
     spawnEggItem(ModItems.GIRLFRIEND_SPAWN_EGG);
@@ -209,6 +211,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         new ResourceLocation("item/handheld")).texture("layer0",
             new ResourceLocation(main.MOD_ID, "item/" + item.getId().getPath()));
   }
+  private void ItemIsModeled(RegistryObject<? extends Item> item) {
+    modelledItems.add(item.getId());
+  }
+
 
   private ItemModelBuilder spawnEggItem(RegistryObject<SpawnEggItem> item) {
     modelledItems.add(item.getId());

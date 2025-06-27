@@ -139,6 +139,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ModItems.CRYSTAL_WOOD_PICKAXE.get(), ModItems.CRYSTAL_WOOD_AXE.get(), ModItems.CRYSTAL_WOOD_SHOVEL.get(),
         ModItems.CRYSTAL_WOOD_HOE.get());
 
+    OneInOneOut(pWriter, Items.APPLE, ModItems.APPLE_TREE_SEED.get());
+
   }
 
   protected static void oreSmeltingAndBlasting(Consumer<FinishedRecipe> consumer, List<ItemLike> ingredients,
@@ -162,7 +164,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
   }
-
   private void blockWithIngot(Consumer<FinishedRecipe> pWriter,
       ItemLike block, ItemLike ingot) {
     // 3×3 ingots → block
@@ -207,6 +208,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         .requires(block)
         .unlockedBy(getHasName(block), has(block))
         .save(pWriter, main.MOD_ID + ":" + getItemName(block) + "_" + getItemName(egg));
+  }
+  private void OneInOneOut(Consumer<FinishedRecipe> pWriter, ItemLike itemIn, ItemLike itemOut) {
+    ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, itemOut)
+            .requires(itemIn)
+            .unlockedBy(getHasName(itemIn), has(itemIn))
+            .save(pWriter, main.MOD_ID + ":" + getItemName(itemIn) + "_" + getItemName(itemOut));
   }
 
   private void GenToolSet(Consumer<FinishedRecipe> pWriter, ItemLike materialItem, String material, ItemLike sword,

@@ -481,6 +481,12 @@ public class ModItems {
       3, // attack damage
       -2.4F, // attack speed
       new Item.Properties()));
+  public static final RegistryObject<Item> BERTHA = ITEM.register("bertha", () -> new SwordItem(
+          ModToolMaterials.BERTHA, // tool material
+          3, // attack damage
+          -2.4F, // attack speed
+          new Item.Properties()));
+
 
   // Spawn eggs
   public static final RegistryObject<SpawnEggItem> GIRLFRIEND_SPAWN_EGG = ITEM.register("girlfriend_spawn_egg",

@@ -1,6 +1,7 @@
 package com.irontom10.freespawn.entity;
 
 import com.irontom10.freespawn.entity.AppleCow.AppleCow;
+import com.irontom10.freespawn.entity.Bee.BeeEntity;
 import com.irontom10.freespawn.entity.girlfriend.GirlfriendEntity;
 import com.irontom10.freespawn.entity.shoe.ShoeEntity;
 import com.irontom10.freespawn.main;
@@ -42,7 +43,25 @@ public class ModEntities {
                             .clientTrackingRange(8)
                             .build(new ResourceLocation(main.MOD_ID, "apple_cow").toString())
             );
-
+    public static final RegistryObject<EntityType<BeeEntity>> BEE =
+            ENTITIES.register("bee",
+                    () -> EntityType.Builder
+                            .of(BeeEntity::new, MobCategory.MONSTER)
+                            .sized(0.9f, 1.4f)
+                            .clientTrackingRange(8)
+                            .build(new ResourceLocation(main.MOD_ID, "bee").toString())
+            );
+    public static final RegistryObject<EntityType<com.irontom10.freespawn.item.tool.Bertha.BerthaProjectileEntity>> BERTHA_PROJECTILE =
+            ENTITIES.register("bertha_projectile",
+                    () -> EntityType.Builder
+                            .<com.irontom10.freespawn.item.tool.Bertha.BerthaProjectileEntity>of(
+                                    (type, world) -> new com.irontom10.freespawn.item.tool.Bertha.BerthaProjectileEntity(type, world),
+                                    MobCategory.MISC)
+                            .sized(0.25f, 0.25f)
+                            .clientTrackingRange(4)
+                            .updateInterval(1)
+                            .build(new ResourceLocation(main.MOD_ID, "bertha_projectile").toString())
+            );
 
 
     public static void register(IEventBus bus) {

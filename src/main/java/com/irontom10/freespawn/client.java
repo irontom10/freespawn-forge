@@ -1,5 +1,7 @@
 package com.irontom10.freespawn;
 
+import com.irontom10.freespawn.entity.Bee.BeeModel;
+import com.irontom10.freespawn.entity.Bee.BeeRenderer;
 import com.irontom10.freespawn.entity.ModEntities;
 import com.irontom10.freespawn.entity.girlfriend.GirlfriendModel;
 import com.irontom10.freespawn.entity.shoe.ShoeEntityRenderer;
@@ -24,6 +26,7 @@ public class client {
         evt.registerEntityRenderer(ModEntities.GIRLFRIEND.get(), GirlfriendModel::new);
         evt.registerEntityRenderer(ModEntities.SHOE.get(), ShoeEntityRenderer::new);
         evt.registerEntityRenderer(ModEntities.APPLE_COW.get(), AppleCowRenderer::new);
+        evt.registerEntityRenderer(ModEntities.BEE.get(), BeeRenderer::new);
 
     }
 
@@ -32,6 +35,6 @@ public class client {
      */
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions evt) {
-        // evt.registerLayerDefinition(MyCustomModel.LAYER_LOCATION, MyCustomModel::createBodyLayer);
+        evt.registerLayerDefinition(BeeModel.LAYER_LOCATION, BeeModel::createBodyLayer);
     }
 }

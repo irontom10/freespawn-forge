@@ -1,6 +1,7 @@
 package com.irontom10.freespawn;
 
 import com.irontom10.freespawn.block.ModBlocks;
+import com.irontom10.freespawn.entity.Bee.BeeEntity;
 import com.irontom10.freespawn.entity.ModEntities;
 import com.irontom10.freespawn.entity.girlfriend.GirlfriendEntity;
 import com.irontom10.freespawn.entity.shoe.ShoeEntityRenderer;
@@ -64,6 +65,7 @@ public class main {
 	private void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
 		event.put(ModEntities.GIRLFRIEND.get(),GirlfriendEntity.createAttributes().build());
 		event.put(ModEntities.APPLE_COW.get(), Cow.createAttributes().build());
+		event.put(ModEntities.BEE.get(), BeeEntity.createAttributes().build());
 
 
 	}

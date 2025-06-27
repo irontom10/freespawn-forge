@@ -1,0 +1,13 @@
+{
+  "parent": "item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "freespawn:item/bertha_3d"
+  },
+  "perspectives": {
+    "gui":    { "parent": "freespawn:item/bertha_2d" },
+    "ground": { "parent": "freespawn:item/bertha_2d" },
+    "fixed":  { "parent": "freespawn:item/bertha_2d" }
+  }
+}
+

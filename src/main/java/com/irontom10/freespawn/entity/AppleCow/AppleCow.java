@@ -21,7 +21,7 @@ public class AppleCow extends Cow {
         }
 
         // ----- BEEF drop -----
-        int beefCount = this.random.nextInt(3) + 1 + this.random.nextInt(1 + looting); // 1–3 + 0–looting
+        int beefCount = this.random.nextInt(1) + 1 + this.random.nextInt(3 + looting); // 1–3 + 0–looting
         for (int i = 0; i < beefCount; ++i) {
             if (this.isOnFire()) {
                 this.spawnAtLocation(Items.COOKED_BEEF);
