@@ -416,6 +416,8 @@ public class ModItems {
   public static final RegistryObject<Item> ULTIMATE_SHOVEL = ITEM.register("ultimate_shovel",
       () -> new UltimateShovel());
   public static final RegistryObject<Item> ULTIMATE_HOE = ITEM.register("ultimate_hoe", () -> new UltimateHoe());
+  public static final RegistryObject<Item> ULTIMATE_BOW = ITEM.register("ultimate_bow", () -> new UltimateBow());
+
   public static final RegistryObject<Item> EMERALD_SWORD = ITEM.register("emerald_sword", () -> new SwordItem(
       ModToolMaterials.EMERALD, // tool material
       3, // attack damage

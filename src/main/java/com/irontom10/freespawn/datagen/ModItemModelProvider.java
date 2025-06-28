@@ -180,6 +180,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     toolItem(ModItems.ULTIMATE_AXE);
     toolItem(ModItems.ULTIMATE_SHOVEL);
     toolItem(ModItems.ULTIMATE_HOE);
+    toolItem(ModItems.ULTIMATE_BOW);
     toolItem(ModItems.EMERALD_SWORD);
     toolItem(ModItems.EMERALD_PICKAXE);
     toolItem(ModItems.EMERALD_AXE);

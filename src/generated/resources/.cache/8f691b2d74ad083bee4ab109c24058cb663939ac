@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-28T16:29:16.920827652	Item Models: freespawn
+// 1.20.1	2025-06-28T16:56:22.903334277	Item Models: freespawn
 b9b9df8a5fcb31f69abc2bebb692a1718535b0b9 assets/freespawn/models/item/a_crabby_patty.json
 0f6c9047d1707eedab0eeee8a539c30e28160598 assets/freespawn/models/item/amethyst.json
 e1ed9702a95bc150ea43c32bfc3123ca0d30b87e assets/freespawn/models/item/amethyst_axe.json
@@ -150,6 +150,7 @@ d9420b51846c0a42b8a1deeccebe67d7dfc82a55 assets/freespawn/models/item/titanium_n
 3dcd80fd8614c9707f4f57889cc03216c2075f0b assets/freespawn/models/item/tomato.json
 2ae6570c634d05b6ab2e2c00616e38326bfb6c49 assets/freespawn/models/item/ultimate_axe.json
 2a45f618843f5bf47bd6c5c904b09680a284cbfe assets/freespawn/models/item/ultimate_boots.json
+b2b41f34163e4be1b02c7e249f23eae2e5331a26 assets/freespawn/models/item/ultimate_bow.json
 ff7b43a864c2eef8cd56a41e5413042be8fd0777 assets/freespawn/models/item/ultimate_chestplate.json
 c77dc4d4782cb08ecc6a9351daaddd62e5490607 assets/freespawn/models/item/ultimate_helmet.json
 1a5f063cb3915ee9f464c21afb70503c3d2f9467 assets/freespawn/models/item/ultimate_hoe.json
