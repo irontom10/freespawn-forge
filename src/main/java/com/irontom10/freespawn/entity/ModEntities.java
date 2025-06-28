@@ -43,6 +43,22 @@ public class ModEntities {
                             .clientTrackingRange(8)
                             .build(new ResourceLocation(main.MOD_ID, "apple_cow").toString())
             );
+    public static final RegistryObject<EntityType<AppleCow>> GOLDEN_APPLE_COW =
+            ENTITIES.register("golden_apple_cow",
+                    () -> EntityType.Builder
+                            .of(AppleCow::new, MobCategory.CREATURE)
+                            .sized(0.9f, 1.4f)
+                            .clientTrackingRange(8)
+                            .build(new ResourceLocation(main.MOD_ID, "golden_apple_cow").toString())
+            );
+    public static final RegistryObject<EntityType<AppleCow>> ENCHANTED_GOLDEN_APPLE_COW =
+            ENTITIES.register("enchanted_golden_apple_cow",
+                    () -> EntityType.Builder
+                            .of(AppleCow::new, MobCategory.CREATURE)
+                            .sized(0.9f, 1.4f)
+                            .clientTrackingRange(8)
+                            .build(new ResourceLocation(main.MOD_ID, "enchanted_golden_apple_cow").toString())
+            );
     public static final RegistryObject<EntityType<BeeEntity>> BEE =
             ENTITIES.register("bee",
                     () -> EntityType.Builder

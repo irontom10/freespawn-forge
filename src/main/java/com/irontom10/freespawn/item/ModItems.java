@@ -501,6 +501,18 @@ public class ModItems {
               0x7CFC00,
               0xFF0000,
               new Item.Properties()));
+  public static final RegistryObject<SpawnEggItem> GOLDEN_APPLE_COW_SPAWN_EGG = ITEM.register("golden_apple_cow_spawn_egg",
+          () -> new ForgeSpawnEggItem(
+                  ModEntities.GOLDEN_APPLE_COW,
+                  0x7CFC00,
+                  0xFF0000,
+                  new Item.Properties()));
+  public static final RegistryObject<SpawnEggItem> ENCHANTED_GOLDEN_APPLE_COW_SPAWN_EGG = ITEM.register("enchanted_golden_apple_cow_spawn_egg",
+          () -> new ForgeSpawnEggItem(
+                  ModEntities.ENCHANTED_GOLDEN_APPLE_COW,
+                  0x7CFC00,
+                  0xFF0000,
+                  new Item.Properties()));
 
 
   public static void register(IEventBus eventBus) {

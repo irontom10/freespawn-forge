@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-19T08:19:26.729433897	Recipes
+// 1.20.1	2025-06-28T07:02:06.309670179	Recipes
 d173cb25fe869388daf70135e7294f8848c9bf05 data/freespawn/advancements/recipes/building_blocks/ingot_to_amethyst_block.json
 5902dc0779441e1e74e0e105b0556a84f4ecb910 data/freespawn/advancements/recipes/building_blocks/ingot_to_ender_eye_block.json
 1a2fdada2a1643dc2467182da31f6160ce596f1e data/freespawn/advancements/recipes/building_blocks/ingot_to_ender_pearl_block.json
@@ -66,6 +66,7 @@ fb58e777ecd7d2e0890c60fbc4113536f1910943 data/freespawn/advancements/recipes/com
 0c269689b7f75418f6a525d334bd6634a10139ad data/freespawn/advancements/recipes/misc/amethyst_from_blasting_stone_amethyst_ore.json
 775768e8e0a0fb03a4f0be32b73abca2b39a05db data/freespawn/advancements/recipes/misc/amethyst_from_smelting_deepslate_amethyst_ore.json
 491541ce8f8e8ea3ef0a9713a2cc6f3d98fcaf72 data/freespawn/advancements/recipes/misc/amethyst_from_smelting_stone_amethyst_ore.json
+cdb29be37fda6b0590ea26984e982f953feed3e1 data/freespawn/advancements/recipes/misc/apple_apple_tree_seed.json
 7c009e38649d900c96d7b8a83b017d2b77d5c352 data/freespawn/advancements/recipes/misc/block_to_amethyst.json
 b1851e81f1b7fd5b739e5d47bb1a2e115c70979a data/freespawn/advancements/recipes/misc/block_to_ender_eye.json
 c3948236b6c05e341a4837178e415543e57a9cb8 data/freespawn/advancements/recipes/misc/block_to_ender_pearl.json
@@ -137,6 +138,7 @@ a394f76e1140900fd2c77bf70c9ded5b25bc9709 data/freespawn/recipes/amethyst_from_sm
 164fabd5caebaaa3249c404af8a2f4bbd8d1bb0a data/freespawn/recipes/amethyst_pickaxe.json
 bdfc08e17e59df327f8139b9da3ea5566f414a80 data/freespawn/recipes/amethyst_shovel.json
 c29069e8a0654d0627a00b07e33a6300caa486e9 data/freespawn/recipes/amethyst_sword.json
+6169eac1663f6544737a5b65dd2013247237b826 data/freespawn/recipes/apple_apple_tree_seed.json
 7e9ccee8a69c76f3a2627973a5ebf55d0fb27ea8 data/freespawn/recipes/block_to_amethyst.json
 162a47762582261fbd56cafd8baba5b5b3f52b2a data/freespawn/recipes/block_to_ender_eye.json
 77dedae47fcdc33d0bde12db33f794983f3082de data/freespawn/recipes/block_to_ender_pearl.json

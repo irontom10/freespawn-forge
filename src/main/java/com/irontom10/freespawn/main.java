@@ -66,8 +66,8 @@ public class main {
 		event.put(ModEntities.GIRLFRIEND.get(),GirlfriendEntity.createAttributes().build());
 		event.put(ModEntities.APPLE_COW.get(), Cow.createAttributes().build());
 		event.put(ModEntities.BEE.get(), BeeEntity.createAttributes().build());
-
-
+		event.put(ModEntities.GOLDEN_APPLE_COW.get(), Cow.createAttributes().build());
+		event.put(ModEntities.ENCHANTED_GOLDEN_APPLE_COW.get(), Cow.createAttributes().build());
 	}
 
 	private void commonSetup(final FMLCommonSetupEvent event) {

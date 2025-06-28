@@ -194,6 +194,9 @@ public class ModItemModelProvider extends ItemModelProvider {
     // Spawn eggs
     spawnEggItem(ModItems.GIRLFRIEND_SPAWN_EGG);
     spawnEggItem(ModItems.APPLE_COW_SPAWN_EGG);
+    spawnEggItem(ModItems.GOLDEN_APPLE_COW_SPAWN_EGG);
+    spawnEggItem(ModItems.ENCHANTED_GOLDEN_APPLE_COW_SPAWN_EGG);
+
 
     validateAllItemsHaveModels();
   }

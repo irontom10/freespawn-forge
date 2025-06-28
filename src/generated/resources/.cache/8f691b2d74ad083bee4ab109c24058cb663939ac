@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-20T16:49:30.334023024	Item Models: freespawn
+// 1.20.1	2025-06-28T08:53:23.231421902	Item Models: freespawn
 b9b9df8a5fcb31f69abc2bebb692a1718535b0b9 assets/freespawn/models/item/a_crabby_patty.json
 0f6c9047d1707eedab0eeee8a539c30e28160598 assets/freespawn/models/item/amethyst.json
 e1ed9702a95bc150ea43c32bfc3123ca0d30b87e assets/freespawn/models/item/amethyst_axe.json
@@ -45,6 +45,7 @@ eb9ca63214e02cc3cb8e03a0b7befa13c95af284 assets/freespawn/models/item/emerald_le
 747218d2d3290ee27ce9c50b1f41a60f963326e8 assets/freespawn/models/item/emerald_pickaxe.json
 cf2038bcbffb4d67aa8ed2a5f06fb2e9455c0766 assets/freespawn/models/item/emerald_shovel.json
 790a44fdd6bf79fab904040390b7c08382870744 assets/freespawn/models/item/emerald_sword.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/freespawn/models/item/enchanted_golden_apple_cow_spawn_egg.json
 0124ee2b959e38e23c5b3cebcb98f70fa6c2b165 assets/freespawn/models/item/experience_boots.json
 5136b3a6cee80038f9833c0ead46dabfcf74d1e0 assets/freespawn/models/item/experience_chestplate.json
 72e9b5e04cf0c0fc8437b81599aa06a6022cae5c assets/freespawn/models/item/experience_helmet.json
@@ -52,6 +53,7 @@ c86c8b006da363cd928de873e4b3ec99ea7606ce assets/freespawn/models/item/experience
 33cf032b92bddb0107da982ec43b7917cc383035 assets/freespawn/models/item/fire_fish.json
 1b6d98fd10e3c372a6b2e06343d6574c976fa4dd assets/freespawn/models/item/garden_salad.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/freespawn/models/item/girlfriend_spawn_egg.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/freespawn/models/item/golden_apple_cow_spawn_egg.json
 b9a20bd1f99e4e8860c70ac9db8b196ecaea0f39 assets/freespawn/models/item/gray_fish.json
 9d4e26da7ff234d51564e35eb4b7e5641ed5c030 assets/freespawn/models/item/green_fish.json
 ca18120c2d6deeaee00dd6ba6a65cc12f2a3539e assets/freespawn/models/item/jew_fish.json
