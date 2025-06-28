@@ -3,6 +3,7 @@ package com.irontom10.freespawn.entity.AppleCow;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.animal.Cow;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
@@ -13,28 +14,26 @@ public class AppleCow extends Cow {
         super(pEntityType, pLevel);
     }
     @Override
-    protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitByPlayer) {
-        // ----- LEATHER drop -----
-        int leatherCount = this.random.nextInt(3) + this.random.nextInt(1 + looting); // 0–2 + 0–looting
-        for (int i = 0; i < leatherCount; ++i) {
-            this.spawnAtLocation(Items.LEATHER);
-        }
+    protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHit) {
+        super.dropCustomDeathLoot(source, looting, recentlyHit);
 
-        // ----- BEEF drop -----
-        int beefCount = this.random.nextInt(1) + 1 + this.random.nextInt(3 + looting); // 1–3 + 0–looting
-        for (int i = 0; i < beefCount; ++i) {
-            if (this.isOnFire()) {
-                this.spawnAtLocation(Items.COOKED_BEEF);
-            } else {
-                this.spawnAtLocation(Items.BEEF);
+        if (this.level().isClientSide) return;
+
+        // Define drops: item, base count, random count logic, cooked (conditional), fire-sensitive
+        Object[][] drops = {
+                {Items.LEATHER, this.random.nextInt(3) + this.random.nextInt(1 + looting)},
+                {this.isOnFire() ? Items.COOKED_BEEF : Items.BEEF, 1 + this.random.nextInt(3 + looting)},
+                {Items.APPLE, 1 + this.random.nextInt(2 + looting)},
+        };
+
+        for (Object[] drop : drops) {
+            Item item = (Item) drop[0];
+            int count = (int) drop[1];
+
+            if (count > 0) {
+                this.spawnAtLocation(new ItemStack(item, count));
             }
         }
-
-        // ----- APPLE drop -----
-        int base = 2;
-        int extra = this.random.nextInt(2 + looting); // range: 0 to (1 + looting)
-        int total = base + extra;
-        this.spawnAtLocation(new ItemStack(Items.APPLE, total));
     }
 
 

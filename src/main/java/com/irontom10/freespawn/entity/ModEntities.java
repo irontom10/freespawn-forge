@@ -1,6 +1,8 @@
 package com.irontom10.freespawn.entity;
 
 import com.irontom10.freespawn.entity.AppleCow.AppleCow;
+import com.irontom10.freespawn.entity.GoldenAppleCow.GoldenAppleCow;
+import com.irontom10.freespawn.entity.EnchantedGoldenAppleCow.EnchantedGoldenAppleCow;
 import com.irontom10.freespawn.entity.Bee.BeeEntity;
 import com.irontom10.freespawn.entity.girlfriend.GirlfriendEntity;
 import com.irontom10.freespawn.entity.shoe.ShoeEntity;
@@ -43,18 +45,18 @@ public class ModEntities {
                             .clientTrackingRange(8)
                             .build(new ResourceLocation(main.MOD_ID, "apple_cow").toString())
             );
-    public static final RegistryObject<EntityType<AppleCow>> GOLDEN_APPLE_COW =
+    public static final RegistryObject<EntityType<GoldenAppleCow>> GOLDEN_APPLE_COW =
             ENTITIES.register("golden_apple_cow",
                     () -> EntityType.Builder
-                            .of(AppleCow::new, MobCategory.CREATURE)
+                            .of(GoldenAppleCow::new, MobCategory.CREATURE)
                             .sized(0.9f, 1.4f)
                             .clientTrackingRange(8)
                             .build(new ResourceLocation(main.MOD_ID, "golden_apple_cow").toString())
             );
-    public static final RegistryObject<EntityType<AppleCow>> ENCHANTED_GOLDEN_APPLE_COW =
+    public static final RegistryObject<EntityType<EnchantedGoldenAppleCow>> ENCHANTED_GOLDEN_APPLE_COW =
             ENTITIES.register("enchanted_golden_apple_cow",
                     () -> EntityType.Builder
-                            .of(AppleCow::new, MobCategory.CREATURE)
+                            .of(EnchantedGoldenAppleCow::new, MobCategory.CREATURE)
                             .sized(0.9f, 1.4f)
                             .clientTrackingRange(8)
                             .build(new ResourceLocation(main.MOD_ID, "enchanted_golden_apple_cow").toString())
