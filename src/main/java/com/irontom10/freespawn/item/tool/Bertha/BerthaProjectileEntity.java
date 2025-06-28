@@ -1,12 +1,12 @@
 package com.irontom10.freespawn.item.tool.Bertha;
 
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
-import net.minecraft.world.damagesource.DamageSource;
 
 public class BerthaProjectileEntity extends Projectile {
     private final float damage;

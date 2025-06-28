@@ -1,10 +1,9 @@
 package com.irontom10.freespawn.item.tool.Ultimate;
 
 import com.irontom10.freespawn.item.ModToolMaterials;
-
 import net.minecraft.world.item.AxeItem;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 

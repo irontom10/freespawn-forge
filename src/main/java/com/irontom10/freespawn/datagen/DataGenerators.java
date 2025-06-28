@@ -1,5 +1,6 @@
 package com.irontom10.freespawn.datagen;
 
+import com.irontom10.freespawn.main;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -7,7 +8,6 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import com.irontom10.freespawn.main;
 
 import java.util.concurrent.CompletableFuture;
 

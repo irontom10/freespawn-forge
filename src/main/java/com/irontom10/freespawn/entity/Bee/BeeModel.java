@@ -1,6 +1,5 @@
 package com.irontom10.freespawn.entity.Bee;
 
-import com.irontom10.freespawn.entity.Bee.BeeEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.EntityModel;

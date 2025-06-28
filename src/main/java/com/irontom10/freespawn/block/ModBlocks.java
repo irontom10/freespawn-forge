@@ -1,8 +1,8 @@
 package com.irontom10.freespawn.block;
 
+import com.irontom10.freespawn.block.custom.AppleLeavesBlock;
 import com.irontom10.freespawn.item.ModItems;
 import com.irontom10.freespawn.main;
-import com.irontom10.freespawn.block.custom.AppleLeavesBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

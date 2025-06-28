@@ -2,7 +2,6 @@ package com.irontom10.freespawn.item.special;
 
 
 import com.irontom10.freespawn.block.ModBlocks;
-import com.irontom10.freespawn.item.ModCreativeTabs;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;

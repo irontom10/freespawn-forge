@@ -3,14 +3,14 @@ package com.irontom10.freespawn.datagen;
 import com.irontom10.freespawn.block.ModBlocks;
 import com.irontom10.freespawn.main;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.util.Set;
 import java.util.HashSet;
-import net.minecraft.resources.ResourceLocation;
+import java.util.Set;
 
 public class ModBlockStateProvider extends BlockStateProvider {
   public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {

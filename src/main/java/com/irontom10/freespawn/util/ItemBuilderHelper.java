@@ -1,9 +1,9 @@
 package com.irontom10.freespawn.util;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.resources.ResourceLocation;
 
 import static com.irontom10.freespawn.main.MOD_ID;
 

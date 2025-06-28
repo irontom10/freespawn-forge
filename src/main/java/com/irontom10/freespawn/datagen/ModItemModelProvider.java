@@ -9,13 +9,12 @@ import net.minecraft.world.item.SpawnEggItem;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.HashSet;
 import java.util.stream.Collectors;
 
 public class ModItemModelProvider extends ItemModelProvider {
@@ -141,6 +140,15 @@ public class ModItemModelProvider extends ItemModelProvider {
     simpleItem(ModItems.EXPERIENCE_CHESTPLATE);
     simpleItem(ModItems.EXPERIENCE_LEGGINGS);
     simpleItem(ModItems.EXPERIENCE_BOOTS);
+    simpleItem(ModItems.ULTIMATE_HELMET);
+    simpleItem(ModItems.ULTIMATE_CHESTPLATE);
+    simpleItem(ModItems.ULTIMATE_LEGGINGS);
+    simpleItem(ModItems.ULTIMATE_BOOTS);
+
+
+
+
+
     simpleItem(ModItems.RED_HEELS);
     simpleItem(ModItems.BLACK_HEELS);
     simpleItem(ModItems.SLIPPERS);
@@ -188,6 +196,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     toolItem(ModItems.CRYSTAL_WOOD_SHOVEL);
     toolItem(ModItems.CRYSTAL_WOOD_HOE);
     toolItem(ModItems.NIGHTMARE_SWORD);
+
     ItemIsModeled(ModItems.BERTHA);
 
 
@@ -196,6 +205,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     spawnEggItem(ModItems.APPLE_COW_SPAWN_EGG);
     spawnEggItem(ModItems.GOLDEN_APPLE_COW_SPAWN_EGG);
     spawnEggItem(ModItems.ENCHANTED_GOLDEN_APPLE_COW_SPAWN_EGG);
+    spawnEggItem(ModItems.BEE_SPAWN_EGG);
 
 
     validateAllItemsHaveModels();

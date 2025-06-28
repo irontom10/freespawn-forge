@@ -4,8 +4,6 @@ package com.irontom10.freespawn.item.armor.tigerseye;
 import com.irontom10.freespawn.item.armor.ModArmorMaterials;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 
 public class TigerseyeHelmet extends ArmorItem {

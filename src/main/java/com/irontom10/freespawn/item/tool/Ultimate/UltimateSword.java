@@ -1,9 +1,6 @@
 package com.irontom10.freespawn.item.tool.Ultimate;
 
 import com.irontom10.freespawn.item.ModToolMaterials;
-
-import net.minecraft.world.entity.player.Player;
-
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;

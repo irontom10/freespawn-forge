@@ -5,9 +5,9 @@ import com.irontom10.freespawn.entity.ModEntities;
 import com.irontom10.freespawn.item.ModItems;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.phys.EntityHitResult;
 
 public class ShoeEntity extends ThrowableItemProjectile {

@@ -68,7 +68,7 @@ public class BigRoundTree {
 
     //The below are constants that should not be changed unless you know what you're doing
     private static final int MAX_TOTAL_BRANCHES = 1000;
-    private static int MASTER_BRANCH_COUNT = 0;
+    private static final int MASTER_BRANCH_COUNT = 0;
 
 
     private static int branchCounter = 0;

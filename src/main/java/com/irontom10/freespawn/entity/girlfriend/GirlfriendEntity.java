@@ -1,14 +1,15 @@
 package com.irontom10.freespawn.entity.girlfriend;
 
-import com.irontom10.freespawn.entity.ModEntities;
 import com.irontom10.freespawn.entity.shoe.ShoeEntity;
 import com.irontom10.freespawn.main;
+import com.irontom10.freespawn.sound.ModSounds;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -21,13 +22,11 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.monster.RangedAttackMob;
-import net.minecraft.sounds.SoundEvent;
-import com.irontom10.freespawn.sound.ModSounds;
 
 public class GirlfriendEntity extends TamableAnimal implements RangedAttackMob {
     // 1) Data parameters

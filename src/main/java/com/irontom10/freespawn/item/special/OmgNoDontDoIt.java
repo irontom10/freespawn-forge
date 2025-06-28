@@ -2,9 +2,7 @@ package com.irontom10.freespawn.item.special;
 
 import com.irontom10.freespawn.world.trees.*;
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -27,7 +25,7 @@ public class OmgNoDontDoIt extends Item {
     ItemStack stack = context.getItemInHand();
 
     if (!level.isClientSide) {
-      RandomSource randomSource = ((ServerLevel) level).getRandom();
+      RandomSource randomSource = level.getRandom();
       Random random = new Random(randomSource.nextLong()); // FIX HERE
       int directionIndex = random.nextInt(4); // 0: North, 1: East, 2: South, 3: West
       int tree = random.nextInt(9);

@@ -1,7 +1,7 @@
 package com.irontom10.freespawn.world;
 
-import com.irontom10.freespawn.main;
 import com.irontom10.freespawn.block.ModBlocks;
+import com.irontom10.freespawn.main;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;

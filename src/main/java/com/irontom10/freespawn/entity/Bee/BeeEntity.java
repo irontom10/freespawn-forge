@@ -1,12 +1,14 @@
 package com.irontom10.freespawn.entity.Bee;
 
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.server.level.ServerLevel;
+import com.irontom10.freespawn.item.ModItems;
+import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.control.FlyingMoveControl;
@@ -16,16 +18,13 @@ import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.phys.HitResult;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.util.LazyOptional;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.EnumSet;
 import java.util.List;
-import java.util.function.Predicate;
 
 public class BeeEntity extends Monster {
     private int stuckCount = 0;
@@ -42,89 +41,6 @@ public class BeeEntity extends Monster {
         this.xpReward = 25;
     }
 
-    @Override
-    protected void registerGoals() {
-        this.goalSelector.addGoal(0, new BeeRandomFlyGoal());
-        this.goalSelector.addGoal(1, new BeeAttackGoal());
-    }
-
-    public static AttributeSupplier.Builder createAttributes() {
-        return Monster.createMonsterAttributes()
-                .add(Attributes.MAX_HEALTH, 80.0D)
-                .add(Attributes.MOVEMENT_SPEED, 0.25D)
-                .add(Attributes.ATTACK_DAMAGE, 12.0D)
-                .add(Attributes.FOLLOW_RANGE, 32.0D)
-                .add(Attributes.FLYING_SPEED, 0.35D);
-    }
-
-    @Override
-    public boolean causeFallDamage(float distance, float damageMultiplier, DamageSource source) {
-        return false;
-    }
-    
-    public boolean isFlying() {
-        return !this.onGround();
-    }
-
-    @Override
-    public boolean canBeLeashed(Player player) {
-        return false;
-    }
-
-    @Override
-    public boolean removeWhenFarAway(double distanceToClosestPlayer) {
-        return !this.isNoAi();
-    }
-
-    @Override
-    public void tick() {
-        super.tick();
-        if (this.lastX == (int) this.getX() && this.lastZ == (int) this.getZ()) {
-            ++this.stuckCount;
-        } else {
-            this.stuckCount = 0;
-            this.lastX = (int) this.getX();
-            this.lastZ = (int) this.getZ();
-        }
-        // Poison water attackers
-        if (this.isInWater() && this.level().random.nextInt(4) == 1 && this.getTarget() != null) {
-            this.doHurtTarget(this.getTarget());
-        }
-    }
-
-    @Override
-    public boolean doHurtTarget(Entity target) {
-        boolean result = super.doHurtTarget(target);
-        if (target instanceof LivingEntity) {
-            ((LivingEntity) target).addEffect(new MobEffectInstance(MobEffects.POISON, 50, 0));
-        }
-        return result;
-    }
-
-    @Override
-    protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHit) {
-        // Example drops, adjust as needed
-        this.spawnAtLocation(new ItemStack(net.minecraft.world.item.Items.GOLD_NUGGET, 4 + this.random.nextInt(6)));
-        this.spawnAtLocation(new ItemStack(net.minecraft.world.item.Items.SUGAR, 4 + this.random.nextInt(6)));
-    }
-
-    // Sound stubs (replace with your own sounds if needed)
-    @Override
-    protected SoundEvent getAmbientSound() { return null; }
-    @Override
-    protected SoundEvent getHurtSound(DamageSource source) { return null; }
-    @Override
-    protected SoundEvent getDeathSound() { return null; }
-
-    // Attacking state
-    public int getAttacking() { return this.attacking; }
-    public void setAttacking(int value) { this.attacking = value; }
-
-    public boolean isAttacking() {
-        return this.attacking != 0;
-    }
-
-    // Custom flying and attack AI
     class BeeRandomFlyGoal extends Goal {
         public BeeRandomFlyGoal() { this.setFlags(EnumSet.of(Goal.Flag.MOVE)); }
         @Override
@@ -152,8 +68,10 @@ public class BeeEntity extends Monster {
         }
         private void setRandomFlightTarget() {
             double x = BeeEntity.this.getX() + BeeEntity.this.getRandom().nextInt(18) - 9;
-            double y = BeeEntity.this.getY() + BeeEntity.this.getRandom().nextInt(6) - 3;
             double z = BeeEntity.this.getZ() + BeeEntity.this.getRandom().nextInt(18) - 9;
+            // Find the ground at this x,z
+            int y = BeeEntity.this.level().getHeight(Heightmap.Types.MOTION_BLOCKING, (int)x, (int)z);
+            y += 3; // Always target 3 blocks above ground
             flightTarget = new Vec3(x, y, z);
         }
     }
@@ -204,8 +122,156 @@ public class BeeEntity extends Monster {
         private boolean canAttackTarget(LivingEntity entity) {
             if (entity == null || entity == BeeEntity.this || !entity.isAlive()) return false;
             if (entity instanceof Player && ((Player)entity).isCreative()) return false;
+            return !(entity instanceof BeeEntity); // Prevent bees from attacking each other
+        }
+    }
+
+    // Flee from players if not attacking
+    class BeeFleePlayerGoal extends Goal {
+        private Player nearestPlayer;
+        public BeeFleePlayerGoal() { this.setFlags(EnumSet.of(Goal.Flag.MOVE)); }
+        @Override
+        public boolean canUse() {
+            if (BeeEntity.this.isAttacking()) return false;
+            nearestPlayer = BeeEntity.this.level().getNearestPlayer(BeeEntity.this, 8.0);
+            return nearestPlayer != null && BeeEntity.this.distanceToSqr(nearestPlayer) < 36.0;
+        }
+        @Override
+        public void tick() {
+            if (nearestPlayer != null) {
+                Vec3 away = BeeEntity.this.position().subtract(nearestPlayer.position()).normalize().scale(8.0);
+                BeeEntity.this.getMoveControl().setWantedPosition(
+                    BeeEntity.this.getX() + away.x,
+                    BeeEntity.this.getY() + away.y,
+                    BeeEntity.this.getZ() + away.z,
+                    1.2
+                );
+            }
+        }
+    }
+
+    // Pollinate flowers
+    class BeePollinateGoal extends Goal {
+        private BlockPos flowerPos;
+        public BeePollinateGoal() { this.setFlags(EnumSet.of(Goal.Flag.MOVE)); }
+        @Override
+        public boolean canUse() {
+            if (BeeEntity.this.isAttacking() || BeeEntity.this.random.nextInt(200) != 0) return false;
+            List<BlockPos> flowers = BlockPos.betweenClosedStream(
+                BeeEntity.this.blockPosition().offset(-8, -2, -8),
+                BeeEntity.this.blockPosition().offset(8, 2, 8)
+            ).map(BlockPos::immutable).filter(pos ->
+                BeeEntity.this.level().getBlockState(pos).is(net.minecraft.tags.BlockTags.FLOWERS)
+            ).toList();
+            if (flowers.isEmpty()) return false;
+            flowerPos = flowers.get(BeeEntity.this.random.nextInt(flowers.size()));
             return true;
         }
+        @Override
+        public void start() {
+            BeeEntity.this.getMoveControl().setWantedPosition(
+                flowerPos.getX() + 0.5,
+                flowerPos.getY() + 1.0,
+                flowerPos.getZ() + 0.5,
+                1.0
+            );
+        }
+        @Override
+        public void tick() {
+            if (BeeEntity.this.blockPosition().closerThan(flowerPos, 2.0)) {
+                // Simulate pollination
+                if (BeeEntity.this.random.nextInt(40) == 0) {
+                    BeeEntity.this.heal(1.0F);
+                }
+            }
+        }
+    }
+
+    // BeeSwarmGoal removed for stability
+    @Override
+    protected void registerGoals() {
+        this.goalSelector.addGoal(0, new BeeFleePlayerGoal());
+        this.goalSelector.addGoal(1, new BeeAttackGoal());
+        this.goalSelector.addGoal(3, new BeePollinateGoal());
+        this.goalSelector.addGoal(2, new BeeRandomFlyGoal());
+
+    }
+
+    public static AttributeSupplier.Builder createAttributes() {
+        return Monster.createMonsterAttributes()
+                .add(Attributes.MAX_HEALTH, 80.0D)
+                .add(Attributes.MOVEMENT_SPEED, 1D)
+                .add(Attributes.ATTACK_DAMAGE, 12.0D)
+                .add(Attributes.FOLLOW_RANGE, 32.0D)
+                .add(Attributes.FLYING_SPEED, 1D);
+    }
+
+    @Override
+    public boolean causeFallDamage(float distance, float damageMultiplier, DamageSource source) {
+        return false;
+    }
+
+    public boolean isFlying() {
+        return !this.onGround();
+    }
+
+    @Override
+    public boolean canBeLeashed(Player player) {
+        return false;
+    }
+
+    @Override
+    public boolean removeWhenFarAway(double distanceToClosestPlayer) {
+        return !this.isNoAi();
+    }
+
+    @Override
+    public void tick() {
+        super.tick();
+        if (this.lastX == (int) this.getX() && this.lastZ == (int) this.getZ()) {
+            ++this.stuckCount;
+        } else {
+            this.stuckCount = 0;
+            this.lastX = (int) this.getX();
+            this.lastZ = (int) this.getZ();
+        }
+        // Poison water attackers
+        if (this.isInWater() && this.level().random.nextInt(4) == 1 && this.getTarget() != null) {
+            this.doHurtTarget(this.getTarget());
+        }
+    }
+
+    @Override
+    public boolean doHurtTarget(Entity target) {
+        boolean result = super.doHurtTarget(target);
+        if (target instanceof LivingEntity) {
+            ((LivingEntity) target).addEffect(new MobEffectInstance(MobEffects.POISON, 50, 0));
+        }
+        return result;
+    }
+
+    @Override
+    protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHit) {
+        // Example drops, adjust as needed
+        this.spawnAtLocation(new ItemStack(Items.GOLD_NUGGET, 4 + this.random.nextInt(6)));
+        this.spawnAtLocation(new ItemStack(Items.SUGAR, 4 + this.random.nextInt(6)));
+        this.spawnAtLocation(new ItemStack(ModItems.BUTTER_CANDY.get(), 4 + this.random.nextInt(6)));
+    }
+
+    // Sound stubs (replace with your own sounds if needed)
+    @Override
+    protected SoundEvent getAmbientSound() { return null; }
+    @Override
+    protected SoundEvent getHurtSound(DamageSource source) { return null; }
+    @Override
+    protected SoundEvent getDeathSound() { return null; }
+
+    // Attacking state
+    public int getAttacking() { return this.attacking; }
+    public void setAttacking(int value) { this.attacking = value; }
+
+    public boolean isAttacking() {
+        return this.attacking != 0;
     }
 
     @Override

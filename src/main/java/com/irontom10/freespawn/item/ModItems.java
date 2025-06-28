@@ -1,31 +1,68 @@
 package com.irontom10.freespawn.item;
 
 import com.irontom10.freespawn.entity.ModEntities;
-import com.irontom10.freespawn.item.armor.amethyst.*;
-import com.irontom10.freespawn.item.armor.emerald.*;
-import com.irontom10.freespawn.item.armor.experience.*;
-import com.irontom10.freespawn.item.armor.lapis.*;
-import com.irontom10.freespawn.item.armor.lavaeel.*;
-import com.irontom10.freespawn.item.armor.mobzilla.*;
-import com.irontom10.freespawn.item.armor.mothscale.*;
-import com.irontom10.freespawn.item.armor.peacock.*;
-import com.irontom10.freespawn.item.armor.pink_tourmaline.*;
-import com.irontom10.freespawn.item.armor.tigerseye.*;
-import com.irontom10.freespawn.item.armor.queen.*;
-import com.irontom10.freespawn.item.armor.royal.*;
-import com.irontom10.freespawn.item.armor.ruby.*;
-import com.irontom10.freespawn.item.tool.Ultimate.*;
+import com.irontom10.freespawn.item.armor.amethyst.AmethystBoots;
+import com.irontom10.freespawn.item.armor.amethyst.AmethystChestplate;
+import com.irontom10.freespawn.item.armor.amethyst.AmethystHelmet;
+import com.irontom10.freespawn.item.armor.amethyst.AmethystLeggings;
+import com.irontom10.freespawn.item.armor.emerald.EmeraldBoots;
+import com.irontom10.freespawn.item.armor.emerald.EmeraldChestplate;
+import com.irontom10.freespawn.item.armor.emerald.EmeraldHelmet;
+import com.irontom10.freespawn.item.armor.emerald.EmeraldLeggings;
+import com.irontom10.freespawn.item.armor.experience.ExperienceBoots;
+import com.irontom10.freespawn.item.armor.experience.ExperienceChestplate;
+import com.irontom10.freespawn.item.armor.experience.ExperienceHelmet;
+import com.irontom10.freespawn.item.armor.experience.ExperienceLeggings;
+import com.irontom10.freespawn.item.armor.lapis.LapisBoots;
+import com.irontom10.freespawn.item.armor.lapis.LapisChestplate;
+import com.irontom10.freespawn.item.armor.lapis.LapisHelmet;
+import com.irontom10.freespawn.item.armor.lapis.LapisLeggings;
+import com.irontom10.freespawn.item.armor.lavaeel.LavaeelBoots;
+import com.irontom10.freespawn.item.armor.lavaeel.LavaeelChestplate;
+import com.irontom10.freespawn.item.armor.lavaeel.LavaeelHelmet;
+import com.irontom10.freespawn.item.armor.lavaeel.LavaeelLeggings;
+import com.irontom10.freespawn.item.armor.mobzilla.MobzillaBoots;
+import com.irontom10.freespawn.item.armor.mobzilla.MobzillaChestplate;
+import com.irontom10.freespawn.item.armor.mobzilla.MobzillaHelmet;
+import com.irontom10.freespawn.item.armor.mobzilla.MobzillaLeggings;
+import com.irontom10.freespawn.item.armor.mothscale.MothscaleBoots;
+import com.irontom10.freespawn.item.armor.mothscale.MothscaleChestplate;
+import com.irontom10.freespawn.item.armor.mothscale.MothscaleHelmet;
+import com.irontom10.freespawn.item.armor.mothscale.MothscaleLeggings;
+import com.irontom10.freespawn.item.armor.peacock.PeacockBoots;
+import com.irontom10.freespawn.item.armor.peacock.PeacockChestplate;
+import com.irontom10.freespawn.item.armor.peacock.PeacockHelmet;
+import com.irontom10.freespawn.item.armor.peacock.PeacockLeggings;
+import com.irontom10.freespawn.item.armor.pink_tourmaline.PinkTourmalineBoots;
+import com.irontom10.freespawn.item.armor.pink_tourmaline.PinkTourmalineChestplate;
+import com.irontom10.freespawn.item.armor.pink_tourmaline.PinkTourmalineHelmet;
+import com.irontom10.freespawn.item.armor.pink_tourmaline.PinkTourmalineLeggings;
+import com.irontom10.freespawn.item.armor.queen.QueenBoots;
+import com.irontom10.freespawn.item.armor.queen.QueenChestplate;
+import com.irontom10.freespawn.item.armor.queen.QueenHelmet;
+import com.irontom10.freespawn.item.armor.queen.QueenLeggings;
+import com.irontom10.freespawn.item.armor.royal.RoyalBoots;
+import com.irontom10.freespawn.item.armor.royal.RoyalChestplate;
+import com.irontom10.freespawn.item.armor.royal.RoyalHelmet;
+import com.irontom10.freespawn.item.armor.royal.RoyalLeggings;
+import com.irontom10.freespawn.item.armor.ruby.RubyBoots;
+import com.irontom10.freespawn.item.armor.ruby.RubyChestplate;
+import com.irontom10.freespawn.item.armor.ruby.RubyHelmet;
+import com.irontom10.freespawn.item.armor.ruby.RubyLeggings;
+import com.irontom10.freespawn.item.armor.tigerseye.TigerseyeBoots;
+import com.irontom10.freespawn.item.armor.tigerseye.TigerseyeChestplate;
+import com.irontom10.freespawn.item.armor.tigerseye.TigerseyeHelmet;
+import com.irontom10.freespawn.item.armor.tigerseye.TigerseyeLeggings;
+import com.irontom10.freespawn.item.armor.ultimate.UltimateBoots;
+import com.irontom10.freespawn.item.armor.ultimate.UltimateChestplate;
+import com.irontom10.freespawn.item.armor.ultimate.UltimateHelmet;
+import com.irontom10.freespawn.item.armor.ultimate.UltimateLeggings;
 import com.irontom10.freespawn.item.special.MinersDream;
 import com.irontom10.freespawn.item.special.OmgNoDontDoIt;
 import com.irontom10.freespawn.item.throwables.Shoe;
 import com.irontom10.freespawn.item.tool.Amethyst.AmethystPickaxe;
 import com.irontom10.freespawn.item.tool.Emerald.EmeraldPickaxe;
-import com.irontom10.freespawn.item.tool.Ultimate.UltimateAxe;
-import com.irontom10.freespawn.item.tool.Ultimate.UltimateHoe;
-import com.irontom10.freespawn.item.tool.Ultimate.UltimatePickaxe;
-import com.irontom10.freespawn.item.tool.Ultimate.UltimateShovel;
-import com.irontom10.freespawn.item.tool.Ultimate.UltimateSword;
-
+import com.irontom10.freespawn.item.tool.Ultimate.*;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -283,6 +320,14 @@ public class ModItems {
   public static final RegistryObject<Item> RUBY_LEGGINGS = ITEM.register("ruby_leggings", RubyLeggings::new);
 
   public static final RegistryObject<Item> ROYAL_BOOTS = ITEM.register("royal_boots", RoyalBoots::new);
+  public static final RegistryObject<Item> ULTIMATE_BOOTS = ITEM.register("ultimate_boots",
+      UltimateBoots::new);
+    public static final RegistryObject<Item> ULTIMATE_CHESTPLATE = ITEM.register("ultimate_chestplate",
+        UltimateChestplate::new);
+    public static final RegistryObject<Item> ULTIMATE_HELMET = ITEM.register("ultimate_helmet",
+        UltimateHelmet::new);
+    public static final RegistryObject<Item> ULTIMATE_LEGGINGS = ITEM.register("ultimate_leggings",
+        UltimateLeggings::new);
 
   // Tool Items
 
@@ -498,20 +543,26 @@ public class ModItems {
   public static final RegistryObject<SpawnEggItem> APPLE_COW_SPAWN_EGG = ITEM.register("apple_cow_spawn_egg",
           () -> new ForgeSpawnEggItem(
               ModEntities.APPLE_COW,
-              0x7CFC00,
-              0xFF0000,
+                  0xC41E3A,
+                  0x8DB600,
               new Item.Properties()));
   public static final RegistryObject<SpawnEggItem> GOLDEN_APPLE_COW_SPAWN_EGG = ITEM.register("golden_apple_cow_spawn_egg",
           () -> new ForgeSpawnEggItem(
                   ModEntities.GOLDEN_APPLE_COW,
-                  0x7CFC00,
-                  0xFF0000,
+                  0xFFD700,
+                  0x8B4513,
                   new Item.Properties()));
   public static final RegistryObject<SpawnEggItem> ENCHANTED_GOLDEN_APPLE_COW_SPAWN_EGG = ITEM.register("enchanted_golden_apple_cow_spawn_egg",
           () -> new ForgeSpawnEggItem(
                   ModEntities.ENCHANTED_GOLDEN_APPLE_COW,
-                  0x7CFC00,
-                  0xFF0000,
+                  0x8A2BE2,
+                  0x00FFFF,
+                  new Item.Properties()));
+  public static final RegistryObject<SpawnEggItem> BEE_SPAWN_EGG = ITEM.register("bee_spawn_egg",
+          () -> new ForgeSpawnEggItem(
+                  ModEntities.BEE,
+                  0xFCE883,
+                  0x000000,
                   new Item.Properties()));
 
 

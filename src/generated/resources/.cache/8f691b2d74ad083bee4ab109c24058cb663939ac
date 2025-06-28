@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-28T08:53:23.231421902	Item Models: freespawn
+// 1.20.1	2025-06-28T16:29:16.920827652	Item Models: freespawn
 b9b9df8a5fcb31f69abc2bebb692a1718535b0b9 assets/freespawn/models/item/a_crabby_patty.json
 0f6c9047d1707eedab0eeee8a539c30e28160598 assets/freespawn/models/item/amethyst.json
 e1ed9702a95bc150ea43c32bfc3123ca0d30b87e assets/freespawn/models/item/amethyst_axe.json
@@ -13,6 +13,7 @@ b7f95820dca25b6988a2c53b3662aba81da5857f assets/freespawn/models/item/amethyst_p
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/freespawn/models/item/apple_cow_spawn_egg.json
 7f958ed23bd90bb9ab32d50ec9cf1d4d4185e273 assets/freespawn/models/item/apple_tree_seed.json
 729c7ea3cc7b6914e96822d86b7aa662b4320795 assets/freespawn/models/item/bag_of_popcorn.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/freespawn/models/item/bee_spawn_egg.json
 9b89936e6e41b0ad9d26de2a635f745c513a9b3b assets/freespawn/models/item/black_heels.json
 bb189849afeb3b7c82fd5d6f26ca008f7b0ebc70 assets/freespawn/models/item/blt_sandwich.json
 554308bea75d878766fc01e686dd6298116b863a assets/freespawn/models/item/blue_fish.json
@@ -148,7 +149,11 @@ f8cdfc33ffeae29b33881196285e852ebeb98faf assets/freespawn/models/item/titanium_i
 d9420b51846c0a42b8a1deeccebe67d7dfc82a55 assets/freespawn/models/item/titanium_nugget.json
 3dcd80fd8614c9707f4f57889cc03216c2075f0b assets/freespawn/models/item/tomato.json
 2ae6570c634d05b6ab2e2c00616e38326bfb6c49 assets/freespawn/models/item/ultimate_axe.json
+2a45f618843f5bf47bd6c5c904b09680a284cbfe assets/freespawn/models/item/ultimate_boots.json
+ff7b43a864c2eef8cd56a41e5413042be8fd0777 assets/freespawn/models/item/ultimate_chestplate.json
+c77dc4d4782cb08ecc6a9351daaddd62e5490607 assets/freespawn/models/item/ultimate_helmet.json
 1a5f063cb3915ee9f464c21afb70503c3d2f9467 assets/freespawn/models/item/ultimate_hoe.json
+550f380c88ec3c288c225e86cc7b983c9f1a93ac assets/freespawn/models/item/ultimate_leggings.json
 6859c44dd49ea85a7233e7fc6a490086e75388aa assets/freespawn/models/item/ultimate_pickaxe.json
 1be038b62f42cd1e4d66087dd89c96af917cc584 assets/freespawn/models/item/ultimate_shovel.json
 523ced99f2908cb82f940a820c15f098cca571c0 assets/freespawn/models/item/ultimate_sword.json

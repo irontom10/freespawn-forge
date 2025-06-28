@@ -1,6 +1,9 @@
 package com.irontom10.freespawn.entity.EnchantedGoldenAppleCow;
 
+import com.irontom10.freespawn.entity.ModEntities;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.animal.Cow;
 import net.minecraft.world.item.Item;
@@ -36,6 +39,12 @@ public class EnchantedGoldenAppleCow extends Cow {
                 this.spawnAtLocation(new ItemStack(item, count));
             }
         }
+    }
+
+    @Override
+    public Cow getBreedOffspring(ServerLevel level, AgeableMob otherParent) {
+        // Always create a new EnchantedGoldenAppleCow using the registered entity type
+        return ModEntities.ENCHANTED_GOLDEN_APPLE_COW.get().create(level);
     }
 
 

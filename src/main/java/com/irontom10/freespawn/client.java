@@ -1,14 +1,13 @@
 package com.irontom10.freespawn;
 
+import com.irontom10.freespawn.entity.AppleCow.AppleCowRenderer;
 import com.irontom10.freespawn.entity.Bee.BeeModel;
 import com.irontom10.freespawn.entity.Bee.BeeRenderer;
-import com.irontom10.freespawn.entity.EnchantedGoldenAppleCow.EnchantedGoldenAppleCow;
 import com.irontom10.freespawn.entity.EnchantedGoldenAppleCow.EnchantedGoldenAppleCowRenderer;
 import com.irontom10.freespawn.entity.GoldenAppleCow.GoldenAppleCowRenderer;
 import com.irontom10.freespawn.entity.ModEntities;
 import com.irontom10.freespawn.entity.girlfriend.GirlfriendModel;
 import com.irontom10.freespawn.entity.shoe.ShoeEntityRenderer;
-import com.irontom10.freespawn.entity.AppleCow.AppleCowRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
