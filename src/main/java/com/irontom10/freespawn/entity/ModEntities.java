@@ -69,6 +69,7 @@ public class ModEntities {
                             .clientTrackingRange(8)
                             .build(new ResourceLocation(main.MOD_ID, "bee").toString())
             );
+
     public static final RegistryObject<EntityType<com.irontom10.freespawn.item.tool.Bertha.BerthaProjectileEntity>> BERTHA_PROJECTILE =
             ENTITIES.register("bertha_projectile",
                     () -> EntityType.Builder
